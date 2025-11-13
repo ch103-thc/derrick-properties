@@ -21,7 +21,7 @@
 		}
 	];
 
-	// const testimonials = [
+	// const journeys = [
 	// 	{
 	// 		review:
 	// 			'Working with this team made buying our first home a breeze. Their expertise and dedication exceeded our expectations.',
@@ -39,12 +39,12 @@
 	// 	}
 	// ];
 
-	const testimonials = [
+	const journeys = [
 		{
 			review: [
 				'Emilia first connected with me through Facebook, and we soon met up for a chat. She shared several concerns — whether she could afford a home on a single income, how to manage her monthly mortgage as a nurse, and the importance of living close to her sister so her nephews and nieces could still visit their grandpa regularly.',
 				'Together, we explored different possibilities and worked out what was financially and practically achievable. Once we set our plan in motion, the search began — though not without its challenges. Emilia faced additional hurdles, including her father’s outstanding town council payments and other unsettled dues from a previous rental flat, all while balancing her demanding work schedule.',
-				'Despite the ups and downs, we eventually found a home that checked all her boxes — a high-floor unit right next to her children’s school. The seller even agreed to a lower option fee, which made the deal possible. It was truly fulfilling to see everything come together and help Emilia secure a home that perfectly fits her family’s needs.'
+				'Despite the ups and downs, we eventually found a home that checked all her boxes — a high-floor unit right next to her children’s school. The seller even agreed to a lower option fee, which made the deal possible. It was truly fulfilling to see everything come together and help Emilia secure a home that perfectly fits her family’s needs.'
 			],
 			name: "Emilia's Story",
 			photo: 'img/emilia-story.jpg'
@@ -53,7 +53,7 @@
 			review: [
 				'Gloria was introduced to me through a friend’s wife. During our consultation, I learned that she had recently obtained her Singapore citizenship and was eager to own her first home here — a place where she could also host her parents when they visit from her hometown in the future.',
 				'Her main concern was not having enough CPF savings to cover the downpayment while still wanting to set aside sufficient cash for renovation expenses. After careful planning and discussion, we managed to secure a home near an LRT station — offering her both convenience to work and financial comfort within her budget.',
-				'The best part? She was able to move in earlier than expected, without having to wait long after completion. It was a joy to see everything fall into place for Gloria as she began this new chapter in her own home.'
+				'The best part? She was able to move in earlier than expected, without having to wait long after completion. It was a joy to see everything fall into place for Gloria as she began this new chapter in her own home.'
 			],
 			name: "Gloria's Story",
 			photo: 'img/gloria-story.jpg'
@@ -63,7 +63,7 @@
 				'When Raymond and Faye first connected with me, they just wanted to understand how an Executive Condo (EC) works. They were sceptical at first — worried about whether upgrading would stretch their finances too much and if it might affect their family’s lifestyle. With two lovely daughters still in school, they didn’t want to risk their family’s comfort or future plans.',
 				'During our chat, I walked them through my W.A.T.E.R. Concept and L.E.X. Framework, which helped them see their situation with fresh clarity. Step by step, they realised that upgrading to an EC wasn’t as out of reach as they once thought.',
 				'In the end, they decided to secure a home at OLA, one that truly fits their family’s needs — now and in the years ahead. What touched me most was seeing how their worries turned into excitement once they had a clear plan in place.',
-				'With their decision made, they now have peace of mind (and time!) to grow their savings before key collection. I’m really proud of them for opening their minds and taking this confident step toward their family’s future.'
+				'With their decision made, they now have peace of mind (and time!) to grow their savings before key collection. I’m really proud of them for opening their minds and taking this confident step toward their family’s future.'
 			],
 			name: "Raymond and Faye's Story",
 			photo: 'img/raymond-faye-story.jpg'
@@ -94,16 +94,47 @@
 		}
 	];
 
-	let currentTestimonial = $state(0);
+	let currentJourney = $state(0);
 
-	function nextTestimonial() {
-		currentTestimonial = (currentTestimonial + 1) % testimonials.length;
+	function nextJourney() {
+		currentJourney = (currentJourney + 1) % journeys.length;
 	}
 
-	function prevTestimonial() {
-		currentTestimonial =
-			currentTestimonial === 0 ? testimonials.length - 1 : currentTestimonial - 1;
+	function prevJourney() {
+		currentJourney = currentJourney === 0 ? journeys.length - 1 : currentJourney - 1;
 	}
+
+	import { onMount } from 'svelte';
+
+	// Add after your existing state variables
+	let servicesVisible = $state(false);
+	let readsVisible = $state(false);
+
+	onMount(() => {
+		const observer = new IntersectionObserver(
+			(entries) => {
+				entries.forEach((entry) => {
+					if (entry.isIntersecting) {
+						if (entry.target.classList.contains('services')) {
+							servicesVisible = true;
+						}
+						if (entry.target.classList.contains('reads')) {
+							readsVisible = true;
+						}
+					}
+				});
+			},
+			{ threshold: 0.1 }
+		);
+
+		const servicesSection = document.querySelector('.services');
+		const readsSection = document.querySelector('.reads');
+
+		if (servicesSection) observer.observe(servicesSection);
+		if (readsSection) observer.observe(readsSection);
+
+		return () => observer.disconnect();
+	});
 </script>
 
 <!-- About/Info Section -->
@@ -111,7 +142,7 @@
 	<div class="container">
 		<div class="info-content">
 			<div class="info-text">
-				<h2>Your Trusted Real Estate Partner</h2>
+				<h2>Derrick Teo, Your Trusted Real Estate Partner</h2>
 				<p>
 					Once a Sales Manager in the engineering industry, I bring along a systematic and
 					data-driven approach to real estate — where precision meets people. Specializing in
@@ -143,14 +174,14 @@
 <!-- Services Section -->
 <section class="services">
 	<div class="container">
-		<div class="section-title">
+		<div class="section-title" class:visible={servicesVisible}>
 			<h2>What We Offer</h2>
 			<p class="sub-header">Comprehensive real estate services tailored to your needs</p>
 		</div>
 
 		<div class="services-grid">
-			{#each services as service}
-				<div class="service-card">
+			{#each services as service, i}
+				<div class="service-card" class:visible={servicesVisible} style="--delay: {i}">
 					<div class="service-image">
 						<img src={service.image} alt={service.title} />
 					</div>
@@ -164,44 +195,35 @@
 	</div>
 </section>
 
-<!-- Testimonials Section -->
-<section class="testimonials">
+<!-- Journeys Section -->
+<section class="journeys">
 	<div class="container">
-		<div class="testimonials-header">
+		<div class="journeys-header">
 			<div class="header-text">
 				<h2>MY CUSTOMER'S JOURNEY WITH ME</h2>
 			</div>
 
 			<div class="nav-arrows">
-				<button class="arrow-btn" onclick={prevTestimonial}>
+				<button class="arrow-btn" onclick={prevJourney}>
 					<Icon icon="mingcute:left-line" width="24" height="24" />
 				</button>
-				<button class="arrow-btn" onclick={nextTestimonial}>
+				<button class="arrow-btn" onclick={nextJourney}>
 					<Icon icon="mingcute:right-line" width="24" height="24" />
 				</button>
 			</div>
 		</div>
 
-		<!-- <div class="testimonial-content">
-			<p class="review">"{testimonials[currentTestimonial].review}"</p>
-			<p class="reviewer">— {testimonials[currentTestimonial].name}</p>
-		</div> -->
-
-		<div class="testimonial-content style-2">
-			<div class="testimonial-photo-large">
-				<img
-					src={testimonials[currentTestimonial].photo}
-					alt={testimonials[currentTestimonial].name}
-				/>
+		<div class="journey-content">
+			<div class="journey-photo-large">
+				<img src={journeys[currentJourney].photo} alt={journeys[currentJourney].name} />
 			</div>
-			<div class="testimonial-text-scroll">
+			<div class="journey-text-scroll">
 				<div class="review-wrapper">
-					<!-- <p class="review">{testimonials[currentTestimonial].review}</p> -->
-					{#each testimonials[currentTestimonial].review as paragraph}
+					{#each journeys[currentJourney].review as paragraph}
 						<p class="review">{paragraph}</p>
 					{/each}
 				</div>
-				<p class="reviewer">— {testimonials[currentTestimonial].name}</p>
+				<p class="reviewer">— {journeys[currentJourney].name}</p>
 			</div>
 		</div>
 	</div>
@@ -210,14 +232,14 @@
 <!-- Featured Reads Section -->
 <section class="reads">
 	<div class="container">
-		<div class="section-title">
+		<div class="section-title" class:visible={readsVisible}>
 			<h2>Featured Reads</h2>
 			<p class="sub-header">Insights and updates from the real estate world</p>
 		</div>
 
 		<div class="reads-grid">
-			{#each reads as read}
-				<article class="read-card">
+			{#each reads as read, i}
+				<article class="read-card" class:visible={readsVisible} style="--delay: {i}">
 					<div class="read-image">
 						<img src={read.image} alt={read.title} />
 					</div>
@@ -380,13 +402,13 @@
 		}
 	}
 
-	/* Testimonials Styles */
-	.testimonials {
+	/* Journeys Styles */
+	.journeys {
 		padding: 100px 0 80px;
 		background: #f8f8f8;
 	}
 
-	.testimonials-header {
+	.journeys-header {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
@@ -421,7 +443,7 @@
 		}
 	}
 
-	.testimonial-content.style-2 {
+	.journey-content {
 		display: grid;
 		grid-template-columns: 50% 1fr;
 		gap: 56px;
@@ -433,7 +455,7 @@
 		}
 	}
 
-	.testimonial-photo-large {
+	.journey-photo-large {
 		width: 100%;
 		height: 500px;
 		border-radius: 8px;
@@ -455,7 +477,7 @@
 		}
 	}
 
-	.testimonial-text-scroll {
+	.journey-text-scroll {
 		padding: 20px 0;
 
 		@media (max-width: 968px) {
@@ -489,7 +511,6 @@
 	}
 
 	.review {
-		font-size: 19px;
 		line-height: 1.8;
 		color: #333;
 		margin: 0 0 20px 0;
@@ -604,6 +625,38 @@
 				transform: translateY(-2px);
 				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 			}
+		}
+	}
+
+	.section-title {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.6s ease;
+
+		&.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		h2 {
+			transition-delay: 0.1s;
+		}
+
+		.sub-header {
+			transition-delay: 0.2s;
+		}
+	}
+
+	.service-card,
+	.read-card {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.6s ease;
+		transition-delay: calc(0.4s + var(--delay) * 0.15s);
+
+		&.visible {
+			opacity: 1;
+			transform: translateY(0);
 		}
 	}
 </style>

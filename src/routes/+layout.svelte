@@ -1,5 +1,6 @@
 <script>
-	import favicon from '$lib/assets/favicon.svg';
+	import favicon from '$lib/assets/favicon.png';
+	import faviconFooter from '$lib/assets/favicon-footer.png';
 	import '@fontsource/poppins';
 	import Icon from '@iconify/svelte';
 	let { children } = $props();
@@ -12,7 +13,6 @@
 <nav class="navbar-container">
 	<div class="navbar-brand">
 		<img src={favicon} alt="Logo" class="logo" />
-		<span class="brand-name">Brand</span>
 	</div>
 
 	<ul class="navbar-menu">
@@ -41,9 +41,10 @@
 				<li><a href="/portfolio">Portfolio</a></li>
 				<li><a href="/reads">Featured Reads</a></li>
 				<li><a href="/testimonials">Testimonials</a></li>
+				<li><a href="/financial-calculator">Financial Calculator</a></li>
 			</ul>
 		</li>
-		<li><a href="/water-concept" class="nav-link">Water Concept</a></li>
+		<li><a href="/water-concept" class="nav-link">WATER Concept</a></li>
 	</ul>
 
 	<a href="/contact" class="cta-button">Contact Me</a>
@@ -65,8 +66,7 @@
 	<div class="footer-container">
 		<div class="footer-brand">
 			<div class="brand-header">
-				<img src={favicon} alt="Logo" class="logo" />
-				<span class="brand-name">Brand</span>
+				<img src={faviconFooter} alt="Logo" class="logo" />
 			</div>
 			<p class="brand-description">
 				Your trusted real estate partner. Specializing in portfolio upgrading and strategic property
@@ -160,13 +160,8 @@
 		gap: 12px;
 
 		.logo {
-			width: 32px;
-			height: 32px;
-			transition: transform 0.3s ease;
-
-			&:hover {
-				transform: rotate(360deg);
-			}
+			width: 150px;
+			height: auto;
 		}
 
 		.brand-name {
@@ -318,7 +313,7 @@
 	.footer-container {
 		max-width: 1200px;
 		margin: 0 auto;
-		padding: 60px 32px 30px;
+		padding: 30px;
 		display: grid;
 		grid-template-columns: 2fr 1fr 1fr 1fr;
 		gap: 48px;
@@ -341,13 +336,8 @@
 			gap: 12px;
 
 			.logo {
-				width: 32px;
-				height: 32px;
-			}
-
-			.brand-name {
-				font-size: 20px;
-				font-weight: 700;
+				width: 150px;
+				height: auto;
 			}
 		}
 
@@ -359,8 +349,7 @@
 
 		.social-links {
 			display: flex;
-			gap: 12px;
-			margin-top: 8px;
+			gap: 0.8rem;
 
 			a {
 				display: flex;
