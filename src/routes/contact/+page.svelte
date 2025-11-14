@@ -308,6 +308,10 @@
 		@media (max-width: 968px) {
 			grid-template-columns: 1fr;
 			gap: 60px;
+
+			.contact-form-wrapper {
+				order: -1;
+			}
 		}
 	}
 

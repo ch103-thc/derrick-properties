@@ -3,21 +3,46 @@
 
 	const services = [
 		{
-			image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800',
-			title: 'Property Management',
+			image: 'img/service/retirement.jpg',
+			title: 'Planning for Retirement',
 			description:
-				'Full-service property management solutions for residential and commercial properties.'
+				'Strategic real estate planning to help you build long-term security and a stable retirement income.'
 		},
 		{
-			image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800',
+			image: 'img/service/consulting.jpeg',
 			title: 'Real Estate Consulting',
 			description:
 				'Expert consultation for buying, selling, investing, and renting for passive income in real estate markets.'
 		},
 		{
-			image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800',
+			image: 'img/service/valuation.jpeg',
 			title: 'Property Valuation',
-			description: 'Accurate property appraisals and market analysis for informed decisions.'
+			description: 'Accurate property appraisals and market analysis for informed decisions.',
+			link: 'https://www.edgeprop.sg/analytic/edgefairvalue/condominium'
+		},
+		{
+			image: 'img/service/restructuring.jpeg',
+			title: 'Asset Restructuring',
+			description:
+				'Optimize your property portfolio through restructuring strategies that enhance long-term financial growth.'
+		},
+		{
+			image: 'img/service/selling.jpg',
+			title: 'Selling a Property',
+			description:
+				'Comprehensive guidance to position, market, and sell your property at the best possible price.'
+		},
+		{
+			image: 'img/service/buying.jpg',
+			title: 'Buying a Property',
+			description:
+				'Personalized support to help you find the right home or investment property that fits your goals.'
+		},
+		{
+			image: 'img/service/renting.jpg',
+			title: 'Renting a Property',
+			description:
+				'Assistance in renting out or finding rental properties with ease and confidence.'
 		}
 	];
 
@@ -47,7 +72,7 @@
 				'Despite the ups and downs, we eventually found a home that checked all her boxes — a high-floor unit right next to her children’s school. The seller even agreed to a lower option fee, which made the deal possible. It was truly fulfilling to see everything come together and help Emilia secure a home that perfectly fits her family’s needs.'
 			],
 			name: "Emilia's Story",
-			photo: 'img/emilia-story.jpg'
+			photo: 'img/journey/emilia-story.jpg'
 		},
 		{
 			review: [
@@ -56,7 +81,7 @@
 				'The best part? She was able to move in earlier than expected, without having to wait long after completion. It was a joy to see everything fall into place for Gloria as she began this new chapter in her own home.'
 			],
 			name: "Gloria's Story",
-			photo: 'img/gloria-story.jpg'
+			photo: 'img/journey/gloria-story.jpg'
 		},
 		{
 			review: [
@@ -66,7 +91,7 @@
 				'With their decision made, they now have peace of mind (and time!) to grow their savings before key collection. I’m really proud of them for opening their minds and taking this confident step toward their family’s future.'
 			],
 			name: "Raymond and Faye's Story",
-			photo: 'img/raymond-faye-story.jpg'
+			photo: 'img/journey/raymond-faye-story.jpg'
 		}
 	];
 
@@ -181,7 +206,14 @@
 
 		<div class="services-grid">
 			{#each services as service, i}
-				<div class="service-card" class:visible={servicesVisible} style="--delay: {i}">
+				<a
+					href={service.link}
+					target="_blank"
+					rel="noopener noreferrer"
+					class="service-card"
+					class:visible={servicesVisible}
+					style="--delay: {i}"
+				>
 					<div class="service-image">
 						<img src={service.image} alt={service.title} />
 					</div>
@@ -189,7 +221,7 @@
 						<h3>{service.title}</h3>
 						<p>{service.description}</p>
 					</div>
-				</div>
+				</a>
 			{/each}
 		</div>
 	</div>
@@ -392,6 +424,21 @@
 			font-size: 24px;
 			font-weight: 600;
 			margin: 0 0 8px 0;
+			position: relative;
+			display: inline-block;
+
+			&::after {
+				content: '';
+				position: absolute;
+				bottom: -2px;
+				left: 0;
+				width: 100%;
+				height: 2px;
+				background: white;
+				transform: scaleX(0);
+				transform-origin: left;
+				transition: transform 0.3s ease;
+			}
 		}
 
 		p {
@@ -400,6 +447,10 @@
 			opacity: 0.9;
 			line-height: 1.5;
 		}
+	}
+
+	.service-card:hover .service-info h3::after {
+		transform: scaleX(1);
 	}
 
 	/* Journeys Styles */

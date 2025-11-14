@@ -12,17 +12,19 @@
 
 <nav class="navbar-container">
 	<div class="navbar-brand">
-		<img src={favicon} alt="Logo" class="logo" />
+		<a href="/" class="home-link">
+			<img src={favicon} alt="Logo" class="logo" />
+		</a>
 	</div>
 
 	<ul class="navbar-menu">
 		<li><a href="/" class="nav-link">Home</a></li>
 		<li><a href="/about" class="nav-link">About</a></li>
 		<li class="dropdown">
-			<a href="/services" class="nav-link">
+			<div class="nav-link">
 				<span>Services</span>
 				<Icon icon="mingcute:down-line" width="18" height="18" />
-			</a>
+			</div>
 			<ul class="dropdown-menu">
 				<li><a href="/services/property-management">Property Management</a></li>
 				<li><a href="/services/consulting">Real Estate Consulting</a></li>
@@ -32,10 +34,10 @@
 		</li>
 		<li><a href="/portfolio" class="nav-link">Portfolio</a></li>
 		<li class="dropdown">
-			<a href="/resources" class="nav-link">
+			<div class="nav-link">
 				<span>Resources</span>
 				<Icon icon="mingcute:down-line" width="18" height="18" />
-			</a>
+			</div>
 			<ul class="dropdown-menu">
 				<li><a href="/about">About</a></li>
 				<li><a href="/portfolio">Portfolio</a></li>
@@ -105,6 +107,7 @@
 				<li><a href="/portfolio">Portfolio</a></li>
 				<li><a href="/reads">Featured Reads</a></li>
 				<li><a href="/testimonials">Testimonials</a></li>
+				<li><a href="/financial-calculator">Financial Calculator</a></li>
 			</ul>
 		</div>
 
@@ -114,13 +117,13 @@
 				<li><a href="/contact">Get In Touch</a></li>
 				<li><a href="tel:+6512345678">+65 1234 5678</a></li>
 				<li><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></li>
-				<li><a href="/schedule">Schedule Consultation</a></li>
+				<li><a href="/contact">Schedule Consultation</a></li>
 			</ul>
 		</div>
 	</div>
 
 	<div class="footer-bottom">
-		<p>© {new Date().getFullYear()} Brand. All rights reserved.</p>
+		<p>Copyright © {new Date().getFullYear()} Brand. All rights reserved.</p>
 		<div class="footer-links">
 			<a href="/privacy-policy">Privacy Policy</a>
 		</div>
@@ -319,9 +322,13 @@
 		gap: 48px;
 
 		@media (max-width: 768px) {
-			grid-template-columns: 1fr;
-			gap: 32px;
-			padding: 40px 16px 20px;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 1.5rem;
+			padding: 40px 20px;
+
+			.footer-brand {
+				grid-column: 1 / -1;
+			}
 		}
 	}
 
@@ -416,7 +423,7 @@
 		@media (max-width: 768px) {
 			flex-direction: column;
 			gap: 12px;
-			padding: 20px 16px;
+			padding: 20px 20px;
 			text-align: center;
 		}
 
