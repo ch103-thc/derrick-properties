@@ -26,10 +26,12 @@
 				<Icon icon="mingcute:down-line" width="18" height="18" />
 			</div>
 			<ul class="dropdown-menu">
-				<li><a href="/services/property-management">Property Management</a></li>
-				<li><a href="/services/consulting">Real Estate Consulting</a></li>
-				<li><a href="/services/valuation">Property Valuation</a></li>
-				<li><a href="/services/portfolio-upgrade">Portfolio Upgrading</a></li>
+				<li><a href="/services/planning-for-retirement">Planning for Retirement</a></li>
+				<li><a href="/services/real-estate-consulting">Real Estate Consulting</a></li>
+				<li><a href="/services/asset-restructuring">Asset Restructuring</a></li>
+				<li><a href="/services/selling-a-property">Selling a Property</a></li>
+				<li><a href="/services/buying-a-property">Buying a Property</a></li>
+				<li><a href="/services/renting-a-property">Renting a Property</a></li>
 			</ul>
 		</li>
 		<li><a href="/portfolio" class="nav-link">Portfolio</a></li>
@@ -43,6 +45,15 @@
 				<li><a href="/portfolio">Portfolio</a></li>
 				<li><a href="/reads">Featured Reads</a></li>
 				<li><a href="/testimonials">Testimonials</a></li>
+				<li>
+					<a
+						href="https://www.edgeprop.sg/analytic/edgefairvalue/condominium"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Property Valuation
+					</a>
+				</li>
 				<li><a href="/financial-calculator">Financial Calculator</a></li>
 			</ul>
 		</li>
@@ -93,10 +104,12 @@
 		<div class="footer-column">
 			<h3>Services</h3>
 			<ul>
-				<li><a href="/services/property-management">Property Management</a></li>
-				<li><a href="/services/consulting">Real Estate Consulting</a></li>
-				<li><a href="/services/valuation">Property Valuation</a></li>
-				<li><a href="/services/portfolio-upgrade">Portfolio Upgrading</a></li>
+				<li><a href="/services/planning-for-retirement">Planning for Retirement</a></li>
+				<li><a href="/services/real-estate-consulting">Real Estate Consulting</a></li>
+				<li><a href="/services/asset-restructuring">Asset Restructuring</a></li>
+				<li><a href="/services/selling-a-property">Selling a Property</a></li>
+				<li><a href="/services/buying-a-property">Buying a Property</a></li>
+				<li><a href="/services/renting-a-property">Renting a Property</a></li>
 			</ul>
 		</div>
 
@@ -107,6 +120,15 @@
 				<li><a href="/portfolio">Portfolio</a></li>
 				<li><a href="/reads">Featured Reads</a></li>
 				<li><a href="/testimonials">Testimonials</a></li>
+				<li>
+					<a
+						href="https://www.edgeprop.sg/analytic/edgefairvalue/condominium"
+						target="_blank"
+						rel="noopener noreferrer"
+					>
+						Property Valuation
+					</a>
+				</li>
 				<li><a href="/financial-calculator">Financial Calculator</a></li>
 			</ul>
 		</div>

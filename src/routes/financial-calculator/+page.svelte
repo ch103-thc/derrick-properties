@@ -675,7 +675,7 @@
 		border: 2px solid #e0e0e0;
 		border-radius: 0.25rem;
 		font-size: 16px;
-		text-align: right;
+		text-align: center;
 		transition: all 0.3s ease;
 	}
 

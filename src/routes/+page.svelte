@@ -9,37 +9,31 @@
 				'Strategic real estate planning to help you build long-term security and a stable retirement income.'
 		},
 		{
-			image: 'img/service/consulting.jpeg',
+			image: 'img/service/consulting.jpg',
 			title: 'Real Estate Consulting',
 			description:
 				'Expert consultation for buying, selling, investing, and renting for passive income in real estate markets.'
 		},
 		{
-			image: 'img/service/valuation.jpeg',
-			title: 'Property Valuation',
-			description: 'Accurate property appraisals and market analysis for informed decisions.',
-			link: 'https://www.edgeprop.sg/analytic/edgefairvalue/condominium'
-		},
-		{
-			image: 'img/service/restructuring.jpeg',
+			image: 'img/service/restructuring.png',
 			title: 'Asset Restructuring',
 			description:
 				'Optimize your property portfolio through restructuring strategies that enhance long-term financial growth.'
 		},
 		{
-			image: 'img/service/selling.jpg',
+			image: 'img/service/selling.png',
 			title: 'Selling a Property',
 			description:
 				'Comprehensive guidance to position, market, and sell your property at the best possible price.'
 		},
 		{
-			image: 'img/service/buying.jpg',
+			image: 'img/service/buying.png',
 			title: 'Buying a Property',
 			description:
 				'Personalized support to help you find the right home or investment property that fits your goals.'
 		},
 		{
-			image: 'img/service/renting.jpg',
+			image: 'img/service/renting.png',
 			title: 'Renting a Property',
 			description:
 				'Assistance in renting out or finding rental properties with ease and confidence.'
@@ -88,10 +82,21 @@
 				'When Raymond and Faye first connected with me, they just wanted to understand how an Executive Condo (EC) works. They were sceptical at first — worried about whether upgrading would stretch their finances too much and if it might affect their family’s lifestyle. With two lovely daughters still in school, they didn’t want to risk their family’s comfort or future plans.',
 				'During our chat, I walked them through my W.A.T.E.R. Concept and L.E.X. Framework, which helped them see their situation with fresh clarity. Step by step, they realised that upgrading to an EC wasn’t as out of reach as they once thought.',
 				'In the end, they decided to secure a home at OLA, one that truly fits their family’s needs — now and in the years ahead. What touched me most was seeing how their worries turned into excitement once they had a clear plan in place.',
-				'With their decision made, they now have peace of mind (and time!) to grow their savings before key collection. I’m really proud of them for opening their minds and taking this confident step toward their family’s future.'
+				'With their decision made, they now have peace of mind (and time!) to grow their savings before key collection. I’m really proud of them for opening their minds and taking this confident step toward their family’s future. 🌟'
 			],
 			name: "Raymond and Faye's Story",
 			photo: 'img/journey/raymond-faye-story.jpg'
+		},
+		{
+			review: [
+				'Some journeys in life come full circle. I’ve known Lau for almost 30 years — I even attended his wedding back then. So when he reached out recently, it was with a heavy heart… he needed help selling his 4-room flat due to a divorce.',
+				'The unit was on a very low floor, though it had great conveniences: a 5-minute walk to the MRT, and close to parks, coffeeshops, and schools. Even with a relatively young lease, finding the right buyer wasn’t easy. And with the court order timeline ticking, the pressure was real.',
+				'We went all out — digital marketing, paper flyers, door-knocking around the neighbourhood — hoping to connect with buyers who already loved the area and wanted to move here for the schools or MRT access. After six months of persistence and countless efforts, a genuine buyer finally appeared, and we secured the OTP.',
+				'But the journey didn’t end there. Navigating his next home purchase was another challenge — limited funds, CPF retirement sum requirements, and strict loan eligibility. There were many rounds of calculations, appeals, and letters to the relevant agencies. Eventually, we managed to secure the minimum HDB loan he needed to move forward with a new flat.',
+				'While not every story begins or ends the way we wish, being able to help Lau transition into a new chapter — together with his son and daughter — is something that truly gives meaning to my work. 💛'
+			],
+			name: "Lau's Story",
+			photo: 'img/journey/lau-story.jpeg'
 		}
 	];
 
@@ -167,12 +172,12 @@
 	<div class="container">
 		<div class="info-content">
 			<div class="info-text">
-				<h2>Derrick Teo, Your Trusted Real Estate Partner</h2>
+				<h2>About Me</h2>
 				<p>
-					Once a Sales Manager in the engineering industry, I bring along a systematic and
-					data-driven approach to real estate — where precision meets people. Specializing in
-					portfolio upgrading, I help clients make informed decisions that align with their
-					long-term financial goals.
+					I'm Derrick Teo, a former Sales Manager in the engineering industry, whom brings along a
+					systematic and data-driven approach to real estate — where precision meets people.
+					Specializing in portfolio upgrading, I help clients make informed decisions that align
+					with their long-term financial goals.
 				</p>
 				<p>
 					Known for my clarity and integrity, I go beyond surface-level advice, offering insights
@@ -189,8 +194,10 @@
 					for your next move with purpose.
 				</p>
 			</div>
-			<div class="info-image">
-				<img src="img/profile.jpg" alt="Derrick Teo" />
+			<div class="info-image-wrapper">
+				<div class="info-image">
+					<img src="img/profile.jpg" alt="Derrick Teo" />
+				</div>
 			</div>
 		</div>
 	</div>
@@ -200,20 +207,13 @@
 <section class="services">
 	<div class="container">
 		<div class="section-title" class:visible={servicesVisible}>
-			<h2>What We Offer</h2>
+			<h2>How can we help you?</h2>
 			<p class="sub-header">Comprehensive real estate services tailored to your needs</p>
 		</div>
 
 		<div class="services-grid">
 			{#each services as service, i}
-				<a
-					href={service.link}
-					target="_blank"
-					rel="noopener noreferrer"
-					class="service-card"
-					class:visible={servicesVisible}
-					style="--delay: {i}"
-				>
+				<div class="service-card" class:visible={servicesVisible} style="--delay: {i}">
 					<div class="service-image">
 						<img src={service.image} alt={service.title} />
 					</div>
@@ -221,7 +221,7 @@
 						<h3>{service.title}</h3>
 						<p>{service.description}</p>
 					</div>
-				</a>
+				</div>
 			{/each}
 		</div>
 	</div>
@@ -232,7 +232,7 @@
 	<div class="container">
 		<div class="journeys-header">
 			<div class="header-text">
-				<h2>MY CUSTOMER'S JOURNEY WITH ME</h2>
+				<h2>My Customer's Journey With Me</h2>
 			</div>
 
 			<div class="nav-arrows">
@@ -242,6 +242,17 @@
 				<button class="arrow-btn" onclick={nextJourney}>
 					<Icon icon="mingcute:right-line" width="24" height="24" />
 				</button>
+			</div>
+
+			<div class="journey-indicators">
+				{#each journeys as _, index}
+					<button
+						class="indicator-dot"
+						class:active={currentJourney === index}
+						onclick={() => (currentJourney = index)}
+						aria-label="Go to journey {index + 1}"
+					></button>
+				{/each}
 			</div>
 		</div>
 
@@ -317,14 +328,13 @@
 
 	.info-text {
 		h2 {
-			font-size: 42px;
-			font-weight: 700;
+			font-size: 1.8rem;
 			margin: 0 0 24px 0;
 			line-height: 1.2;
 		}
 
 		p {
-			font-size: 16px;
+			font-size: 1rem;
 			line-height: 1.7;
 			color: #666;
 			margin: 0 0 20px 0;
@@ -336,12 +346,49 @@
 		}
 	}
 
+	.info-image-wrapper {
+		position: relative;
+		width: 100%;
+
+		@media (max-width: 768px) {
+			order: -1;
+		}
+
+		/* Layered frame effect - back layer */
+		&::before {
+			content: '';
+			position: absolute;
+			top: -20px;
+			left: -20px;
+			right: 20px;
+			bottom: 20px;
+			border: 2px solid #e0e0e0;
+			border-radius: 0.25rem;
+			z-index: 0;
+		}
+
+		/* Optional: Second layer for triple effect */
+		// &::after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	top: -10px;
+		// 	left: -10px;
+		// 	right: 10px;
+		// 	bottom: 10px;
+		// 	border: 2px solid #f0f0f0;
+		// 	border-radius: 0.25rem;
+		// 	z-index: 1;
+		// }
+	}
+
 	.info-image {
+		position: relative;
 		width: 100%;
 		height: 500px;
 		border-radius: 0.25rem;
 		overflow: hidden;
 		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+		z-index: 2;
 
 		img {
 			width: 100%;
@@ -360,8 +407,7 @@
 		margin-bottom: 56px;
 
 		h2 {
-			font-size: 42px;
-			font-weight: 700;
+			font-size: 1.8rem;
 			margin: 0 0 12px 0;
 		}
 
@@ -382,7 +428,8 @@
 		}
 
 		@media (max-width: 640px) {
-			grid-template-columns: 1fr;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 16px;
 		}
 	}
 
@@ -393,6 +440,10 @@
 		height: 400px;
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 		transition: all 0.3s ease;
+
+		@media (max-width: 640px) {
+			height: 300px;
+		}
 	}
 
 	.service-image {
@@ -421,11 +472,14 @@
 		color: white;
 
 		h3 {
-			font-size: 24px;
-			font-weight: 600;
+			font-size: 1.5rem;
 			margin: 0 0 8px 0;
 			position: relative;
 			display: inline-block;
+
+			@media (max-width: 640px) {
+				font-size: 1rem;
+			}
 
 			&::after {
 				content: '';
@@ -442,10 +496,14 @@
 		}
 
 		p {
-			font-size: 15px;
+			font-size: 1rem;
 			margin: 0;
 			opacity: 0.9;
 			line-height: 1.5;
+
+			@media (max-width: 640px) {
+				font-size: 0.8rem;
+			}
 		}
 	}
 
@@ -468,6 +526,34 @@
 		@media (max-width: 768px) {
 			flex-direction: column;
 			gap: 24px;
+		}
+	}
+
+	.journey-indicators {
+		display: flex;
+		gap: 8px;
+		align-items: center;
+	}
+
+	.indicator-dot {
+		width: 10px;
+		height: 10px;
+		border-radius: 50%;
+		background: #d0d0d0;
+		border: none;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		padding: 0;
+
+		&:hover {
+			background: #999;
+			transform: scale(1.2);
+		}
+
+		&.active {
+			background: #333;
+			width: 24px;
+			border-radius: 5px;
 		}
 	}
 
