@@ -96,7 +96,7 @@
 
 <style lang="scss">
 	.privacy-policy {
-		background-color: #fafafa;
+		background-color: #f8f8f8;
 		color: #222;
 		padding: 4rem 1rem;
 
@@ -153,6 +153,141 @@
 				&:hover {
 					text-decoration: underline;
 				}
+			}
+		}
+	}
+
+	:global(html[data-theme='dark']) .privacy-policy {
+		background-color: #1a1a1a;
+		color: #d0d0d0;
+	}
+
+	/* CONTAINER */
+	.privacy-policy .container {
+		max-width: 800px;
+		margin: 0 auto;
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 240, 245, 0.8) 100%);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		padding: 3rem 2rem;
+		border-radius: 1.5rem;
+		border: 1.5px solid rgba(255, 255, 255, 0.6);
+		box-shadow:
+			0 8px 32px rgba(0, 0, 0, 0.08),
+			inset -1px -1px 3px rgba(0, 0, 0, 0.05),
+			inset 1px 1px 3px rgba(255, 255, 255, 0.8);
+	}
+
+	:global(html[data-theme='dark']) .privacy-policy .container {
+		background: linear-gradient(135deg, rgba(50, 50, 70, 0.4) 0%, rgba(40, 40, 60, 0.35) 100%);
+		border-color: rgba(255, 255, 255, 0.12);
+		box-shadow:
+			0 8px 32px rgba(0, 0, 0, 0.5),
+			inset -1px -1px 3px rgba(0, 0, 0, 0.3),
+			inset 1px 1px 3px rgba(255, 255, 255, 0.08);
+	}
+
+	/* HEADINGS */
+	.privacy-policy h1 {
+		font-size: 2rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+		text-align: center;
+		color: #111;
+	}
+
+	:global(html[data-theme='dark']) .privacy-policy h1 {
+		color: #e8e8f0;
+	}
+
+	.privacy-policy h2 {
+		font-size: 1.4rem;
+		margin-top: 2.5rem;
+		margin-bottom: 1rem;
+		color: #333;
+	}
+
+	:global(html[data-theme='dark']) .privacy-policy h2 {
+		color: #d0d0d0;
+	}
+
+	/* PARAGRAPHS */
+	.privacy-policy p {
+		line-height: 1.7;
+		margin-bottom: 1rem;
+		color: #666;
+	}
+
+	:global(html[data-theme='dark']) .privacy-policy p {
+		color: #a0a0b0;
+	}
+
+	/* LIST ITEMS */
+	.privacy-policy ul {
+		list-style: disc;
+		padding-left: 2rem;
+		margin-bottom: 1rem;
+
+		li {
+			margin-bottom: 0.5rem;
+			color: #666;
+		}
+	}
+
+	:global(html[data-theme='dark']) .privacy-policy ul li {
+		color: #a0a0b0;
+	}
+
+	/* CONTACT CARD */
+	.privacy-policy .contact {
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(245, 245, 250, 0.7) 100%);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+		padding: 1.5rem;
+		border-left: 4px solid #1a1a1a;
+		border-radius: 0.25rem;
+		margin: 1.5rem 0;
+		box-shadow:
+			0 4px 15px rgba(0, 0, 0, 0.05),
+			inset -1px -1px 2px rgba(0, 0, 0, 0.03),
+			inset 1px 1px 2px rgba(255, 255, 255, 0.7);
+
+		p {
+			margin-bottom: 0.75rem;
+			color: #333;
+		}
+
+		a {
+			color: #0077ff;
+			text-decoration: none;
+			font-weight: 600;
+			transition: all 0.3s ease;
+
+			&:hover {
+				color: #0059cc;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	:global(html[data-theme='dark']) .privacy-policy .contact {
+		background: linear-gradient(135deg, rgba(70, 75, 100, 0.35) 0%, rgba(50, 55, 80, 0.3) 100%);
+		border-color: rgba(255, 255, 255, 0.12);
+		border-left: 4px solid #b0b0d0;
+		box-shadow:
+			0 4px 15px rgba(0, 0, 0, 0.3),
+			inset -1px -1px 2px rgba(0, 0, 0, 0.2),
+			inset 1px 1px 2px rgba(255, 255, 255, 0.08);
+
+		p {
+			color: #d0d0d0;
+		}
+
+		a {
+			color: #6ba3ff;
+
+			&:hover {
+				color: #91bfff;
 			}
 		}
 	}

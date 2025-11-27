@@ -193,6 +193,7 @@
 					I’m approachable, genuine, and always happy to chat about how I can be part of your plan
 					for your next move with purpose.
 				</p>
+				<a href="/contact" class="cta-button">Let's Chat</a>
 			</div>
 			<div class="info-image-wrapper">
 				<div class="info-image">
@@ -215,7 +216,7 @@
 			{#each services as service, i}
 				<div class="service-card" class:visible={servicesVisible} style="--delay: {i}">
 					<div class="service-image">
-						<img src={service.image} alt={service.title} />
+						<img src={service.image} alt={service.title} loading="lazy" />
 					</div>
 					<div class="service-info">
 						<h3>{service.title}</h3>
@@ -257,8 +258,10 @@
 		</div>
 
 		<div class="journey-content">
-			<div class="journey-photo-large">
-				<img src={journeys[currentJourney].photo} alt={journeys[currentJourney].name} />
+			<div class="journey-photo-wrapper">
+				<div class="journey-photo-large">
+					<img src={journeys[currentJourney].photo} alt={journeys[currentJourney].name} />
+				</div>
 			</div>
 			<div class="journey-text-scroll">
 				<div class="review-wrapper">
@@ -311,7 +314,6 @@
 	/* Info Section Styles */
 	.info-section {
 		padding: 60px 0 60px;
-		background: white;
 	}
 
 	.info-content {
@@ -331,18 +333,61 @@
 			font-size: 1.8rem;
 			margin: 0 0 24px 0;
 			line-height: 1.2;
+			color: #333;
 		}
 
 		p {
 			font-size: 1rem;
 			line-height: 1.7;
-			color: #666;
 			margin: 0 0 20px 0;
 			max-width: 590px;
+			color: #666;
 
 			&:last-child {
 				margin-bottom: 0;
 			}
+		}
+
+		.cta-button {
+			display: inline-block;
+			padding: 12px 28px;
+			background: black;
+			color: white;
+			border: none;
+			border-radius: 0.25rem;
+			font-weight: 600;
+			font-size: 15px;
+			text-decoration: none;
+			cursor: pointer;
+			transition: all 0.3s ease;
+			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+			margin-top: 16px;
+
+			&:hover {
+				transform: translateY(-2px);
+				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+			}
+		}
+	}
+
+	:global(html[data-theme='dark']) .cta-button {
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: #eee7de;
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.15);
+			border-color: rgba(255, 255, 255, 0.3);
+		}
+	}
+
+	:global(html[data-theme='dark']) .info-text {
+		h2 {
+			color: #eee7de;
+		}
+
+		p {
+			color: #aaa;
 		}
 	}
 
@@ -413,15 +458,24 @@
 
 		.sub-header {
 			font-size: 18px;
-			color: #666;
 			margin: 0;
+		}
+	}
+
+	:global(html[data-theme='dark']) .section-title {
+		h2 {
+			color: #eee7de;
+		}
+
+		.sub-header {
+			color: #aaa;
 		}
 	}
 
 	.services-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 32px;
+		gap: 16px;
 
 		@media (max-width: 1024px) {
 			grid-template-columns: repeat(2, 1fr);
@@ -429,13 +483,12 @@
 
 		@media (max-width: 640px) {
 			grid-template-columns: repeat(2, 1fr);
-			gap: 16px;
 		}
 	}
 
 	.service-card {
 		position: relative;
-		border-radius: 0.25rem;
+		border-radius: 1rem;
 		overflow: hidden;
 		height: 400px;
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
@@ -511,10 +564,19 @@
 		transform: scaleX(1);
 	}
 
+	:global(html[data-theme='dark']) .service-info {
+		h3 {
+			color: #eee7de;
+		}
+
+		p {
+			color: #eee7de;
+		}
+	}
+
 	/* Journeys Styles */
 	.journeys {
 		padding: 100px 0 80px;
-		background: #f8f8f8;
 	}
 
 	.journeys-header {
@@ -565,7 +627,7 @@
 	.arrow-btn {
 		width: 48px;
 		height: 48px;
-		background: white;
+		background: transparent;
 		border: 2px solid #e0e0e0;
 		border-radius: 999px;
 		cursor: pointer;
@@ -592,19 +654,43 @@
 		}
 	}
 
+	.journey-photo-wrapper {
+		position: relative;
+		width: 100%;
+		position: sticky;
+		top: 20px;
+
+		@media (max-width: 968px) {
+			position: relative;
+			top: 0;
+		}
+
+		/* Layered frame effect - back layer */
+		&::before {
+			content: '';
+			position: absolute;
+			top: -20px;
+			left: -20px;
+			right: 20px;
+			bottom: 20px;
+			border: 2px solid #e0e0e0;
+			border-radius: 8px;
+			z-index: 0;
+		}
+	}
+
 	.journey-photo-large {
+		position: relative; // Change from sticky to relative
 		width: 100%;
 		height: 500px;
 		border-radius: 8px;
 		overflow: hidden;
 		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
-		position: sticky;
-		top: 20px;
+		z-index: 2;
+		// Remove the sticky positioning and top from here
 
 		@media (max-width: 968px) {
 			height: 400px;
-			position: relative;
-			top: 0;
 		}
 
 		img {
@@ -649,7 +735,6 @@
 
 	.review {
 		line-height: 1.8;
-		color: #333;
 		margin: 0 0 20px 0;
 		white-space: pre-line;
 
@@ -662,16 +747,60 @@
 		font-weight: bold;
 	}
 
+	:global(html[data-theme='dark']) .journeys-header .header-text h2 {
+		color: #eee7de;
+	}
+
+	:global(html[data-theme='dark']) .arrow-btn {
+		border-color: #555;
+		color: #eee7de;
+
+		&:hover {
+			border-color: #eee7de;
+			background: rgba(238, 231, 222, 0.1);
+		}
+	}
+
+	:global(html[data-theme='dark']) .indicator-dot {
+		background: #555;
+
+		&:hover {
+			background: #777;
+		}
+
+		&.active {
+			background: #eee7de;
+		}
+	}
+
+	:global(html[data-theme='dark']) .review-wrapper {
+		&::-webkit-scrollbar-track {
+			background: #222;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: #555;
+
+			&:hover {
+				background: #777;
+			}
+		}
+	}
+
+	:global(html[data-theme='dark']) .review,
+	:global(html[data-theme='dark']) .reviewer {
+		color: #aaa;
+	}
+
 	/* Reads Styles */
 	.reads {
 		padding: 100px 0 80px;
-		background: white;
 	}
 
 	.reads-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 32px;
+		gap: 16px;
 
 		@media (max-width: 1024px) {
 			grid-template-columns: repeat(2, 1fr);
@@ -683,16 +812,53 @@
 	}
 
 	.read-card {
-		background: white;
-		border-radius: 0.25rem;
+		border-radius: 1.5rem;
 		overflow: hidden;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-		transition: all 0.3s ease;
+		background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 240, 245, 0.8) 100%);
+		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
+		border: 1.5px solid rgba(255, 255, 255, 0.6);
+		box-shadow:
+			0 8px 32px rgba(0, 0, 0, 0.08),
+			inset -1px -1px 3px rgba(0, 0, 0, 0.05),
+			inset 1px 1px 3px rgba(255, 255, 255, 0.8);
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		/* Animated gradient background */
+		&::before {
+			content: '';
+			position: absolute;
+			top: -50%;
+			left: -50%;
+			width: 200%;
+			height: 200%;
+			background: linear-gradient(
+				45deg,
+				transparent 0%,
+				rgba(255, 255, 255, 0.1) 25%,
+				transparent 50%
+			);
+			animation: shimmer 6s infinite;
+			pointer-events: none;
+		}
 
 		&:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+			background: linear-gradient(
+				135deg,
+				rgba(255, 255, 255, 0.95) 0%,
+				rgba(245, 245, 250, 0.85) 100%
+			);
+			border-color: rgba(255, 255, 255, 0.8);
+			transform: translateY(-6px);
+			box-shadow:
+				0 12px 40px rgba(0, 0, 0, 0.12),
+				inset -1px -1px 3px rgba(0, 0, 0, 0.06),
+				inset 1px 1px 3px rgba(255, 255, 255, 0.9);
 		}
 	}
 
@@ -700,29 +866,42 @@
 		width: 100%;
 		height: 240px;
 		overflow: hidden;
+		position: relative;
+		flex-shrink: 0;
 
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			transition: transform 0.3s ease;
+			display: block;
+			transition: transform 0.4s ease;
 		}
 	}
 
 	.read-card:hover .read-image img {
-		transform: scale(1.05);
+		transform: scale(1.08);
 	}
 
 	.read-content {
 		padding: 24px;
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(245, 245, 250, 0.6) 100%);
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+		border-top: 1px solid rgba(255, 255, 255, 0.5);
+		position: relative;
+		z-index: 2;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
 	}
 
 	.read-date {
 		font-size: 14px;
-		color: #999;
 		margin: 0 0 12px 0;
 		text-transform: uppercase;
-		letter-spacing: 0.5px;
+		letter-spacing: 0.8px;
+		color: rgba(80, 80, 100, 0.7);
+		font-weight: 500;
 	}
 
 	.read-content h3 {
@@ -730,14 +909,26 @@
 		font-weight: 600;
 		margin: 0 0 12px 0;
 		line-height: 1.4;
-		color: #333;
+		color: #1a1a2e;
+		text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
 	}
 
 	.read-description {
 		font-size: 15px;
 		line-height: 1.6;
-		color: #666;
 		margin: 0;
+		color: rgba(60, 60, 80, 0.8);
+		flex-grow: 1;
+	}
+
+	/* Animation for shimmer effect */
+	@keyframes shimmer {
+		0% {
+			transform: translate(-50%, -50%) rotate(0deg);
+		}
+		100% {
+			transform: translate(-50%, -50%) rotate(360deg);
+		}
 	}
 
 	.see-all {
@@ -794,6 +985,67 @@
 		&.visible {
 			opacity: 1;
 			transform: translateY(0);
+		}
+	}
+
+	:global(html[data-theme='dark']) .read-card {
+		background: linear-gradient(
+			135deg,
+			rgba(238, 231, 222, 0.12) 0%,
+			rgba(238, 231, 222, 0.04) 100%
+		);
+		border-color: rgba(238, 231, 222, 0.2);
+		box-shadow:
+			0 8px 32px rgba(0, 0, 0, 0.4),
+			inset 0 0 20px rgba(238, 231, 222, 0.08),
+			0 0 40px rgba(100, 100, 150, 0.15);
+
+		// 	background: linear-gradient(135deg, rgba(50, 50, 70, 0.4) 0%, rgba(40, 40, 60, 0.35) 100%);
+		// border-color: rgba(255, 255, 255, 0.12);
+		// box-shadow:
+		// 	0 8px 32px rgba(0, 0, 0, 0.5),
+		// 	inset -1px -1px 3px rgba(0, 0, 0, 0.3),
+		// 	inset 1px 1px 3px rgba(255, 255, 255, 0.08);
+
+		&:hover {
+			background: linear-gradient(
+				135deg,
+				rgba(238, 231, 222, 0.18) 0%,
+				rgba(238, 231, 222, 0.08) 100%
+			);
+			border-color: rgba(238, 231, 222, 0.35);
+			box-shadow:
+				0 16px 48px rgba(0, 0, 0, 0.5),
+				inset 0 0 30px rgba(238, 231, 222, 0.12),
+				0 0 60px rgba(100, 100, 150, 0.25);
+		}
+	}
+
+	:global(html[data-theme='dark']) .read-content {
+		background: linear-gradient(180deg, rgba(30, 30, 40, 0.5) 0%, rgba(20, 20, 30, 0.6) 100%);
+		border-top-color: rgba(238, 231, 222, 0.08);
+	}
+
+	:global(html[data-theme='dark']) .read-date {
+		color: rgba(238, 231, 222, 0.6);
+	}
+
+	:global(html[data-theme='dark']) .read-content h3 {
+		color: #eee7de;
+	}
+
+	:global(html[data-theme='dark']) .read-description {
+		color: rgba(238, 231, 222, 0.75);
+	}
+
+	:global(html[data-theme='dark']) .see-all-btn {
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.2);
+		color: #eee7de;
+
+		&:hover {
+			background: rgba(255, 255, 255, 0.15);
+			border-color: rgba(255, 255, 255, 0.3);
 		}
 	}
 </style>
