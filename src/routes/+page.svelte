@@ -278,9 +278,14 @@
 <!-- Featured Reads Section -->
 <section class="reads">
 	<div class="container">
-		<div class="section-title" class:visible={readsVisible}>
-			<h2>Featured Reads</h2>
-			<p class="sub-header">Insights and updates from the real estate world</p>
+		<div class="reads-header">
+			<div class="section-title" class:visible={readsVisible}>
+				<h2>Featured Reads</h2>
+				<p class="sub-header">Insights and updates from the real estate world</p>
+			</div>
+			<div class="see-all">
+				<a href="/reads" class="see-all-btn">See All Reads</a>
+			</div>
 		</div>
 
 		<div class="reads-grid">
@@ -296,10 +301,6 @@
 					</div>
 				</article>
 			{/each}
-		</div>
-
-		<div class="see-all">
-			<a href="/reads" class="see-all-btn">See All Reads</a>
 		</div>
 	</div>
 </section>
@@ -341,49 +342,56 @@
 			line-height: 1.7;
 			margin: 0 0 20px 0;
 			max-width: 590px;
-			color: #666;
 
 			&:last-child {
 				margin-bottom: 0;
 			}
 		}
+	}
 
-		.cta-button {
-			display: inline-block;
-			padding: 12px 28px;
-			background: black;
-			color: white;
-			border: none;
-			border-radius: 0.25rem;
-			font-weight: 600;
-			font-size: 15px;
-			text-decoration: none;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-			margin-top: 16px;
+	.cta-button,
+	.see-all-btn {
+		display: inline-block;
+		padding: 14px 36px;
+		background: transparent;
+		color: #1a1a2e;
+		border: 2px solid #1a1a2e;
+		border-radius: 50px;
+		font-weight: 600;
+		font-size: 15px;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+		letter-spacing: 0.5px;
+		margin-top: 16px;
 
-			&:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-			}
+		&:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 		}
 	}
 
-	:global(html[data-theme='dark']) .cta-button {
-		background: rgba(255, 255, 255, 0.1);
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		color: #eee7de;
+	.see-all-btn {
+		margin-top: 0;
+	}
+
+	:global(html[data-theme='dark']) .cta-button,
+	:global(html[data-theme='dark']) .see-all-btn {
+		background: transparent;
+		border: 2px solid #f8f8f8;
+		color: #f8f8f8;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 		&:hover {
-			background: rgba(255, 255, 255, 0.15);
-			border-color: rgba(255, 255, 255, 0.3);
+			transform: translateY(-4px);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 		}
 	}
 
 	:global(html[data-theme='dark']) .info-text {
 		h2 {
-			color: #eee7de;
+			color: #fff;
 		}
 
 		p {
@@ -408,7 +416,7 @@
 			right: 20px;
 			bottom: 20px;
 			border: 2px solid #e0e0e0;
-			border-radius: 0.25rem;
+			border-radius: 1.5rem;
 			z-index: 0;
 		}
 
@@ -430,7 +438,7 @@
 		position: relative;
 		width: 100%;
 		height: 500px;
-		border-radius: 0.25rem;
+		border-radius: 1.5rem;
 		overflow: hidden;
 		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 		z-index: 2;
@@ -445,6 +453,7 @@
 	/* Services Styles */
 	.services {
 		padding: 100px 0 80px;
+		background: #e9ecef;
 	}
 
 	.section-title {
@@ -464,7 +473,7 @@
 
 	:global(html[data-theme='dark']) .section-title {
 		h2 {
-			color: #eee7de;
+			color: #fff;
 		}
 
 		.sub-header {
@@ -476,6 +485,7 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 16px;
+		margin-top: 2.5rem;
 
 		@media (max-width: 1024px) {
 			grid-template-columns: repeat(2, 1fr);
@@ -564,13 +574,17 @@
 		transform: scaleX(1);
 	}
 
+	:global(html[data-theme='dark']) .services {
+		background: rgba(31, 31, 31, 0.7);
+	}
+
 	:global(html[data-theme='dark']) .service-info {
 		h3 {
-			color: #eee7de;
+			color: #fff;
 		}
 
 		p {
-			color: #eee7de;
+			color: #fff;
 		}
 	}
 
@@ -628,17 +642,31 @@
 		width: 48px;
 		height: 48px;
 		background: transparent;
-		border: 2px solid #e0e0e0;
+		border: 2px solid #1a1a2e;
 		border-radius: 999px;
 		cursor: pointer;
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		transition: all 0.3s ease;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+		color: #1a1a2e;
 
 		&:hover {
-			border-color: #333;
-			background: rgba(0, 0, 0, 0.05);
+			transform: translateY(-4px);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+		}
+	}
+
+	:global(html[data-theme='dark']) .arrow-btn {
+		background: transparent;
+		border: 2px solid #f8f8f8;
+		color: #f8f8f8;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+		&:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 		}
 	}
 
@@ -674,20 +702,19 @@
 			right: 20px;
 			bottom: 20px;
 			border: 2px solid #e0e0e0;
-			border-radius: 8px;
+			border-radius: 1.5rem;
 			z-index: 0;
 		}
 	}
 
 	.journey-photo-large {
-		position: relative; // Change from sticky to relative
+		position: relative;
 		width: 100%;
 		height: 500px;
-		border-radius: 8px;
+		border-radius: 1.5rem;
 		overflow: hidden;
 		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 		z-index: 2;
-		// Remove the sticky positioning and top from here
 
 		@media (max-width: 968px) {
 			height: 400px;
@@ -748,17 +775,7 @@
 	}
 
 	:global(html[data-theme='dark']) .journeys-header .header-text h2 {
-		color: #eee7de;
-	}
-
-	:global(html[data-theme='dark']) .arrow-btn {
-		border-color: #555;
-		color: #eee7de;
-
-		&:hover {
-			border-color: #eee7de;
-			background: rgba(238, 231, 222, 0.1);
-		}
+		color: #fff;
 	}
 
 	:global(html[data-theme='dark']) .indicator-dot {
@@ -769,7 +786,7 @@
 		}
 
 		&.active {
-			background: #eee7de;
+			background: #fff;
 		}
 	}
 
@@ -795,6 +812,70 @@
 	/* Reads Styles */
 	.reads {
 		padding: 100px 0 80px;
+		background: #e9ecef;
+	}
+
+	:global(html[data-theme='dark']) .reads {
+		background: rgba(31, 31, 31, 0.7);
+	}
+
+	.reads-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+		margin-bottom: 2.5rem;
+		gap: 40px;
+
+		@media (max-width: 768px) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 24px;
+		}
+	}
+
+	.section-title {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.6s ease;
+		text-align: left;
+		margin-bottom: 0;
+
+		&.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		h2 {
+			font-size: 1.8rem;
+			margin: 0 0 12px 0;
+			transition-delay: 0.1s;
+		}
+
+		.sub-header {
+			font-size: 18px;
+			margin: 0;
+			transition-delay: 0.2s;
+		}
+	}
+
+	.see-all {
+		display: flex;
+		align-items: flex-start;
+		padding-top: 8px;
+
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+	}
+
+	:global(html[data-theme='dark']) .section-title {
+		h2 {
+			color: #fff;
+		}
+
+		.sub-header {
+			color: #aaa;
+		}
 	}
 
 	.reads-grid {
@@ -812,16 +893,11 @@
 	}
 
 	.read-card {
-		border-radius: 1.5rem;
+		border-radius: 1rem;
 		overflow: hidden;
-		background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 240, 245, 0.8) 100%);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		border: 1.5px solid rgba(255, 255, 255, 0.6);
-		box-shadow:
-			0 8px 32px rgba(0, 0, 0, 0.08),
-			inset -1px -1px 3px rgba(0, 0, 0, 0.05),
-			inset 1px 1px 3px rgba(255, 255, 255, 0.8);
+		background: #fff;
+		border: 1px solid #e0e0e0;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
 		position: relative;
@@ -829,36 +905,11 @@
 		flex-direction: column;
 		height: 100%;
 
-		/* Animated gradient background */
-		&::before {
-			content: '';
-			position: absolute;
-			top: -50%;
-			left: -50%;
-			width: 200%;
-			height: 200%;
-			background: linear-gradient(
-				45deg,
-				transparent 0%,
-				rgba(255, 255, 255, 0.1) 25%,
-				transparent 50%
-			);
-			animation: shimmer 6s infinite;
-			pointer-events: none;
-		}
-
 		&:hover {
-			background: linear-gradient(
-				135deg,
-				rgba(255, 255, 255, 0.95) 0%,
-				rgba(245, 245, 250, 0.85) 100%
-			);
-			border-color: rgba(255, 255, 255, 0.8);
-			transform: translateY(-6px);
-			box-shadow:
-				0 12px 40px rgba(0, 0, 0, 0.12),
-				inset -1px -1px 3px rgba(0, 0, 0, 0.06),
-				inset 1px 1px 3px rgba(255, 255, 255, 0.9);
+			transform: translateY(-4px);
+			background: #fafafa;
+			border-color: #d0d0d0;
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
 		}
 	}
 
@@ -884,10 +935,8 @@
 
 	.read-content {
 		padding: 24px;
-		background: linear-gradient(180deg, rgba(255, 255, 255, 0.7) 0%, rgba(245, 245, 250, 0.6) 100%);
-		backdrop-filter: blur(8px);
-		-webkit-backdrop-filter: blur(8px);
-		border-top: 1px solid rgba(255, 255, 255, 0.5);
+		background: rgba(255, 255, 255, 0.7);
+		border-top: 1px solid rgba(0, 0, 0, 0.05);
 		position: relative;
 		z-index: 2;
 		flex-grow: 1;
@@ -910,7 +959,6 @@
 		margin: 0 0 12px 0;
 		line-height: 1.4;
 		color: #1a1a2e;
-		text-shadow: 0 1px 2px rgba(255, 255, 255, 0.3);
 	}
 
 	.read-description {
@@ -921,109 +969,22 @@
 		flex-grow: 1;
 	}
 
-	/* Animation for shimmer effect */
-	@keyframes shimmer {
-		0% {
-			transform: translate(-50%, -50%) rotate(0deg);
-		}
-		100% {
-			transform: translate(-50%, -50%) rotate(360deg);
-		}
-	}
-
-	.see-all {
-		text-align: center;
-		margin-top: 40px;
-
-		.see-all-btn {
-			display: inline-block;
-			padding: 12px 28px;
-			background: black;
-			color: white;
-			border: none;
-			border-radius: 0.25rem;
-			font-weight: 600;
-			font-size: 15px;
-			text-decoration: none;
-			cursor: pointer;
-			transition: all 0.3s ease;
-			box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-
-			&:hover {
-				transform: translateY(-2px);
-				box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
-			}
-		}
-	}
-
-	.section-title {
-		opacity: 0;
-		transform: translateY(30px);
-		transition: all 0.6s ease;
-
-		&.visible {
-			opacity: 1;
-			transform: translateY(0);
-		}
-
-		h2 {
-			transition-delay: 0.1s;
-		}
-
-		.sub-header {
-			transition-delay: 0.2s;
-		}
-	}
-
-	.service-card,
-	.read-card {
-		opacity: 0;
-		transform: translateY(30px);
-		transition: all 0.6s ease;
-		transition-delay: calc(0.4s + var(--delay) * 0.15s);
-
-		&.visible {
-			opacity: 1;
-			transform: translateY(0);
-		}
-	}
-
 	:global(html[data-theme='dark']) .read-card {
-		background: linear-gradient(
-			135deg,
-			rgba(238, 231, 222, 0.12) 0%,
-			rgba(238, 231, 222, 0.04) 100%
-		);
-		border-color: rgba(238, 231, 222, 0.2);
-		box-shadow:
-			0 8px 32px rgba(0, 0, 0, 0.4),
-			inset 0 0 20px rgba(238, 231, 222, 0.08),
-			0 0 40px rgba(100, 100, 150, 0.15);
-
-		// 	background: linear-gradient(135deg, rgba(50, 50, 70, 0.4) 0%, rgba(40, 40, 60, 0.35) 100%);
-		// border-color: rgba(255, 255, 255, 0.12);
-		// box-shadow:
-		// 	0 8px 32px rgba(0, 0, 0, 0.5),
-		// 	inset -1px -1px 3px rgba(0, 0, 0, 0.3),
-		// 	inset 1px 1px 3px rgba(255, 255, 255, 0.08);
+		background: #3a3a3a;
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 		&:hover {
-			background: linear-gradient(
-				135deg,
-				rgba(238, 231, 222, 0.18) 0%,
-				rgba(238, 231, 222, 0.08) 100%
-			);
-			border-color: rgba(238, 231, 222, 0.35);
-			box-shadow:
-				0 16px 48px rgba(0, 0, 0, 0.5),
-				inset 0 0 30px rgba(238, 231, 222, 0.12),
-				0 0 60px rgba(100, 100, 150, 0.25);
+			transform: translateY(-4px);
+			background: #4a4a4a;
+			border-color: rgba(255, 255, 255, 0.2);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 		}
 	}
 
 	:global(html[data-theme='dark']) .read-content {
-		background: linear-gradient(180deg, rgba(30, 30, 40, 0.5) 0%, rgba(20, 20, 30, 0.6) 100%);
-		border-top-color: rgba(238, 231, 222, 0.08);
+		background: rgba(30, 30, 40, 0.5);
+		border-top-color: rgba(255, 255, 255, 0.05);
 	}
 
 	:global(html[data-theme='dark']) .read-date {
@@ -1031,21 +992,10 @@
 	}
 
 	:global(html[data-theme='dark']) .read-content h3 {
-		color: #eee7de;
+		color: #fff;
 	}
 
 	:global(html[data-theme='dark']) .read-description {
-		color: rgba(238, 231, 222, 0.75);
-	}
-
-	:global(html[data-theme='dark']) .see-all-btn {
-		background: rgba(255, 255, 255, 0.1);
-		border: 1px solid rgba(255, 255, 255, 0.2);
-		color: #eee7de;
-
-		&:hover {
-			background: rgba(255, 255, 255, 0.15);
-			border-color: rgba(255, 255, 255, 0.3);
-		}
+		color: #aaa;
 	}
 </style>

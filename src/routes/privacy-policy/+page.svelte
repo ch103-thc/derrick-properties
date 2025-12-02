@@ -179,7 +179,7 @@
 	}
 
 	:global(html[data-theme='dark']) .privacy-policy .container {
-		background: linear-gradient(135deg, rgba(50, 50, 70, 0.4) 0%, rgba(40, 40, 60, 0.35) 100%);
+		background: #1a1a1a;
 		border-color: rgba(255, 255, 255, 0.12);
 		box-shadow:
 			0 8px 32px rgba(0, 0, 0, 0.5),
@@ -271,7 +271,7 @@
 	}
 
 	:global(html[data-theme='dark']) .privacy-policy .contact {
-		background: linear-gradient(135deg, rgba(70, 75, 100, 0.35) 0%, rgba(50, 55, 80, 0.3) 100%);
+		background: linear-gradient(135deg, rgba(50, 50, 70, 0.4) 0%, rgba(40, 40, 60, 0.35) 100%);
 		border-color: rgba(255, 255, 255, 0.12);
 		border-left: 4px solid #b0b0d0;
 		box-shadow:
