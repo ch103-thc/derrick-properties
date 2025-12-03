@@ -18,22 +18,22 @@
 			image: 'img/service/restructuring.png',
 			title: 'Asset Restructuring',
 			description:
-				'Optimize your property portfolio through restructuring strategies that enhance long-term financial growth.'
+				'Optimise your property portfolio through restructuring strategies that enhance long-term financial growth.'
 		},
 		{
-			image: 'img/service/selling.png',
+			image: 'img/service/selling.jpeg',
 			title: 'Selling a Property',
 			description:
 				'Comprehensive guidance to position, market, and sell your property at the best possible price.'
 		},
 		{
-			image: 'img/service/buying.png',
+			image: 'img/service/buying.jpeg',
 			title: 'Buying a Property',
 			description:
-				'Personalized support to help you find the right home or investment property that fits your goals.'
+				'Personalised support to help you find the right home or investment property that fits your goals.'
 		},
 		{
-			image: 'img/service/renting.png',
+			image: 'img/service/renting.jpeg',
 			title: 'Renting a Property',
 			description:
 				'Assistance in renting out or finding rental properties with ease and confidence.'
@@ -176,7 +176,7 @@
 				<p>
 					I'm Derrick Teo, a former Sales Manager in the engineering industry, whom brings along a
 					systematic and data-driven approach to real estate — where precision meets people.
-					Specializing in portfolio upgrading, I help clients make informed decisions that align
+					Specialising in portfolio upgrading, I help clients make informed decisions that align
 					with their long-term financial goals.
 				</p>
 				<p>
@@ -335,6 +335,10 @@
 			margin: 0 0 24px 0;
 			line-height: 1.2;
 			color: #333;
+
+			@media (max-width: 768px) {
+				font-size: 1.5rem;
+			}
 		}
 
 		p {
@@ -354,11 +358,11 @@
 		display: inline-block;
 		padding: 14px 36px;
 		background: transparent;
-		color: #1a1a2e;
-		border: 2px solid #1a1a2e;
+		color: #1a1a1a;
+		border: 2px solid #1a1a1a;
 		border-radius: 50px;
 		font-weight: 600;
-		font-size: 15px;
+		font-size: 1rem;
 		text-decoration: none;
 		cursor: pointer;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -369,6 +373,14 @@
 		&:hover {
 			transform: translateY(-4px);
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+		}
+
+		@media (max-width: 768px) {
+			.cta-button,
+			.see-all-btn {
+				padding: 10px 20px;
+				font-size: 14px; /* optional: smaller text */
+			}
 		}
 	}
 
@@ -419,19 +431,6 @@
 			border-radius: 1.5rem;
 			z-index: 0;
 		}
-
-		/* Optional: Second layer for triple effect */
-		// &::after {
-		// 	content: '';
-		// 	position: absolute;
-		// 	top: -10px;
-		// 	left: -10px;
-		// 	right: 10px;
-		// 	bottom: 10px;
-		// 	border: 2px solid #f0f0f0;
-		// 	border-radius: 0.25rem;
-		// 	z-index: 1;
-		// }
 	}
 
 	.info-image {
@@ -454,20 +453,39 @@
 	.services {
 		padding: 100px 0 80px;
 		background: #e9ecef;
+
+		@media (max-width: 768px) {
+			padding: 60px 0 40px;
+		}
 	}
 
 	.section-title {
-		text-align: center;
-		margin-bottom: 56px;
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.6s ease;
+		text-align: left;
+		margin-bottom: 0;
+
+		&.visible {
+			opacity: 1;
+			transform: translateY(0);
+		}
 
 		h2 {
 			font-size: 1.8rem;
 			margin: 0 0 12px 0;
+			transition-delay: 0.1s;
+
+			@media (max-width: 768px) {
+				font-size: 1.5rem;
+			}
 		}
 
 		.sub-header {
 			font-size: 18px;
+			color: #666;
 			margin: 0;
+			transition-delay: 0.2s;
 		}
 	}
 
@@ -491,7 +509,7 @@
 			grid-template-columns: repeat(2, 1fr);
 		}
 
-		@media (max-width: 640px) {
+		@media (max-width: 768px) {
 			grid-template-columns: repeat(2, 1fr);
 		}
 	}
@@ -504,7 +522,7 @@
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 		transition: all 0.3s ease;
 
-		@media (max-width: 640px) {
+		@media (max-width: 768px) {
 			height: 300px;
 		}
 	}
@@ -534,13 +552,17 @@
 		background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
 		color: white;
 
+		@media (max-width: 768px) {
+			padding: 16px;
+		}
+
 		h3 {
 			font-size: 1.5rem;
 			margin: 0 0 8px 0;
 			position: relative;
 			display: inline-block;
 
-			@media (max-width: 640px) {
+			@media (max-width: 768px) {
 				font-size: 1rem;
 			}
 
@@ -564,7 +586,7 @@
 			opacity: 0.9;
 			line-height: 1.5;
 
-			@media (max-width: 640px) {
+			@media (max-width: 768px) {
 				font-size: 0.8rem;
 			}
 		}
@@ -591,6 +613,10 @@
 	/* Journeys Styles */
 	.journeys {
 		padding: 100px 0 80px;
+
+		@media (max-width: 768px) {
+			padding: 60px 0 40px;
+		}
 	}
 
 	.journeys-header {
@@ -598,6 +624,17 @@
 		justify-content: space-between;
 		align-items: flex-start;
 		margin-bottom: 48px;
+
+		.header-text {
+			h2 {
+				font-size: 1.8rem;
+				margin: 0;
+
+				@media (max-width: 768px) {
+					font-size: 1.5rem;
+				}
+			}
+		}
 
 		@media (max-width: 768px) {
 			flex-direction: column;
@@ -642,7 +679,7 @@
 		width: 48px;
 		height: 48px;
 		background: transparent;
-		border: 2px solid #1a1a2e;
+		border: 2px solid #1a1a1a;
 		border-radius: 999px;
 		cursor: pointer;
 		display: flex;
@@ -650,7 +687,7 @@
 		justify-content: center;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-		color: #1a1a2e;
+		color: #1a1a1a;
 
 		&:hover {
 			transform: translateY(-4px);
@@ -761,6 +798,7 @@
 	}
 
 	.review {
+		font-size: 1rem;
 		line-height: 1.8;
 		margin: 0 0 20px 0;
 		white-space: pre-line;
@@ -771,6 +809,7 @@
 	}
 
 	.reviewer {
+		font-size: 1rem;
 		font-weight: bold;
 	}
 
@@ -813,6 +852,10 @@
 	.reads {
 		padding: 100px 0 80px;
 		background: #e9ecef;
+
+		@media (max-width: 768px) {
+			padding: 60px 0 40px;
+		}
 	}
 
 	:global(html[data-theme='dark']) .reads {
@@ -833,31 +876,6 @@
 		}
 	}
 
-	.section-title {
-		opacity: 0;
-		transform: translateY(30px);
-		transition: all 0.6s ease;
-		text-align: left;
-		margin-bottom: 0;
-
-		&.visible {
-			opacity: 1;
-			transform: translateY(0);
-		}
-
-		h2 {
-			font-size: 1.8rem;
-			margin: 0 0 12px 0;
-			transition-delay: 0.1s;
-		}
-
-		.sub-header {
-			font-size: 18px;
-			margin: 0;
-			transition-delay: 0.2s;
-		}
-	}
-
 	.see-all {
 		display: flex;
 		align-items: flex-start;
@@ -865,16 +883,6 @@
 
 		@media (max-width: 768px) {
 			width: 100%;
-		}
-	}
-
-	:global(html[data-theme='dark']) .section-title {
-		h2 {
-			color: #fff;
-		}
-
-		.sub-header {
-			color: #aaa;
 		}
 	}
 
@@ -887,8 +895,9 @@
 			grid-template-columns: repeat(2, 1fr);
 		}
 
-		@media (max-width: 640px) {
+		@media (max-width: 768px) {
 			grid-template-columns: 1fr;
+			gap: 20px;
 		}
 	}
 
@@ -954,18 +963,18 @@
 	}
 
 	.read-content h3 {
-		font-size: 20px;
+		font-size: 1.2rem;
 		font-weight: 600;
 		margin: 0 0 12px 0;
 		line-height: 1.4;
-		color: #1a1a2e;
+		color: #1a1a1a;
 	}
 
 	.read-description {
-		font-size: 15px;
+		font-size: 0.95rem;
 		line-height: 1.6;
 		margin: 0;
-		color: rgba(60, 60, 80, 0.8);
+		color: #666;
 		flex-grow: 1;
 	}
 

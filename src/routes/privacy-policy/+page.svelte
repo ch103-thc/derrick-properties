@@ -106,7 +106,12 @@
 			background: #fff;
 			padding: 3rem 2rem;
 			border-radius: 1rem;
-			box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+			border: 1px solid #e0e0e0;
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+			@media (max-width: 768px) {
+				padding: 2rem 1.5rem;
+			}
 		}
 
 		h1 {
@@ -125,6 +130,7 @@
 		}
 
 		p {
+			font-size: 1rem;
 			line-height: 1.7;
 			margin-bottom: 1rem;
 		}
@@ -154,6 +160,10 @@
 					text-decoration: underline;
 				}
 			}
+
+			@media (max-width: 768px) {
+				padding: 1rem;
+			}
 		}
 	}
 
@@ -162,29 +172,10 @@
 		color: #d0d0d0;
 	}
 
-	/* CONTAINER */
-	.privacy-policy .container {
-		max-width: 800px;
-		margin: 0 auto;
-		background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 240, 245, 0.8) 100%);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		padding: 3rem 2rem;
-		border-radius: 1.5rem;
-		border: 1.5px solid rgba(255, 255, 255, 0.6);
-		box-shadow:
-			0 8px 32px rgba(0, 0, 0, 0.08),
-			inset -1px -1px 3px rgba(0, 0, 0, 0.05),
-			inset 1px 1px 3px rgba(255, 255, 255, 0.8);
-	}
-
 	:global(html[data-theme='dark']) .privacy-policy .container {
 		background: #1a1a1a;
-		border-color: rgba(255, 255, 255, 0.12);
-		box-shadow:
-			0 8px 32px rgba(0, 0, 0, 0.5),
-			inset -1px -1px 3px rgba(0, 0, 0, 0.3),
-			inset 1px 1px 3px rgba(255, 255, 255, 0.08);
+		border: 1px solid rgba(255, 255, 255, 0.12);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 	}
 
 	/* HEADINGS */
@@ -194,6 +185,10 @@
 		margin-bottom: 1.5rem;
 		text-align: center;
 		color: #111;
+
+		@media (max-width: 768px) {
+			font-size: 1.5rem;
+		}
 	}
 
 	:global(html[data-theme='dark']) .privacy-policy h1 {
@@ -205,6 +200,11 @@
 		margin-top: 2.5rem;
 		margin-bottom: 1rem;
 		color: #333;
+
+		@media (max-width: 768px) {
+			font-size: 1.1rem;
+			margin-top: 2rem;
+		}
 	}
 
 	:global(html[data-theme='dark']) .privacy-policy h2 {
@@ -240,17 +240,12 @@
 
 	/* CONTACT CARD */
 	.privacy-policy .contact {
-		background: linear-gradient(135deg, rgba(255, 255, 255, 0.8) 0%, rgba(245, 245, 250, 0.7) 100%);
-		backdrop-filter: blur(8px);
-		-webkit-backdrop-filter: blur(8px);
+		background: #f9f9f9;
 		padding: 1.5rem;
 		border-left: 4px solid #1a1a1a;
-		border-radius: 0.25rem;
+		border-radius: 0.5rem;
 		margin: 1.5rem 0;
-		box-shadow:
-			0 4px 15px rgba(0, 0, 0, 0.05),
-			inset -1px -1px 2px rgba(0, 0, 0, 0.03),
-			inset 1px 1px 2px rgba(255, 255, 255, 0.7);
+		box-shadow: none;
 
 		p {
 			margin-bottom: 0.75rem;
@@ -268,16 +263,16 @@
 				text-decoration: underline;
 			}
 		}
+
+		@media (max-width: 768px) {
+			padding: 1rem;
+		}
 	}
 
 	:global(html[data-theme='dark']) .privacy-policy .contact {
-		background: linear-gradient(135deg, rgba(50, 50, 70, 0.4) 0%, rgba(40, 40, 60, 0.35) 100%);
-		border-color: rgba(255, 255, 255, 0.12);
+		background: #2a2a2a;
 		border-left: 4px solid #b0b0d0;
-		box-shadow:
-			0 4px 15px rgba(0, 0, 0, 0.3),
-			inset -1px -1px 2px rgba(0, 0, 0, 0.2),
-			inset 1px 1px 2px rgba(255, 255, 255, 0.08);
+		box-shadow: none;
 
 		p {
 			color: #d0d0d0;

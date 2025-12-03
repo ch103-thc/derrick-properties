@@ -49,8 +49,8 @@
 
 <section class="contact-hero">
 	<div class="container">
-		<h1>Get In Touch</h1>
-		<p>
+		<h1 class="hero-title">Get In Touch</h1>
+		<p class="hero-subtitle">
 			Ready to make your next move? Let's discuss how I can help you achieve your real estate goals.
 		</p>
 	</div>
@@ -229,8 +229,8 @@
 								required
 							/>
 							<span>
-								I agree to the <a href="/privacy-policy" target="_blank">Privacy Policy</a> and consent
-								to the collection and use of my personal data for the purpose of responding to my inquiry.
+								I agree to the <a href="/privacy-policy">Privacy Policy</a> and consent to the collection
+								and use of my personal data for the purpose of responding to my inquiry.
 							</span>
 						</label>
 					</div>
@@ -276,29 +276,43 @@
 	}
 
 	.contact-hero {
-		padding: 60px 0 60px;
 		background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-		text-align: center;
 		color: #000;
+		padding: 80px 0 60px;
+		text-align: center;
 
-		h1 {
-			font-size: 48px;
+		.hero-title {
+			font-size: 2.5rem;
 			font-weight: 700;
 			margin: 0 0 16px 0;
+			line-height: 1.2;
+
+			@media (max-width: 768px) {
+				font-size: 1.75rem;
+			}
 		}
 
-		p {
-			font-size: 18px;
+		.hero-subtitle {
+			font-size: 20px;
 			color: #666;
 			max-width: 600px;
 			margin: 0 auto;
-			line-height: 1.6;
+			opacity: 0.9;
+
+			@media (max-width: 768px) {
+				font-size: 0.95rem;
+				max-width: 400px;
+			}
 		}
 	}
 
 	.contact-section {
 		padding: 80px 0;
 		background: #f8f8f8;
+
+		@media (max-width: 768px) {
+			padding: 60px 0 40px;
+		}
 	}
 
 	:global(html[data-theme='dark']) .contact-section {
@@ -323,13 +337,17 @@
 
 	.contact-info {
 		h2 {
-			font-size: 36px;
+			font-size: 2rem;
 			font-weight: 700;
 			margin: 0 0 16px 0;
+
+			@media (max-width: 768px) {
+				font-size: 1.5rem;
+			}
 		}
 
 		.intro-text {
-			font-size: 16px;
+			font-size: 1rem;
 			line-height: 1.7;
 			color: #666;
 			margin: 0 0 40px 0;
@@ -377,17 +395,17 @@
 			justify-content: center;
 			flex-shrink: 0;
 			box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-			color: #1a1a2e;
+			color: #1a1a1a;
 		}
 
 		.info-text {
 			flex: 1;
 
 			h3 {
-				font-size: 16px;
+				font-size: 1rem;
 				font-weight: 600;
 				margin: 0 0 4px 0;
-				color: #1a1a2e;
+				color: #1a1a1a;
 			}
 
 			p,
@@ -400,7 +418,7 @@
 			}
 
 			a:hover {
-				color: #1a1a2e;
+				color: #1a1a1a;
 			}
 		}
 	}
@@ -454,7 +472,7 @@
 				background: #fff;
 				border: 1px solid #e0e0e0;
 				border-radius: 50%;
-				color: #1a1a2e;
+				color: #1a1a1a;
 				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 
@@ -463,6 +481,10 @@
 					background: #fafafa;
 					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 				}
+			}
+
+			@media (max-width: 768px) {
+				gap: 8px;
 			}
 		}
 	}
@@ -532,7 +554,7 @@
 			&:focus {
 				outline: none;
 				background: #fff;
-				border-color: #1a1a2e;
+				border-color: #1a1a1a;
 				box-shadow: 0 0 0 3px rgba(26, 26, 46, 0.1);
 			}
 
@@ -586,6 +608,11 @@
 				margin-top: 2px;
 				cursor: pointer;
 				accent-color: #1a1a1a;
+
+				@media (max-width: 768px) {
+					width: 16px;
+					height: 16px;
+				}
 			}
 
 			span {
@@ -679,8 +706,8 @@
 		color: #1a1a1a;
 		border: 2px solid #1a1a1a;
 		border-radius: 0.75rem;
+		font-size: 1rem;
 		font-weight: 600;
-		font-size: 16px;
 		cursor: pointer;
 		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);

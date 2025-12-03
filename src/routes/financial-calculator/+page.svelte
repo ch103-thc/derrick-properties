@@ -464,7 +464,7 @@
 				<p>
 					<strong>Disclaimer:</strong> These calculators provide estimates for informational purposes
 					only. Actual figures may vary based on specific circumstances, bank policies, and market conditions.
-					Please consult with a qualified professional for personalized advice.
+					Please consult with a qualified professional for personalised advice.
 				</p>
 			</div>
 		</div>
@@ -496,16 +496,27 @@
 	}
 
 	.hero-title {
-		font-size: 48px;
+		font-size: 2.5rem;
 		font-weight: 700;
 		margin: 0 0 16px 0;
 		line-height: 1.2;
+
+		@media (max-width: 768px) {
+			font-size: 1.75rem;
+		}
 	}
 
 	.hero-subtitle {
 		font-size: 20px;
-		margin: 0;
+		color: #666;
+		max-width: 600px;
+		margin: 0 auto;
 		opacity: 0.9;
+
+		@media (max-width: 768px) {
+			font-size: 0.95rem;
+			max-width: 400px;
+		}
 	}
 
 	/* Calculator Toggle */
@@ -529,12 +540,17 @@
 		background: white;
 		border: 1px solid #e0e0e0;
 		border-radius: 1rem;
-		font-size: 16px;
+		font-size: 1rem;
 		font-weight: 600;
 		cursor: pointer;
 		transition: all 0.3s ease;
 		color: #1a1a1a;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+		@media (max-width: 768px) {
+			padding: 10px 20px;
+			font-size: 0.9rem;
+		}
 	}
 
 	.toggle-btn:hover {
@@ -602,12 +618,17 @@
 
 	/* Form Styles */
 	.calculator-form h2 {
-		font-size: 32px;
+		font-size: 1.5rem;
 		font-weight: 700;
 		margin: 0 0 12px 0;
+
+		@media (max-width: 768px) {
+			font-size: 1.2rem;
+		}
 	}
 
 	.calculator-description {
+		font-size: 1rem;
 		color: #666;
 		margin: 0 0 32px 0;
 		line-height: 1.6;
@@ -631,7 +652,7 @@
 		background: white;
 		border: 1px solid #d0d0d0;
 		border-radius: 0.8rem;
-		font-size: 16px;
+		font-size: 1rem;
 		transition: all 0.3s ease;
 	}
 
@@ -730,12 +751,14 @@
 		background: transparent;
 		color: #1a1a1a;
 		border: 2px solid #1a1a1a;
-		border-radius: 0.8rem;
+		border-radius: 0.75rem;
+		font-size: 1rem;
 		font-weight: 600;
 		cursor: pointer;
 		transition: all 0.3s ease;
 		margin-top: 12px;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		font-family: 'Poppins', sans-serif;
 	}
 
 	.reset-btn:hover {

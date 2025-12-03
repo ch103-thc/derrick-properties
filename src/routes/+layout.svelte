@@ -1,7 +1,9 @@
 <script>
 	import favicon from '$lib/assets/favicon.png';
 	import logo from '$lib/assets/logo.png';
+	import logoTransparent from '$lib/assets/logo-transparent.png';
 	import logoFooter from '$lib/assets/logo-footer.png';
+	import logoFooterTransparent from '$lib/assets/logo-footer-transparent.png';
 	import '@fontsource/poppins';
 	import Icon from '@iconify/svelte';
 	import '../main.scss';
@@ -80,9 +82,10 @@
 </svelte:head>
 
 <nav class="navbar-container" class:scrolled={isScrolled}>
-	<div class="navbar-brand">
+	<div class="navbar-logo">
 		<a href="/" class="home-link">
-			<img src={logo} alt="Logo" class="logo" />
+			<!-- <img src={logo} alt="Logo" class="logo" /> -->
+			<img src={isDark ? logoTransparent : logo} alt="Logo" class="logo" />
 		</a>
 	</div>
 
@@ -198,8 +201,8 @@
 
 	<!-- Mobile Menu Overlay -->
 	{#if isMobileMenuOpen}
+		<div class="mobile-menu-overlay" onclick={toggleMobileMenu}></div>
 		<div class="mobile-menu">
-			<!-- <div class="mobile-menu-overlay" onclick={toggleMobileMenu}></div> -->
 			<div class="mobile-menu-header">
 				<span class="mobile-menu-title">Menu</span>
 				<button class="mobile-close" onclick={toggleMobileMenu} aria-label="Close menu">
@@ -341,10 +344,11 @@
 	<div class="footer-container">
 		<div class="footer-brand">
 			<div class="brand-header">
-				<img src={logoFooter} alt="Logo" class="logo" />
+				<!-- <img src={logoFooter} alt="Logo" class="logo" /> -->
+				<img src={isDark ? logoFooterTransparent : logoFooter} alt="Logo" class="logo" />
 			</div>
 			<p class="brand-description">
-				Your trusted real estate partner. Specializing in portfolio upgrading and strategic property
+				Your trusted real estate partner. Specialising in portfolio upgrading and strategic property
 				investment with a systematic, data-driven approach.
 			</p>
 			<div class="social-links">
@@ -477,7 +481,7 @@
 		}
 	}
 
-	.navbar-brand {
+	.navbar-logo {
 		display: flex;
 		align-items: center;
 		gap: 12px;
@@ -485,11 +489,10 @@
 		.logo {
 			width: 150px;
 			height: auto;
-		}
 
-		.brand-name {
-			font-size: 20px;
-			font-weight: 700;
+			@media (max-width: 768px) {
+				width: 120px;
+			}
 		}
 	}
 
@@ -653,7 +656,7 @@
 		border: 2px solid #1a1a1a;
 		border-radius: 50px;
 		font-weight: 600;
-		font-size: 15px;
+		font-size: 1rem;
 		text-decoration: none;
 		cursor: pointer;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -663,6 +666,13 @@
 		&:hover {
 			transform: translateY(-4px);
 			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+		}
+
+		@media (max-width: 768px) {
+			.cta-button {
+				padding: 10px 20px;
+				font-size: 14px; /* optional: smaller text */
+			}
 		}
 	}
 
@@ -732,6 +742,7 @@
 	.mobile-menu {
 		display: none;
 		padding: 24px;
+		z-index: 999;
 
 		.mobile-menu-header {
 			display: flex;
@@ -778,6 +789,8 @@
 			overflow-y: auto;
 			box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
 			animation: slideIn 0.3s ease;
+			// Add smooth scrolling
+			-webkit-overflow-scrolling: touch;
 
 			ul {
 				list-style: none;
@@ -827,14 +840,14 @@
 					width: 100%;
 					padding: 14px 16px;
 					color: #333;
-					font-weight: 600;
+					font-weight: 500;
 					background: transparent;
 					border: none;
 					border-radius: 12px;
 					cursor: pointer;
 					transition: all 0.3s ease;
 					font-family: 'Poppins', sans-serif;
-					font-size: 16px;
+					font-size: 1rem;
 
 					&:hover {
 						background: #f0f0f0;
@@ -1051,6 +1064,10 @@
 					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 				}
 			}
+
+			@media (max-width: 768px) {
+				gap: 8px;
+			}
 		}
 	}
 
@@ -1073,7 +1090,7 @@
 
 	.footer-column {
 		h3 {
-			font-size: 16px;
+			font-size: 1rem;
 			font-weight: 600;
 			margin-bottom: 20px;
 			color: black;
@@ -1174,7 +1191,7 @@
 			display: none;
 		}
 
-		.navbar-brand {
+		.navbar-logo {
 			flex: 1;
 		}
 	}
