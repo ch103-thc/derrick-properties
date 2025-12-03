@@ -70,16 +70,6 @@
 				<div class="info-cards">
 					<div class="info-card">
 						<div class="icon-wrapper">
-							<Icon icon="mdi:phone" width="24" height="24" />
-						</div>
-						<div class="info-text">
-							<h3>Phone</h3>
-							<a href="tel:+6512345678">+65 1234 5678</a>
-						</div>
-					</div>
-
-					<div class="info-card">
-						<div class="icon-wrapper">
 							<Icon icon="mdi:email" width="24" height="24" />
 						</div>
 						<div class="info-text">
@@ -304,6 +294,21 @@
 				max-width: 400px;
 			}
 		}
+	}
+
+	/* DARK THEME - CONTACT HERO */
+	:global(html[data-theme='dark']) .contact-hero {
+		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		color: #ffffff;
+	}
+
+	:global(html[data-theme='dark']) .contact-hero .hero-title {
+		color: #ffffff;
+	}
+
+	:global(html[data-theme='dark']) .contact-hero .hero-subtitle {
+		color: #b0b0c0;
+		opacity: 0.9;
 	}
 
 	.contact-section {
@@ -701,7 +706,7 @@
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
-		padding: 14px 32px;
+		padding: 10px 20px;
 		background: transparent;
 		color: #1a1a1a;
 		border: 2px solid #1a1a1a;

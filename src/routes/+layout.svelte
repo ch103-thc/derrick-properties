@@ -195,7 +195,7 @@
 		<a href="/contact" class="cta-button">Contact Me</a>
 
 		<button class="hamburger" onclick={toggleMobileMenu} aria-label="Toggle menu">
-			<Icon icon="mdi:menu" width="24" height="24" />
+			<Icon icon="material-symbols:menu-rounded" width="24" height="24" />
 		</button>
 	</div>
 
@@ -206,7 +206,7 @@
 			<div class="mobile-menu-header">
 				<span class="mobile-menu-title">Menu</span>
 				<button class="mobile-close" onclick={toggleMobileMenu} aria-label="Close menu">
-					<Icon icon="mdi:close" width="24" height="24" />
+					<Icon icon="material-symbols:close-rounded" width="24" height="24" />
 				</button>
 			</div>
 			<ul>
@@ -403,8 +403,6 @@
 			<h3>Contact</h3>
 			<ul>
 				<li><a href="/contact">Get In Touch</a></li>
-				<li><a href="tel:+6512345678">+65 1234 5678</a></li>
-				<li><a href="mailto:info@yourdomain.com">info@yourdomain.com</a></li>
 				<li><a href="/contact">Schedule Consultation</a></li>
 			</ul>
 		</div>
@@ -575,7 +573,7 @@
 	.nav-link {
 		display: inline-flex;
 		align-items: center;
-		padding: 10px 20px;
+		padding: 10px 16px;
 		gap: 4px;
 		color: black;
 		text-decoration: none;
@@ -650,13 +648,13 @@
 
 	.cta-button {
 		display: inline-block;
-		padding: 14px 36px;
+		padding: 10px 20px;
 		background: transparent;
 		color: #1a1a1a;
 		border: 2px solid #1a1a1a;
 		border-radius: 50px;
 		font-weight: 600;
-		font-size: 1rem;
+		font-size: 14px;
 		text-decoration: none;
 		cursor: pointer;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -670,8 +668,8 @@
 
 		@media (max-width: 768px) {
 			.cta-button {
-				padding: 10px 20px;
-				font-size: 14px; /* optional: smaller text */
+				padding: 6px 12px;
+				font-size: 12px;
 			}
 		}
 	}

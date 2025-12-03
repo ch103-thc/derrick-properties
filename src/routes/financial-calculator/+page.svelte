@@ -500,8 +500,25 @@
 		font-weight: 700;
 		margin: 0 0 16px 0;
 		line-height: 1.2;
+	}
 
-		@media (max-width: 768px) {
+	/* DARK THEME - HERO SECTION */
+	:global(html[data-theme='dark']) .hero {
+		background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+		color: #ffffff;
+	}
+
+	:global(html[data-theme='dark']) .hero-title {
+		color: #ffffff;
+	}
+
+	:global(html[data-theme='dark']) .hero-subtitle {
+		color: #b0b0c0;
+		opacity: 0.9;
+	}
+
+	@media (max-width: 768px) {
+		.hero-title {
 			font-size: 1.75rem;
 		}
 	}
@@ -512,8 +529,10 @@
 		max-width: 600px;
 		margin: 0 auto;
 		opacity: 0.9;
+	}
 
-		@media (max-width: 768px) {
+	@media (max-width: 768px) {
+		.hero-subtitle {
 			font-size: 0.95rem;
 			max-width: 400px;
 		}
@@ -537,7 +556,7 @@
 
 	.toggle-btn {
 		padding: 14px 32px;
-		background: white;
+		background: #fff;
 		border: 1px solid #e0e0e0;
 		border-radius: 1rem;
 		font-size: 1rem;
@@ -546,8 +565,10 @@
 		transition: all 0.3s ease;
 		color: #1a1a1a;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	}
 
-		@media (max-width: 768px) {
+	@media (max-width: 768px) {
+		.toggle-btn {
 			padding: 10px 20px;
 			font-size: 0.9rem;
 		}
@@ -621,8 +642,10 @@
 		font-size: 1.5rem;
 		font-weight: 700;
 		margin: 0 0 12px 0;
+	}
 
-		@media (max-width: 768px) {
+	@media (max-width: 768px) {
+		.calculator-form h2 {
 			font-size: 1.2rem;
 		}
 	}
@@ -747,7 +770,7 @@
 
 	.reset-btn {
 		width: 100%;
-		padding: 12px;
+		padding: 10px 20px;
 		background: transparent;
 		color: #1a1a1a;
 		border: 2px solid #1a1a1a;
@@ -773,29 +796,6 @@
 		flex-direction: column;
 		gap: 20px;
 	}
-
-	/* .result-card {
-		background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 240, 245, 0.8) 100%);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		padding: 24px;
-		border-radius: 1rem;
-		border: 1.5px solid rgba(255, 255, 255, 0.6);
-		box-shadow:
-			0 4px 15px rgba(0, 0, 0, 0.08),
-			inset -1px -1px 3px rgba(0, 0, 0, 0.05),
-			inset 1px 1px 3px rgba(255, 255, 255, 0.8);
-	}
-
-	.result-card.primary {
-		background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
-		color: white;
-		border: 1.5px solid rgba(255, 255, 255, 0.2);
-		box-shadow:
-			0 8px 32px rgba(0, 0, 0, 0.2),
-			inset -1px -1px 3px rgba(0, 0, 0, 0.3),
-			inset 1px 1px 3px rgba(255, 255, 255, 0.1);
-	} */
 
 	.result-card {
 		background: white;

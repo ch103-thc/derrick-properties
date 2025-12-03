@@ -331,7 +331,7 @@
 
 	.info-text {
 		h2 {
-			font-size: 1.8rem;
+			font-size: 28px;
 			margin: 0 0 24px 0;
 			line-height: 1.2;
 			color: #333;
@@ -353,40 +353,59 @@
 		}
 	}
 
-	.cta-button,
-	.see-all-btn {
-		display: inline-block;
-		padding: 14px 36px;
-		background: transparent;
-		color: #1a1a1a;
-		border: 2px solid #1a1a1a;
-		border-radius: 50px;
-		font-weight: 600;
-		font-size: 1rem;
-		text-decoration: none;
-		cursor: pointer;
-		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-		letter-spacing: 0.5px;
-		margin-top: 16px;
+	.cta-button {
+	display: inline-block;
+	padding: 14px 36px;
+	background: transparent;
+	color: #1a1a1a;
+	border: 2px solid #1a1a1a;
+	border-radius: 50px;
+	font-weight: 600;
+	font-size: 1rem;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+	letter-spacing: 0.5px;
+	margin-top: 16px;
 
-		&:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-		}
-
-		@media (max-width: 768px) {
-			.cta-button,
-			.see-all-btn {
-				padding: 10px 20px;
-				font-size: 14px; /* optional: smaller text */
-			}
-		}
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 	}
 
-	.see-all-btn {
-		margin-top: 0;
+	@media (max-width: 768px) {
+		padding: 10px 20px;
+		font-size: 14px;
 	}
+}
+
+.see-all-btn {
+	display: inline-block;
+	padding: 10px 24px;
+	background: transparent;
+	color: #1a1a1a;
+	border: 2px solid #1a1a1a;
+	border-radius: 50px;
+	font-weight: 600;
+	font-size: 0.9rem;
+	text-decoration: none;
+	cursor: pointer;
+	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+	letter-spacing: 0.5px;
+	margin-top: 0;
+
+	&:hover {
+		transform: translateY(-4px);
+		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+	}
+
+	@media (max-width: 768px) {
+		padding: 8px 16px;
+		font-size: 13px;
+	}
+}
 
 	:global(html[data-theme='dark']) .cta-button,
 	:global(html[data-theme='dark']) .see-all-btn {
@@ -472,7 +491,7 @@
 		}
 
 		h2 {
-			font-size: 1.8rem;
+			font-size: 28px;
 			margin: 0 0 12px 0;
 			transition-delay: 0.1s;
 
@@ -557,7 +576,7 @@
 		}
 
 		h3 {
-			font-size: 1.5rem;
+			font-size: 18px;
 			margin: 0 0 8px 0;
 			position: relative;
 			display: inline-block;
@@ -581,7 +600,7 @@
 		}
 
 		p {
-			font-size: 1rem;
+			font-size: 15px;
 			margin: 0;
 			opacity: 0.9;
 			line-height: 1.5;
@@ -627,7 +646,7 @@
 
 		.header-text {
 			h2 {
-				font-size: 1.8rem;
+				font-size: 28px;
 				margin: 0;
 
 				@media (max-width: 768px) {
@@ -676,8 +695,8 @@
 	}
 
 	.arrow-btn {
-		width: 48px;
-		height: 48px;
+		width: 40px;
+		height: 40px;
 		background: transparent;
 		border: 2px solid #1a1a1a;
 		border-radius: 999px;
@@ -954,7 +973,7 @@
 	}
 
 	.read-date {
-		font-size: 14px;
+		font-size: 12px;
 		margin: 0 0 12px 0;
 		text-transform: uppercase;
 		letter-spacing: 0.8px;
@@ -963,7 +982,7 @@
 	}
 
 	.read-content h3 {
-		font-size: 1.2rem;
+		font-size: 18px;
 		font-weight: 600;
 		margin: 0 0 12px 0;
 		line-height: 1.4;
@@ -971,7 +990,7 @@
 	}
 
 	.read-description {
-		font-size: 0.95rem;
+		font-size: 15px;
 		line-height: 1.6;
 		margin: 0;
 		color: #666;
