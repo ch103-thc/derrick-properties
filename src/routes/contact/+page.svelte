@@ -1,5 +1,20 @@
 <script>
 	import Icon from '@iconify/svelte';
+	import { onMount } from 'svelte';
+
+	let contactInfoVisible = $state(false);
+	let formVisible = $state(false);
+
+	onMount(() => {
+		// Trigger animations with staggered delays
+		setTimeout(() => {
+			contactInfoVisible = true;
+		}, 100);
+
+		setTimeout(() => {
+			formVisible = true;
+		}, 300); // 300ms = 100ms + 200ms stagger delay
+	});
 
 	let formData = $state({
 		name: '',
@@ -60,7 +75,7 @@
 	<div class="container">
 		<div class="contact-grid">
 			<!-- Contact Information -->
-			<div class="contact-info">
+			<div class="contact-info" class:visible={contactInfoVisible}>
 				<h2>Let's Connect</h2>
 				<p class="intro-text">
 					Whether you're looking to upgrade your portfolio, explore new investment opportunities, or
@@ -80,21 +95,21 @@
 
 					<div class="info-card">
 						<div class="icon-wrapper">
-							<Icon icon="mdi:clock" width="24" height="24" />
-						</div>
-						<div class="info-text">
-							<h3>Availability</h3>
-							<p>Mon - Sat: 9:00 AM - 7:00 PM</p>
-						</div>
-					</div>
-
-					<div class="info-card">
-						<div class="icon-wrapper">
 							<Icon icon="mdi:whatsapp" width="24" height="24" />
 						</div>
 						<div class="info-text">
 							<h3>WhatsApp</h3>
 							<a href="https://wa.me/6512345678">Chat with me</a>
+						</div>
+					</div>
+
+					<div class="info-card">
+						<div class="icon-wrapper">
+							<Icon icon="mdi:clock" width="24" height="24" />
+						</div>
+						<div class="info-text">
+							<h3>Availability</h3>
+							<p>Mon - Sat: 9:00 AM - 7:00 PM</p>
 						</div>
 					</div>
 				</div>
@@ -116,7 +131,7 @@
 			</div>
 
 			<!-- Contact Form -->
-			<div class="contact-form-wrapper">
+			<div class="contact-form-wrapper" class:visible={formVisible}>
 				<form method="post" action="" class="contact-form" onsubmit={handleSubmit}>
 					<div class="form-group">
 						<label for="name">Full Name *</label>
@@ -278,7 +293,7 @@
 			line-height: 1.2;
 
 			@media (max-width: 768px) {
-				font-size: 1.75rem;
+				font-size: 36px;
 			}
 		}
 
@@ -290,7 +305,7 @@
 			opacity: 0.9;
 
 			@media (max-width: 768px) {
-				font-size: 0.95rem;
+				font-size: 16px;
 				max-width: 400px;
 			}
 		}
@@ -341,6 +356,10 @@
 	}
 
 	.contact-info {
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.6s ease;
+
 		h2 {
 			font-size: 2rem;
 			font-weight: 700;
@@ -357,6 +376,11 @@
 			color: #666;
 			margin: 0 0 40px 0;
 		}
+	}
+
+	.contact-info.visible {
+		opacity: 1;
+		transform: translateY(0);
 	}
 
 	:global(html[data-theme='dark']) .contact-info {
@@ -519,6 +543,15 @@
 		border-radius: 1.5rem;
 		border: 1px solid #e0e0e0;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+		opacity: 0;
+		transform: translateY(30px);
+		transition: all 0.6s ease;
+		transition-delay: 0.2s; // Stagger after contact-info
+	}
+
+	.contact-form-wrapper.visible {
+		opacity: 1;
+		transform: translateY(0);
 	}
 
 	:global(html[data-theme='dark']) .contact-form-wrapper {
@@ -761,18 +794,6 @@
 	}
 
 	@media (max-width: 768px) {
-		.contact-hero {
-			padding: 120px 0 40px;
-
-			h1 {
-				font-size: 36px;
-			}
-
-			p {
-				font-size: 16px;
-			}
-		}
-
 		.contact-form-wrapper {
 			padding: 24px;
 		}

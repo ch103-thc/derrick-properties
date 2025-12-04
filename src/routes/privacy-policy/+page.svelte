@@ -1,5 +1,17 @@
+<script>
+	import { onMount } from 'svelte';
+
+	let containerVisible = $state(false);
+
+	onMount(() => {
+		setTimeout(() => {
+			containerVisible = true;
+		}, 100);
+	});
+</script>
+
 <section class="privacy-policy">
-	<div class="container">
+	<div class="container" class:visible={containerVisible}>
 		<h1>Privacy Policy</h1>
 
 		<p>
@@ -108,6 +120,14 @@
 			border-radius: 1rem;
 			border: 1px solid #e0e0e0;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+			opacity: 0;
+			transform: translateY(30px);
+			transition: all 0.6s ease;
+
+			&.visible {
+				opacity: 1;
+				transform: translateY(0);
+			}
 
 			@media (max-width: 768px) {
 				padding: 2rem 1.5rem;

@@ -354,58 +354,58 @@
 	}
 
 	.cta-button {
-	display: inline-block;
-	padding: 14px 36px;
-	background: transparent;
-	color: #1a1a1a;
-	border: 2px solid #1a1a1a;
-	border-radius: 50px;
-	font-weight: 600;
-	font-size: 1rem;
-	text-decoration: none;
-	cursor: pointer;
-	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-	letter-spacing: 0.5px;
-	margin-top: 16px;
+		display: inline-block;
+		padding: 14px 36px;
+		background: transparent;
+		color: #1a1a1a;
+		border: 2px solid #1a1a1a;
+		border-radius: 50px;
+		font-weight: 600;
+		font-size: 1rem;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+		letter-spacing: 0.5px;
+		margin-top: 16px;
 
-	&:hover {
-		transform: translateY(-4px);
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+		&:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+		}
+
+		@media (max-width: 768px) {
+			padding: 10px 20px;
+			font-size: 14px;
+		}
 	}
 
-	@media (max-width: 768px) {
+	.see-all-btn {
+		display: inline-block;
 		padding: 10px 20px;
-		font-size: 14px;
-	}
-}
+		background: transparent;
+		color: #1a1a1a;
+		border: 2px solid #1a1a1a;
+		border-radius: 50px;
+		font-weight: 600;
+		font-size: 0.9rem;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+		letter-spacing: 0.5px;
+		margin-top: 0;
 
-.see-all-btn {
-	display: inline-block;
-	padding: 10px 24px;
-	background: transparent;
-	color: #1a1a1a;
-	border: 2px solid #1a1a1a;
-	border-radius: 50px;
-	font-weight: 600;
-	font-size: 0.9rem;
-	text-decoration: none;
-	cursor: pointer;
-	transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-	letter-spacing: 0.5px;
-	margin-top: 0;
+		&:hover {
+			transform: translateY(-4px);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+		}
 
-	&:hover {
-		transform: translateY(-4px);
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+		@media (max-width: 768px) {
+			padding: 10px 20px;
+			font-size: 14px;
+		}
 	}
-
-	@media (max-width: 768px) {
-		padding: 8px 16px;
-		font-size: 13px;
-	}
-}
 
 	:global(html[data-theme='dark']) .cta-button,
 	:global(html[data-theme='dark']) .see-all-btn {

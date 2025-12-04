@@ -21,21 +21,10 @@
 	let calculatorsVisible = $state(false);
 
 	onMount(() => {
-		const observer = new IntersectionObserver(
-			(entries) => {
-				entries.forEach((entry) => {
-					if (entry.isIntersecting) {
-						calculatorsVisible = true;
-					}
-				});
-			},
-			{ threshold: 0.1 }
-		);
-
-		const section = document.querySelector('.calculators-section');
-		if (section) observer.observe(section);
-
-		return () => observer.disconnect();
+		// Trigger animations on page load
+		setTimeout(() => {
+			calculatorsVisible = true;
+		}, 100);
 	});
 
 	function formatMoney(amount) {
@@ -519,7 +508,12 @@
 
 	@media (max-width: 768px) {
 		.hero-title {
-			font-size: 1.75rem;
+			font-size: 36px;
+		}
+
+		.hero-subtitle {
+			font-size: 16px;
+			max-width: 400px;
 		}
 	}
 
