@@ -176,8 +176,10 @@
 				color: #0077ff;
 				text-decoration: none;
 
-				&:hover {
-					text-decoration: underline;
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						text-decoration: underline;
+					}
 				}
 			}
 
@@ -301,8 +303,10 @@
 		a {
 			color: #6ba3ff;
 
-			&:hover {
-				color: #91bfff;
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					color: #91bfff;
+				}
 			}
 		}
 	}

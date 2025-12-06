@@ -369,9 +369,11 @@
 		letter-spacing: 0.5px;
 		margin-top: 16px;
 
-		&:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+			}
 		}
 
 		@media (max-width: 768px) {
@@ -396,9 +398,11 @@
 		letter-spacing: 0.5px;
 		margin-top: 0;
 
-		&:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+			}
 		}
 
 		@media (max-width: 768px) {
@@ -414,9 +418,11 @@
 		color: #f8f8f8;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
-		&:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+			}
 		}
 	}
 
@@ -558,8 +564,14 @@
 		}
 	}
 
-	.service-card:hover .service-image img {
-		transform: scale(1.05);
+	@media (hover: hover) and (pointer: fine) {
+		.service-card:hover .service-image img {
+			transform: scale(1.05);
+		}
+
+		.service-card:hover .service-info h3::after {
+			transform: scaleX(1);
+		}
 	}
 
 	.service-info {
@@ -609,10 +621,6 @@
 				font-size: 0.8rem;
 			}
 		}
-	}
-
-	.service-card:hover .service-info h3::after {
-		transform: scaleX(1);
 	}
 
 	:global(html[data-theme='dark']) .services {
@@ -677,9 +685,11 @@
 		transition: all 0.3s ease;
 		padding: 0;
 
-		&:hover {
-			background: #999;
-			transform: scale(1.2);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background: #999;
+				transform: scale(1.2);
+			}
 		}
 
 		&.active {
@@ -708,9 +718,11 @@
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 		color: #1a1a1a;
 
-		&:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+			}
 		}
 	}
 
@@ -720,9 +732,11 @@
 		color: #f8f8f8;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
-		&:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+			}
 		}
 	}
 
@@ -839,8 +853,10 @@
 	:global(html[data-theme='dark']) .indicator-dot {
 		background: #555;
 
-		&:hover {
-			background: #777;
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background: #777;
+			}
 		}
 
 		&.active {
@@ -933,11 +949,19 @@
 		flex-direction: column;
 		height: 100%;
 
-		&:hover {
-			transform: translateY(-4px);
-			background: #fafafa;
-			border-color: #d0d0d0;
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: translateY(-4px);
+				background: #fafafa;
+				border-color: #d0d0d0;
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+			}
+		}
+	}
+
+	@media (hover: hover) and (pointer: fine) {
+		.read-card:hover .read-image img {
+			transform: scale(1.08);
 		}
 	}
 
@@ -955,10 +979,6 @@
 			display: block;
 			transition: transform 0.4s ease;
 		}
-	}
-
-	.read-card:hover .read-image img {
-		transform: scale(1.08);
 	}
 
 	.read-content {
@@ -1002,11 +1022,13 @@
 		border: 1px solid rgba(255, 255, 255, 0.12);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
-		&:hover {
-			transform: translateY(-4px);
-			background: #4a4a4a;
-			border-color: rgba(255, 255, 255, 0.2);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: translateY(-4px);
+				background: #4a4a4a;
+				border-color: rgba(255, 255, 255, 0.2);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+			}
 		}
 	}
 

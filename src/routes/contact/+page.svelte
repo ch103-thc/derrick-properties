@@ -6,14 +6,22 @@
 	let formVisible = $state(false);
 
 	onMount(() => {
-		// Trigger animations with staggered delays
-		setTimeout(() => {
-			contactInfoVisible = true;
-		}, 100);
+		const isMobile = window.matchMedia('(max-width: 968px)').matches;
 
-		setTimeout(() => {
-			formVisible = true;
-		}, 300); // 300ms = 100ms + 200ms stagger delay
+		// Trigger animations with staggered delays
+		setTimeout(
+			() => {
+				contactInfoVisible = true;
+			},
+			isMobile ? 300 : 100
+		); // 300ms on mobile, 100ms on desktop
+
+		setTimeout(
+			() => {
+				formVisible = true;
+			},
+			isMobile ? 100 : 300
+		); // 100ms on mobile, 300ms on desktop
 	});
 
 	let formData = $state({
@@ -408,10 +416,12 @@
 		border-radius: 1rem;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
-		&:hover {
-			background: #fafafa;
-			transform: translateY(-4px);
-			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background: #fafafa;
+				transform: translateY(-4px);
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+			}
 		}
 
 		.icon-wrapper {
@@ -446,16 +456,20 @@
 				transition: color 0.3s ease;
 			}
 
-			a:hover {
-				color: #1a1a1a;
+			@media (hover: hover) and (pointer: fine) {
+				a:hover {
+					color: #1a1a1a;
+				}
 			}
 		}
 	}
 
 	:global(html[data-theme='dark']) .info-card {
-		&:hover {
-			background: #2a2a2a;
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background: #2a2a2a;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+			}
 		}
 
 		.icon-wrapper {
@@ -474,8 +488,10 @@
 				color: #b0b0c0;
 			}
 
-			a:hover {
-				color: #e8e8f0;
+			@media (hover: hover) and (pointer: fine) {
+				a:hover {
+					color: #e8e8f0;
+				}
 			}
 		}
 	}
@@ -505,10 +521,12 @@
 				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 
-				&:hover {
-					transform: translateY(-4px);
-					background: #fafafa;
-					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						transform: translateY(-4px);
+						background: #fafafa;
+						box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+					}
 				}
 			}
 
@@ -529,10 +547,12 @@
 			color: #fff;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
-			&:hover {
-				background: #3a3a3a;
-				border-color: #4a4a4a;
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					background: #3a3a3a;
+					border-color: #4a4a4a;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+				}
 			}
 		}
 	}
@@ -546,7 +566,6 @@
 		opacity: 0;
 		transform: translateY(30px);
 		transition: all 0.6s ease;
-		transition-delay: 0.2s; // Stagger after contact-info
 	}
 
 	.contact-form-wrapper.visible {
@@ -662,8 +681,10 @@
 					text-decoration: none;
 					font-weight: 600;
 
-					&:hover {
-						text-decoration: underline;
+					@media (hover: hover) and (pointer: fine) {
+						&:hover {
+							text-decoration: underline;
+						}
 					}
 				}
 			}
@@ -750,10 +771,12 @@
 		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
-		&:hover:not(:disabled) {
-			transform: translateY(-2px);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-			border-color: #444;
+		@media (hover: hover) and (pointer: fine) {
+			&:hover:not(:disabled) {
+				transform: translateY(-2px);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+				border-color: #444;
+			}
 		}
 
 		&:disabled {
@@ -777,10 +800,12 @@
 		border-color: #e8e8f0;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 
-		&:hover:not(:disabled) {
-			background: rgba(220, 220, 240, 0.2);
-			border-color: rgba(255, 255, 255, 0.25);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover:not(:disabled) {
+				background: rgba(220, 220, 240, 0.2);
+				border-color: rgba(255, 255, 255, 0.25);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+			}
 		}
 	}
 

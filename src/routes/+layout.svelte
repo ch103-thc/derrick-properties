@@ -344,8 +344,10 @@
 	<div class="footer-container">
 		<div class="footer-brand">
 			<div class="brand-header">
-				<!-- <img src={logoFooter} alt="Logo" class="logo" /> -->
-				<img src={isDark ? logoFooterTransparent : logoFooter} alt="Logo" class="logo" />
+				<a href="/" class="home-link">
+					<!-- <img src={logoFooter} alt="Logo" class="logo" /> -->
+					<img src={isDark ? logoFooterTransparent : logoFooter} alt="Logo" class="logo" />
+				</a>
 			</div>
 			<p class="brand-description">
 				Your trusted real estate partner. Specialising in portfolio upgrading and strategic property
@@ -532,10 +534,12 @@
 					border-radius: 0.8rem;
 					transition: all 0.3s ease;
 
-					&:hover {
-						background: #f0f0f0;
-						color: black;
-						transform: none;
+					@media (hover: hover) and (pointer: fine) {
+						&:hover {
+							background: #f0f0f0;
+							color: black;
+							transform: none;
+						}
 					}
 				}
 			}
@@ -563,9 +567,11 @@
 		li a {
 			color: #fff !important;
 
-			&:hover {
-				background: rgba(255, 255, 255, 0.1) !important;
-				color: #f8f8f8 !important;
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					background: rgba(255, 255, 255, 0.1) !important;
+					color: #f8f8f8 !important;
+				}
 			}
 		}
 	}
@@ -581,8 +587,10 @@
 		transition: all 0.3s ease;
 		border-radius: 50px;
 
-		&:hover {
-			background: #f0f0f0;
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background: #f0f0f0;
+			}
 		}
 
 		&:hover :global(svg) {
@@ -601,8 +609,10 @@
 	:global(html[data-theme='dark']) .nav-link {
 		color: #fff;
 
-		&:hover {
-			background: rgba(255, 255, 255, 0.1);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background: rgba(255, 255, 255, 0.1);
+			}
 		}
 	}
 
@@ -620,8 +630,10 @@
 		transition: background 0.3s ease;
 		margin: 0;
 
-		&:hover {
-			background: #f0f0f0;
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background: #f0f0f0;
+			}
 		}
 
 		&.rotating :global(svg) {
@@ -641,8 +653,10 @@
 	:global(html[data-theme='dark']) .theme-toggle {
 		color: #fff;
 
-		&:hover {
-			background: rgba(255, 255, 255, 0.1);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background: rgba(255, 255, 255, 0.1);
+			}
 		}
 	}
 
@@ -661,9 +675,11 @@
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 		letter-spacing: 0.5px;
 
-		&:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+			}
 		}
 
 		@media (max-width: 768px) {
@@ -680,9 +696,11 @@
 		color: #f8f8f8;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
-		&:hover {
-			transform: translateY(-4px);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+			}
 		}
 	}
 
@@ -696,8 +714,10 @@
 		border-radius: 8px;
 		transition: background 0.3s ease;
 
-		&:hover {
-			background: #f0f0f0;
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background: #f0f0f0;
+			}
 		}
 
 		@media (max-width: 768px) {
@@ -710,8 +730,10 @@
 	:global(html[data-theme='dark']) .hamburger {
 		color: #fff;
 
-		&:hover {
-			background: rgba(255, 255, 255, 0.1);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background: rgba(255, 255, 255, 0.1);
+			}
 		}
 	}
 
@@ -768,8 +790,10 @@
 				border-radius: 8px;
 				transition: background 0.3s ease;
 
-				&:hover {
-					background: #f0f0f0;
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						background: #f0f0f0;
+					}
 				}
 			}
 		}
@@ -810,8 +834,10 @@
 						transition: all 0.3s ease;
 						font-weight: 500;
 
-						&:hover {
-							background: #f0f0f0;
+						@media (hover: hover) and (pointer: fine) {
+							&:hover {
+								background: #f0f0f0;
+							}
 						}
 
 						&.mobile-cta {
@@ -822,8 +848,10 @@
 							justify-content: center;
 							font-weight: 600;
 
-							&:hover {
-								background: #333;
+							@media (hover: hover) and (pointer: fine) {
+								&:hover {
+									background: #333;
+								}
 							}
 						}
 					}
@@ -847,8 +875,10 @@
 					font-family: 'Poppins', sans-serif;
 					font-size: 1rem;
 
-					&:hover {
-						background: #f0f0f0;
+					@media (hover: hover) and (pointer: fine) {
+						&:hover {
+							background: #f0f0f0;
+						}
 					}
 
 					:global(svg) {
@@ -890,8 +920,10 @@
 			.mobile-close {
 				color: #fff;
 
-				&:hover {
-					background: rgba(255, 255, 255, 0.1);
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						background: rgba(255, 255, 255, 0.1);
+					}
 				}
 			}
 		}
@@ -899,16 +931,20 @@
 		ul li a {
 			color: #fff;
 
-			&:hover {
-				background: rgba(255, 255, 255, 0.1);
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					background: rgba(255, 255, 255, 0.1);
+				}
 			}
 
 			&.mobile-cta {
 				background: #fff;
 				color: #1a1a1a;
 
-				&:hover {
-					background: #f0f0f0;
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						background: #f0f0f0;
+					}
 				}
 			}
 		}
@@ -917,8 +953,10 @@
 			.mobile-dropdown-toggle {
 				color: #fff;
 
-				&:hover {
-					background: rgba(255, 255, 255, 0.1);
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						background: rgba(255, 255, 255, 0.1);
+					}
 				}
 			}
 		}
@@ -972,10 +1010,12 @@
 		z-index: 999;
 		transition: all 0.3s ease;
 
-		&:hover {
-			transform: scale(1.1);
-			background: rgba(37, 211, 102, 0.9);
-			box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: scale(1.1);
+				background: rgba(37, 211, 102, 0.9);
+				box-shadow: 0 8px 32px rgba(37, 211, 102, 0.6);
+			}
 		}
 
 		@media (max-width: 768px) {
@@ -1056,10 +1096,12 @@
 				transition: all 0.3s ease;
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 
-				&:hover {
-					transform: translateY(-4px);
-					background: #fafafa;
-					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						transform: translateY(-4px);
+						background: #fafafa;
+						box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+					}
 				}
 			}
 
@@ -1079,10 +1121,12 @@
 		color: #d0d0d0;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
-		&:hover {
-			background: rgba(238, 231, 222, 0.18);
-			border-color: rgba(255, 255, 255, 0.2);
-			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				background: rgba(238, 231, 222, 0.18);
+				border-color: rgba(255, 255, 255, 0.2);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+			}
 		}
 	}
 
@@ -1109,9 +1153,11 @@
 				transition: all 0.3s ease;
 				display: inline-block;
 
-				&:hover {
-					color: black;
-					transform: translateX(4px);
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						color: black;
+						transform: translateX(4px);
+					}
 				}
 			}
 		}
@@ -1125,8 +1171,10 @@
 		ul li a {
 			color: #aaa;
 
-			&:hover {
-				color: #fff;
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					color: #fff;
+				}
 			}
 		}
 	}
@@ -1158,8 +1206,10 @@
 				text-decoration: none;
 				transition: color 0.3s ease;
 
-				&:hover {
-					color: black;
+				@media (hover: hover) and (pointer: fine) {
+					&:hover {
+						color: black;
+					}
 				}
 			}
 		}
@@ -1172,8 +1222,10 @@
 		.footer-links a {
 			color: #aaa;
 
-			&:hover {
-				color: #fff;
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					color: #fff;
+				}
 			}
 		}
 	}

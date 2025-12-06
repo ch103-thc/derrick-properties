@@ -525,13 +525,6 @@
 		opacity: 0.9;
 	}
 
-	@media (max-width: 768px) {
-		.hero-subtitle {
-			font-size: 0.95rem;
-			max-width: 400px;
-		}
-	}
-
 	/* Calculator Toggle */
 	.calculator-toggle {
 		display: flex;
@@ -568,11 +561,13 @@
 		}
 	}
 
-	.toggle-btn:hover {
-		background: #f5f5f5;
-		border-color: #d0d0d0;
-		transform: translateY(-2px);
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+	@media (hover: hover) and (pointer: fine) {
+		.toggle-btn:hover {
+			background: #f5f5f5;
+			border-color: #d0d0d0;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+		}
 	}
 
 	.toggle-btn.active {
@@ -614,20 +609,6 @@
 			grid-template-columns: 1fr;
 			gap: 40px;
 			padding: 32px;
-		}
-	}
-
-	@media (max-width: 640px) {
-		.calculator-grid {
-			padding: 24px;
-		}
-
-		.hero-title {
-			font-size: 36px;
-		}
-
-		.hero-subtitle {
-			font-size: 18px;
 		}
 	}
 
@@ -702,9 +683,11 @@
 		transition: all 0.2s ease;
 	}
 
-	.form-group input[type='range']::-webkit-slider-thumb:hover {
-		transform: scale(1.15);
-		box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+	@media (hover: hover) and (pointer: fine) {
+		.form-group input[type='range']::-webkit-slider-thumb:hover {
+			transform: scale(1.15);
+			box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+		}
 	}
 
 	.form-group input[type='range']::-moz-range-thumb {
@@ -778,10 +761,12 @@
 		font-family: 'Poppins', sans-serif;
 	}
 
-	.reset-btn:hover {
-		border-color: #444;
-		transform: translateY(-2px);
-		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+	@media (hover: hover) and (pointer: fine) {
+		.reset-btn:hover {
+			border-color: #444;
+			transform: translateY(-2px);
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+		}
 	}
 
 	/* Results Styles */
@@ -1004,10 +989,19 @@
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
 	}
 
-	:global(html[data-theme='dark']) .toggle-btn:hover {
-		background: rgba(70, 70, 90, 0.6);
-		border-color: rgba(255, 255, 255, 0.2);
-		box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+	@media (hover: hover) and (pointer: fine) {
+		:global(html[data-theme='dark']) .toggle-btn:hover {
+			background: rgba(70, 70, 90, 0.6);
+			border-color: rgba(255, 255, 255, 0.2);
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+		}
+
+		:global(html[data-theme='dark']) .toggle-btn.active:hover {
+			box-shadow:
+				0 12px 40px rgba(0, 0, 0, 0.6),
+				inset -1px -1px 3px rgba(0, 0, 0, 0.6),
+				inset 1px 1px 3px rgba(255, 255, 255, 0.15);
+		}
 	}
 
 	:global(html[data-theme='dark']) .toggle-btn.active {
@@ -1015,13 +1009,6 @@
 		border-color: #64748b;
 		color: #ffffff;
 		box-shadow: 0 2px 8px rgba(100, 116, 139, 0.35);
-	}
-
-	:global(html[data-theme='dark']) .toggle-btn.active:hover {
-		box-shadow:
-			0 12px 40px rgba(0, 0, 0, 0.6),
-			inset -1px -1px 3px rgba(0, 0, 0, 0.6),
-			inset 1px 1px 3px rgba(255, 255, 255, 0.15);
 	}
 
 	/* DARK THEME - CALCULATOR GRID */
@@ -1089,8 +1076,10 @@
 		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 	}
 
-	:global(html[data-theme='dark']) .reset-btn:hover {
-		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+	@media (hover: hover) and (pointer: fine) {
+		:global(html[data-theme='dark']) .reset-btn:hover {
+			box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+		}
 	}
 
 	/* DARK THEME - RESULT CARDS */
