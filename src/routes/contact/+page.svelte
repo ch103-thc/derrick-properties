@@ -514,17 +514,15 @@
 				justify-content: center;
 				width: 40px;
 				height: 40px;
-				background: #fff;
-				border: 1px solid #e0e0e0;
-				border-radius: 50%;
+				background: transparent;
 				color: #1a1a1a;
+				border-radius: 50%;
 				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
 						transform: translateY(-4px);
-						background: #fafafa;
 						box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 					}
 				}
@@ -542,15 +540,13 @@
 		}
 
 		.social-links a {
-			background: #2a2a2a;
-			border: 1px solid #3a3a3a;
-			color: #fff;
+			background: transparent;
+			color: #f8f8f8;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
-					background: #3a3a3a;
-					border-color: #4a4a4a;
+					transform: translateY(-4px);
 					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 				}
 			}

@@ -97,6 +97,48 @@
 			],
 			name: "Lau's Story",
 			photo: 'img/journey/lau-story.jpeg'
+		},
+		{
+			review: [
+				'Rafi first reached out to me after seeing my FB story about how I helped Emilia, a single buyer, secure her 3-room flat. At that time, his situation was tough — he was working as a food delivery rider, his wife was on an LTVP and not working yet, and they were living in a rented flat under his mom’s name with their four growing children.',
+				'He asked me a simple but heartfelt question: “Bro do you think I have any chance to give my family a home of our own?”',
+				'But things weren’t straightforward. Rafi was under a bank loan restructuring program with two more years left, which made getting any housing loan extremely difficult. This was a genuine case that needed real guidance — not just a quick “no” like what he had heard from other agents.',
+				'I sat down with him and mapped out a clear, realistic path forward: • secure a permanent job so he can qualify for an HDB loan • prioritise clearing his remaining debts • renew his wife’s passport and LTVP • eventually get her employed too, to strengthen the family’s income • understand how CPF can support the journey',
+				'By the end of our conversation, he thanked me — saying most agents had turned him away once they heard his situation. I assured him that I was here to walk this journey with him, no matter how long it took.',
+				'Fast forward two years. Rafi called me again — this time with good news. He had a stable, permanent job… and his wife had become a PR. That was the green light we needed. We met up, re-assessed everything, and moved forward with confidence.',
+				'Today, Rafi and his family are proud owners of a 4-room flat, conveniently located near their daughter’s school and close to his sister’s house — making it easier for his mom to visit too.',
+				'Seeing the smile on his face, and knowing how much this home means for his children’s future, reminds me why I do what I do. This profession isn’t just about homes — it’s about changing lives, one family at a time. 💛🏡✨',
+				'If you’re unsure about your situation or feel like your chances are low - it’s okay. Sometimes you just need someone to show you the path. PM me anytime. I’m here to help.'
+			],
+			name: "Rafi's Story",
+			photo: 'img/journey/rafi-story.jpeg'
+		},
+		{
+			review: [
+				'During one of our activities, Mrs Tay approached me with an interest in investing in a property. It was a broad desire — and like many first-time investors, she wasn’t sure what direction made the most sense for her goals.',
+				'We had an open and honest chat about her current home, her finances, and what she hoped to achieve. Local commercial or industrial properties didn’t match her lifestyle or comfort level. Buying another local residential property under her daughter’s name also didn’t feel right, especially with her daughter just entering her graduation year.',
+				'That narrowed our path to a meaningful, realistic option: ✨ a neighbouring overseas property — one that fit her budget, offered potential rental income, and aligned with her long-term plans.',
+				'I connected her with my trusted cross-border partner to ensure we fully understood the policies and regulations involved. Protecting her interests was priority. Together, we reviewed options, analysed the rules, and even travelled across the border for site visits.',
+				'And that’s when everything clicked. We found a development with beautiful natural surroundings — a unit with serene sea views right from the balcony, and from the higher floors, a sweeping view of the local township below. It offered both tranquility and vibrancy — exactly the kind of environment she could see value in for the long term.',
+				'After several discussions and on-site evaluations, she made her decision with full confidence. Today, Mrs Tay is delighted — not just because she secured a promising investment, but because it aligns perfectly with her plans for her daughter’s future and her own retirement lifestyle.',
+				'Property decisions aren’t just about numbers. They’re about clarity, care, and helping clients find a future they feel good about. 🌊🏡✨'
+			],
+			name: "Mrs Tay's Story",
+			photo: 'img/journey/tay-story.jpeg'
+		},
+		{
+			review: [
+				'Viewing showflats is a favourite pastime for many people — and that’s exactly how I bumped into Mr Teh, a gentleman in his 50s, while I was on duty. We toured the showflat together, and soon after, we dived into a conversation about policies, numbers, and the realities of today’s property market.',
+				'We analysed nearby projects, looked at both sale and rental trends, and discussed where the market is likely heading in the near future. These insights were important, especially for someone like Mr Teh — a finance professional who understands numbers better than anyone.',
+				'Initially, the idea of owning a private investment-cum-own-stay property seemed too heavy on his finances. After reviewing the calculations together, it became clear that pushing for a private condo immediately wouldn’t be the most balanced move.',
+				'That’s when we zoomed in on a more strategic path: ✨ Upgrading to an Executive Condo (EC) It made perfect sense — he could secure a new home without having to offload his existing property right away. More flexibility, less pressure, and better long-term planning.',
+				'We went through several EC projects that fit his budget, lifestyle, and future plans. Keeping his son’s working location in mind, he eventually made a decisive choice: ✔ a project with a sizable land parcel ✔ facilities he could enjoy now ✔ and strong appeal for resale or retirement planning later',
+				'Today, Mr Teh feels confident and excited about the road ahead — knowing he made a strategic, future-proof decision that balances his finances, lifestyle, and long-term goals.',
+				'Helping clients see both numbers and possibilities… that’s where the magic happens. ✨🏡',
+				'PM me if you are in search and needs a 2nd proposal to understand better. Always ready to assist.'
+			],
+			name: "Mr Teh's Story",
+			photo: 'img/journey/teh-story.jpeg'
 		}
 	];
 
@@ -331,9 +373,8 @@
 
 	.info-text {
 		h2 {
-			font-size: 28px;
+			font-size: 32px;
 			margin: 0 0 24px 0;
-			line-height: 1.2;
 			color: #333;
 
 			@media (max-width: 768px) {
@@ -343,7 +384,7 @@
 
 		p {
 			font-size: 1rem;
-			line-height: 1.7;
+			line-height: 1.5;
 			margin: 0 0 20px 0;
 			max-width: 590px;
 
@@ -355,9 +396,9 @@
 
 	.cta-button {
 		display: inline-block;
-		padding: 14px 36px;
-		background: transparent;
-		color: #1a1a1a;
+		padding: 12px 32px;
+		background: #1a1a1a;
+		color: #f8f8f8;
 		border: 2px solid #1a1a1a;
 		border-radius: 50px;
 		font-weight: 600;
@@ -371,22 +412,19 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				transform: translateY(-4px);
 				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+				background: #333;
 			}
 		}
 
-		@media (max-width: 768px) {
-			padding: 10px 20px;
-			font-size: 14px;
-		}
+
 	}
 
 	.see-all-btn {
 		display: inline-block;
 		padding: 10px 20px;
-		background: transparent;
-		color: #1a1a1a;
+		background: #1a1a1a;
+		color: #f8f8f8;
 		border: 2px solid #1a1a1a;
 		border-radius: 50px;
 		font-weight: 600;
@@ -400,28 +438,25 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				transform: translateY(-4px);
 				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+				background: #333;
 			}
 		}
 
-		@media (max-width: 768px) {
-			padding: 10px 20px;
-			font-size: 14px;
-		}
+
 	}
 
 	:global(html[data-theme='dark']) .cta-button,
 	:global(html[data-theme='dark']) .see-all-btn {
-		background: transparent;
+		background: #f8f8f8;
 		border: 2px solid #f8f8f8;
-		color: #f8f8f8;
+		color: #1a1a1a;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				transform: translateY(-4px);
 				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+				background: #e0e0e0;
 			}
 		}
 	}
@@ -497,7 +532,7 @@
 		}
 
 		h2 {
-			font-size: 28px;
+			font-size: 32px;
 			margin: 0 0 12px 0;
 			transition-delay: 0.1s;
 
@@ -507,10 +542,14 @@
 		}
 
 		.sub-header {
-			font-size: 18px;
+			font-size: 16px;
 			color: #666;
 			margin: 0;
 			transition-delay: 0.2s;
+
+			@media (max-width: 768px) {
+            font-size: 15px;
+        }
 		}
 	}
 
@@ -584,17 +623,17 @@
 		color: white;
 
 		@media (max-width: 768px) {
-			padding: 16px;
+			padding: 20px;
 		}
 
 		h3 {
-			font-size: 18px;
+			font-size: 20px;
 			margin: 0 0 8px 0;
 			position: relative;
 			display: inline-block;
 
 			@media (max-width: 768px) {
-				font-size: 1rem;
+				font-size: 18px;
 			}
 
 			&::after {
@@ -618,7 +657,7 @@
 			line-height: 1.5;
 
 			@media (max-width: 768px) {
-				font-size: 0.8rem;
+				font-size: 14px;
 			}
 		}
 	}
@@ -654,7 +693,7 @@
 
 		.header-text {
 			h2 {
-				font-size: 28px;
+				font-size: 32px;
 				margin: 0;
 
 				@media (max-width: 768px) {
@@ -697,6 +736,15 @@
 			width: 24px;
 			border-radius: 5px;
 		}
+
+		@media (max-width: 768px) {
+        width: 8px;
+        height: 8px;
+        
+        &.active {
+            width: 20px;
+        }
+    }
 	}
 
 	.nav-arrows {
@@ -705,8 +753,8 @@
 	}
 
 	.arrow-btn {
-		width: 40px;
-		height: 40px;
+		width: 44px;
+		height: 44px;
 		background: transparent;
 		border: 2px solid #1a1a1a;
 		border-radius: 999px;
@@ -717,13 +765,6 @@
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 		color: #1a1a1a;
-
-		@media (hover: hover) and (pointer: fine) {
-			&:hover {
-				transform: translateY(-4px);
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-			}
-		}
 	}
 
 	:global(html[data-theme='dark']) .arrow-btn {
@@ -731,13 +772,6 @@
 		border: 2px solid #f8f8f8;
 		color: #f8f8f8;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-
-		@media (hover: hover) and (pointer: fine) {
-			&:hover {
-				transform: translateY(-4px);
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-			}
-		}
 	}
 
 	.journey-content {
@@ -832,13 +866,11 @@
 
 	.review {
 		font-size: 1rem;
-		line-height: 1.8;
+		line-height: 1.6;
 		margin: 0 0 20px 0;
 		white-space: pre-line;
 
-		@media (max-width: 768px) {
-			font-size: 17px;
-		}
+
 	}
 
 	.reviewer {
@@ -1002,16 +1034,18 @@
 	}
 
 	.read-content h3 {
-		font-size: 18px;
+		font-size: 20px;
 		font-weight: 600;
 		margin: 0 0 12px 0;
-		line-height: 1.4;
 		color: #1a1a1a;
+
+		@media (max-width: 768px) {
+        font-size: 18px;
+    }
 	}
 
 	.read-description {
 		font-size: 15px;
-		line-height: 1.6;
 		margin: 0;
 		color: #666;
 		flex-grow: 1;

@@ -134,7 +134,6 @@
 				</li>
 			</ul>
 		</li>
-		<li><a href="/portfolio" class="nav-link">Portfolio</a></li>
 		<li class="dropdown">
 			<div class="nav-link">
 				<span>Resources</span>
@@ -144,11 +143,6 @@
 				<li>
 					<a href="/about"
 						><Icon icon="mdi:information" width="20" height="20" /><span>About</span></a
-					>
-				</li>
-				<li>
-					<a href="/portfolio"
-						><Icon icon="mdi:briefcase" width="20" height="20" /><span>Portfolio</span></a
 					>
 				</li>
 				<li>
@@ -264,8 +258,6 @@
 					{/if}
 				</li>
 
-				<li><a href="/portfolio" onclick={toggleMobileMenu}>Portfolio</a></li>
-
 				<li class="mobile-dropdown">
 					<button
 						class="mobile-dropdown-toggle"
@@ -281,12 +273,6 @@
 								<a href="/about" onclick={toggleMobileMenu}>
 									<Icon icon="mdi:information" width="18" height="18" />
 									<span>About</span>
-								</a>
-							</li>
-							<li>
-								<a href="/portfolio" onclick={toggleMobileMenu}>
-									<Icon icon="mdi:briefcase" width="18" height="18" />
-									<span>Portfolio</span>
 								</a>
 							</li>
 							<li>
@@ -385,7 +371,6 @@
 			<h3>Resources</h3>
 			<ul>
 				<li><a href="/about">About</a></li>
-				<li><a href="/portfolio">Portfolio</a></li>
 				<li><a href="/reads">Featured Reads</a></li>
 				<li><a href="/testimonials">Testimonials</a></li>
 				<li>
@@ -663,8 +648,8 @@
 	.cta-button {
 		display: inline-block;
 		padding: 10px 20px;
-		background: transparent;
-		color: #1a1a1a;
+		background: #1a1a1a;
+		color: #f8f8f8;
 		border: 2px solid #1a1a1a;
 		border-radius: 50px;
 		font-weight: 600;
@@ -677,8 +662,8 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				transform: translateY(-4px);
 				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+				background: #333;
 			}
 		}
 
@@ -691,15 +676,15 @@
 	}
 
 	:global(html[data-theme='dark']) .cta-button {
-		background: transparent;
+		background: #f8f8f8;
 		border: 2px solid #f8f8f8;
-		color: #f8f8f8;
+		color: #1a1a1a;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				transform: translateY(-4px);
 				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+				background: #e0e0e0;
 			}
 		}
 	}
@@ -1087,19 +1072,17 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				width: 40px;
-				height: 40px;
-				background: #fff;
-				border: 1px solid #e0e0e0;
-				border-radius: 50%;
+				width: 36px;
+				height: 36px;
+				background: transparent;
 				color: #1a1a1a;
-				transition: all 0.3s ease;
+				border-radius: 50%;
+				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
 						transform: translateY(-4px);
-						background: #fafafa;
 						box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 					}
 				}
@@ -1116,15 +1099,13 @@
 	}
 
 	:global(html[data-theme='dark']) .footer-brand .social-links a {
-		background: rgba(238, 231, 222, 0.12);
-		border: 1px solid rgba(255, 255, 255, 0.12);
-		color: #d0d0d0;
+		background: transparent;
+		color: #f8f8f8;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				background: rgba(238, 231, 222, 0.18);
-				border-color: rgba(255, 255, 255, 0.2);
+				transform: translateY(-4px);
 				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 			}
 		}
