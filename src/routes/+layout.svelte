@@ -1060,7 +1060,7 @@
 
 		.brand-description {
 			color: #666;
-			line-height: 1.6;
+			line-height: 1.7;
 			font-size: 14px;
 		}
 

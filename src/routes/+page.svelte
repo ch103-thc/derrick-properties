@@ -384,7 +384,7 @@
 
 		p {
 			font-size: 1rem;
-			line-height: 1.5;
+			line-height: 1.7;
 			margin: 0 0 20px 0;
 			max-width: 590px;
 
@@ -416,8 +416,6 @@
 				background: #333;
 			}
 		}
-
-
 	}
 
 	.see-all-btn {
@@ -442,8 +440,6 @@
 				background: #333;
 			}
 		}
-
-
 	}
 
 	:global(html[data-theme='dark']) .cta-button,
@@ -548,8 +544,8 @@
 			transition-delay: 0.2s;
 
 			@media (max-width: 768px) {
-            font-size: 15px;
-        }
+				font-size: 15px;
+			}
 		}
 	}
 
@@ -627,13 +623,13 @@
 		}
 
 		h3 {
-			font-size: 20px;
+			font-size: 18px;
 			margin: 0 0 8px 0;
 			position: relative;
 			display: inline-block;
 
 			@media (max-width: 768px) {
-				font-size: 18px;
+				font-size: 16px;
 			}
 
 			&::after {
@@ -738,13 +734,13 @@
 		}
 
 		@media (max-width: 768px) {
-        width: 8px;
-        height: 8px;
-        
-        &.active {
-            width: 20px;
-        }
-    }
+			width: 8px;
+			height: 8px;
+
+			&.active {
+				width: 20px;
+			}
+		}
 	}
 
 	.nav-arrows {
@@ -866,11 +862,9 @@
 
 	.review {
 		font-size: 1rem;
-		line-height: 1.6;
+		line-height: 1.7;
 		margin: 0 0 20px 0;
 		white-space: pre-line;
-
-
 	}
 
 	.reviewer {
@@ -1040,8 +1034,8 @@
 		color: #1a1a1a;
 
 		@media (max-width: 768px) {
-        font-size: 18px;
-    }
+			font-size: 18px;
+		}
 	}
 
 	.read-description {
