@@ -126,13 +126,13 @@
 					<h3>Connect on Social Media</h3>
 					<div class="social-links">
 						<a href="#" aria-label="Facebook">
-							<Icon icon="mdi:facebook" width="20" height="20" />
+							<Icon icon="mdi:facebook" width="24" height="24" />
 						</a>
 						<a href="#" aria-label="LinkedIn">
-							<Icon icon="mdi:linkedin" width="20" height="20" />
+							<Icon icon="mdi:linkedin" width="24" height="24" />
 						</a>
 						<a href="#" aria-label="Instagram">
-							<Icon icon="mdi:instagram" width="20" height="20" />
+							<Icon icon="mdi:instagram" width="24" height="24" />
 						</a>
 					</div>
 				</div>
@@ -512,8 +512,8 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				width: 40px;
-				height: 40px;
+				width: 44px;
+				height: 44px;
 				background: transparent;
 				color: #1a1a1a;
 				border-radius: 50%;
@@ -756,29 +756,27 @@
 		align-items: center;
 		justify-content: center;
 		gap: 8px;
-		padding: 10px 20px;
-		background: transparent;
-		color: #1a1a1a;
-		border: 2px solid #1a1a1a;
+		padding: 12px 20px;
+		background: #1a1a1a;
+		color: #f8f8f8;
+		border: none;
 		border-radius: 0.75rem;
 		font-size: 1rem;
 		font-weight: 600;
 		cursor: pointer;
-		transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover:not(:disabled) {
-				transform: translateY(-2px);
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-				border-color: #444;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+				background: #333;
 			}
 		}
 
 		&:disabled {
 			opacity: 0.6;
 			cursor: not-allowed;
-			transform: none;
 		}
 
 		:global(.spinner) {
@@ -791,16 +789,14 @@
 	}
 
 	:global(html[data-theme='dark']) .submit-btn {
-		background: transparent;
-		color: #e8e8f0;
-		border-color: #e8e8f0;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+		background: #f8f8f8;
+		color: #1a1a1a;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover:not(:disabled) {
-				background: rgba(220, 220, 240, 0.2);
-				border-color: rgba(255, 255, 255, 0.25);
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+				background: #e0e0e0;
 			}
 		}
 	}

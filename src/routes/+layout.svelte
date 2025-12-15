@@ -396,7 +396,7 @@
 	</div>
 
 	<div class="footer-bottom">
-		<p>Copyright © {new Date().getFullYear()} Brand. All rights reserved.</p>
+		<p>Copyright © {new Date().getFullYear()} D'Home Series. All rights reserved.</p>
 		<div class="footer-links">
 			<a href="/privacy-policy">Privacy Policy</a>
 		</div>
@@ -647,10 +647,9 @@
 
 	.cta-button {
 		display: inline-block;
-		padding: 10px 20px;
+		padding: 12px 20px;
 		background: #1a1a1a;
 		color: #f8f8f8;
-		border: 2px solid #1a1a1a;
 		border-radius: 50px;
 		font-weight: 600;
 		font-size: 14px;
@@ -658,7 +657,7 @@
 		cursor: pointer;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-		letter-spacing: 0.5px;
+		// letter-spacing: 0.5px;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -666,18 +665,10 @@
 				background: #333;
 			}
 		}
-
-		@media (max-width: 768px) {
-			.cta-button {
-				padding: 6px 12px;
-				font-size: 12px;
-			}
-		}
 	}
 
 	:global(html[data-theme='dark']) .cta-button {
 		background: #f8f8f8;
-		border: 2px solid #f8f8f8;
 		color: #1a1a1a;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
@@ -832,6 +823,8 @@
 							text-align: center;
 							justify-content: center;
 							font-weight: 600;
+							padding: 12px 16px;
+							font-size: 14px;
 
 							@media (hover: hover) and (pointer: fine) {
 								&:hover {
@@ -1072,8 +1065,8 @@
 				display: flex;
 				align-items: center;
 				justify-content: center;
-				width: 36px;
-				height: 36px;
+				width: 44px;
+				height: 44px;
 				background: transparent;
 				color: #1a1a1a;
 				border-radius: 50%;

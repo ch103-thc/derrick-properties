@@ -396,10 +396,9 @@
 
 	.cta-button {
 		display: inline-block;
-		padding: 12px 32px;
+		padding: 16px 32px;
 		background: #1a1a1a;
 		color: #f8f8f8;
-		border: 2px solid #1a1a1a;
 		border-radius: 50px;
 		font-weight: 600;
 		font-size: 1rem;
@@ -407,7 +406,7 @@
 		cursor: pointer;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-		letter-spacing: 0.5px;
+		// letter-spacing: 0.5px;
 		margin-top: 16px;
 
 		@media (hover: hover) and (pointer: fine) {
@@ -420,10 +419,9 @@
 
 	.see-all-btn {
 		display: inline-block;
-		padding: 10px 20px;
+		padding: 12px 20px;
 		background: #1a1a1a;
 		color: #f8f8f8;
-		border: 2px solid #1a1a1a;
 		border-radius: 50px;
 		font-weight: 600;
 		font-size: 0.9rem;
@@ -431,7 +429,7 @@
 		cursor: pointer;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-		letter-spacing: 0.5px;
+		// letter-spacing: 0.5px;
 		margin-top: 0;
 
 		@media (hover: hover) and (pointer: fine) {
@@ -445,7 +443,6 @@
 	:global(html[data-theme='dark']) .cta-button,
 	:global(html[data-theme='dark']) .see-all-btn {
 		background: #f8f8f8;
-		border: 2px solid #f8f8f8;
 		color: #1a1a1a;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
@@ -1022,7 +1019,7 @@
 		font-size: 12px;
 		margin: 0 0 12px 0;
 		text-transform: uppercase;
-		letter-spacing: 0.8px;
+		// letter-spacing: 0.8px;
 		color: rgba(80, 80, 100, 0.7);
 		font-weight: 500;
 	}

@@ -848,17 +848,6 @@
 		font-weight: 600;
 	}
 
-	/* .breakdown-card {
-		background: linear-gradient(135deg, rgba(255, 255, 255, 0.9) 0%, rgba(240, 240, 245, 0.8) 100%);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		border: 1.5px solid rgba(255, 255, 255, 0.6);
-		box-shadow:
-			0 4px 15px rgba(0, 0, 0, 0.08),
-			inset -1px -1px 3px rgba(0, 0, 0, 0.05),
-			inset 1px 1px 3px rgba(255, 255, 255, 0.8);
-	} */
-
 	.breakdown-card {
 		background: white;
 		border: 1px solid #e0e0e0;
@@ -923,29 +912,6 @@
 		margin: 0;
 		max-width: 300px;
 	}
-
-	/* Disclaimer */
-	/* .disclaimer {
-		margin-top: 40px;
-		padding: 24px;
-		background: linear-gradient(
-			135deg,
-			rgba(255, 255, 255, 0.85) 0%,
-			rgba(245, 245, 250, 0.75) 100%
-		);
-		backdrop-filter: blur(8px);
-		-webkit-backdrop-filter: blur(8px);
-		border-radius: 0.25rem;
-		border-left: 4px solid #ff9800;
-		opacity: 0;
-		transform: translateY(20px);
-		transition: all 0.6s ease;
-		transition-delay: 0.3s;
-		box-shadow:
-			0 4px 15px rgba(0, 0, 0, 0.05),
-			inset -1px -1px 2px rgba(0, 0, 0, 0.03),
-			inset 1px 1px 2px rgba(255, 255, 255, 0.7);
-	} */
 
 	.disclaimer {
 		margin-top: 40px;
@@ -1120,22 +1086,6 @@
 		color: #d0d0d0;
 	}
 
-	/* DARK THEME - BREAKDOWN CARD */
-	/* :global(html[data-theme='dark']) .breakdown-card {
-		background: linear-gradient(
-			135deg,
-			rgba(238, 231, 222, 0.12) 0%,
-			rgba(238, 231, 222, 0.04) 100%
-		);
-		backdrop-filter: blur(10px);
-		-webkit-backdrop-filter: blur(10px);
-		border: 1.5px solid rgba(255, 255, 255, 0.12);
-		box-shadow:
-			0 4px 15px rgba(0, 0, 0, 0.3),
-			inset -1px -1px 3px rgba(0, 0, 0, 0.3),
-			inset 1px 1px 3px rgba(255, 255, 255, 0.08);
-	} */
-
 	:global(html[data-theme='dark']) .breakdown-card {
 		background: rgba(238, 231, 222, 0.12);
 		border: 1px solid rgba(255, 255, 255, 0.12);
@@ -1173,17 +1123,6 @@
 	:global(html[data-theme='dark']) .empty-state svg {
 		color: #505060;
 	}
-
-	/* DARK THEME - DISCLAIMER */
-	/* :global(html[data-theme='dark']) .disclaimer {
-		background: linear-gradient(135deg, rgba(70, 75, 100, 0.35) 0%, rgba(50, 55, 80, 0.3) 100%);
-		border-color: rgba(255, 165, 0, 0.25);
-		border-left-color: #ffb74d;
-		box-shadow:
-			0 4px 15px rgba(0, 0, 0, 0.3),
-			inset -1px -1px 2px rgba(0, 0, 0, 0.2),
-			inset 1px 1px 2px rgba(255, 255, 255, 0.08);
-	} */
 
 	:global(html[data-theme='dark']) .disclaimer {
 		background: rgba(70, 75, 100, 0.35);
