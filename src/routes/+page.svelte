@@ -144,21 +144,21 @@
 
 	const reads = [
 		{
-			image: 'https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=800',
+			image: 'img/read/first.jpg',
 			date: 'Nov 5, 2025',
-			title: 'Understanding Property Market Trends in 2025',
+			title: 'Understand Property Market Trends in 2025',
 			description:
 				'Key insights into the evolving real estate landscape and what it means for investors and homeowners.'
 		},
 		{
-			image: 'https://images.unsplash.com/photo-1582407947304-fd86f028f716?w=800',
+			image: 'img/read/second.jpg',
 			date: 'Oct 28, 2025',
 			title: 'Portfolio Upgrading: A Strategic Approach',
 			description:
 				'Learn how to systematically upgrade your property portfolio for long-term wealth growth.'
 		},
 		{
-			image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800',
+			image: 'img/read/third.jpg',
 			date: 'Oct 15, 2025',
 			title: 'Overseas Property Investment Guide',
 			description:
@@ -337,8 +337,8 @@
 						<img src={read.image} alt={read.title} />
 					</div>
 					<div class="read-content">
-						<p class="read-date">{read.date}</p>
 						<h3>{read.title}</h3>
+						<p class="read-date">{read.date}</p>
 						<p class="read-description">{read.description}</p>
 					</div>
 				</article>
@@ -481,7 +481,7 @@
 			right: 20px;
 			bottom: 20px;
 			border: 2px solid #e0e0e0;
-			border-radius: 1.5rem;
+			border-radius: 1rem;
 			z-index: 0;
 		}
 	}
@@ -490,7 +490,7 @@
 		position: relative;
 		width: 100%;
 		height: 500px;
-		border-radius: 1.5rem;
+		border-radius: 1rem;
 		overflow: hidden;
 		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 		z-index: 2;
@@ -505,7 +505,7 @@
 	/* Services Styles */
 	.services {
 		padding: 100px 0 80px;
-		background: #e9ecef;
+		background: #f8f9fa;
 
 		@media (max-width: 768px) {
 			padding: 60px 0 40px;
@@ -573,15 +573,11 @@
 
 	.service-card {
 		position: relative;
-		border-radius: 1rem;
+		border-radius: 12px;
 		overflow: hidden;
-		height: 400px;
+		height: 300px;
 		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
 		transition: all 0.3s ease;
-
-		@media (max-width: 768px) {
-			height: 300px;
-		}
 	}
 
 	.service-image {
@@ -656,7 +652,7 @@
 	}
 
 	:global(html[data-theme='dark']) .services {
-		background: rgba(31, 31, 31, 0.7);
+		background: #1D1D20;
 	}
 
 	:global(html[data-theme='dark']) .service-info {
@@ -799,7 +795,7 @@
 			right: 20px;
 			bottom: 20px;
 			border: 2px solid #e0e0e0;
-			border-radius: 1.5rem;
+			border-radius: 1rem;
 			z-index: 0;
 		}
 	}
@@ -808,7 +804,7 @@
 		position: relative;
 		width: 100%;
 		height: 500px;
-		border-radius: 1.5rem;
+		border-radius: 1rem;
 		overflow: hidden;
 		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
 		z-index: 2;
@@ -909,7 +905,7 @@
 	/* Reads Styles */
 	.reads {
 		padding: 100px 0 80px;
-		background: #e9ecef;
+		background: #f8f9fa;
 
 		@media (max-width: 768px) {
 			padding: 60px 0 40px;
@@ -917,7 +913,7 @@
 	}
 
 	:global(html[data-theme='dark']) .reads {
-		background: rgba(31, 31, 31, 0.7);
+		background: #1D1D20;
 	}
 
 	.reads-header {
@@ -960,11 +956,8 @@
 	}
 
 	.read-card {
-		border-radius: 1rem;
 		overflow: hidden;
-		background: #fff;
-		border: 1px solid #e0e0e0;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+		background: transparent;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
 		position: relative;
@@ -974,10 +967,7 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				transform: translateY(-4px);
-				background: #fafafa;
-				border-color: #d0d0d0;
-				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+				transform: translateY(-2px);
 			}
 		}
 	}
@@ -1000,14 +990,12 @@
 			height: 100%;
 			object-fit: cover;
 			display: block;
+			border-radius: 12px;
 			transition: transform 0.4s ease;
 		}
 	}
 
 	.read-content {
-		padding: 24px;
-		background: rgba(255, 255, 255, 0.7);
-		border-top: 1px solid rgba(0, 0, 0, 0.05);
 		position: relative;
 		z-index: 2;
 		flex-grow: 1;
@@ -1025,9 +1013,9 @@
 	}
 
 	.read-content h3 {
-		font-size: 20px;
+		font-size: 18px;
 		font-weight: 600;
-		margin: 0 0 12px 0;
+		margin: 16px 0 12px;
 		color: #1a1a1a;
 
 		@media (max-width: 768px) {
@@ -1043,23 +1031,13 @@
 	}
 
 	:global(html[data-theme='dark']) .read-card {
-		background: #3a3a3a;
-		border: 1px solid rgba(255, 255, 255, 0.12);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+		background: transparent;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				transform: translateY(-4px);
-				background: #4a4a4a;
-				border-color: rgba(255, 255, 255, 0.2);
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+				transform: translateY(-2px);
 			}
 		}
-	}
-
-	:global(html[data-theme='dark']) .read-content {
-		background: rgba(30, 30, 40, 0.5);
-		border-top-color: rgba(255, 255, 255, 0.05);
 	}
 
 	:global(html[data-theme='dark']) .read-date {

@@ -862,7 +862,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 12px 0;
-		border-bottom: 1px solid #f0f0f0;
+		border-bottom: 1px solid #f8f9fa;
 		font-size: 15px;
 	}
 

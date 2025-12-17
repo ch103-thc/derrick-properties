@@ -91,25 +91,25 @@
 				</p>
 
 				<div class="info-cards">
-					<div class="info-card">
+					<a href="mailto:info@yourdomain.com" class="info-card">
 						<div class="icon-wrapper">
 							<Icon icon="mdi:email" width="24" height="24" />
 						</div>
 						<div class="info-text">
 							<h3>Email</h3>
-							<a href="mailto:info@yourdomain.com">info@yourdomain.com</a>
+							<span>info@yourdomain.com</span>
 						</div>
-					</div>
+					</a>
 
-					<div class="info-card">
+					<a href="https://wa.me/6512345678" class="info-card">
 						<div class="icon-wrapper">
 							<Icon icon="mdi:whatsapp" width="24" height="24" />
 						</div>
 						<div class="info-text">
 							<h3>WhatsApp</h3>
-							<a href="https://wa.me/6512345678">Chat with me</a>
+							<span>Chat with me</span>
 						</div>
-					</div>
+					</a>
 
 					<div class="info-card">
 						<div class="icon-wrapper">
@@ -415,6 +415,7 @@
 		padding: 20px;
 		border-radius: 1rem;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		text-decoration: none;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -448,7 +449,7 @@
 			}
 
 			p,
-			a {
+			span {
 				font-size: 15px;
 				color: #666;
 				margin: 0;
@@ -457,7 +458,7 @@
 			}
 
 			@media (hover: hover) and (pointer: fine) {
-				a:hover {
+				span:hover {
 					color: #1a1a1a;
 				}
 			}
@@ -484,7 +485,7 @@
 			}
 
 			p,
-			a {
+			span {
 				color: #b0b0c0;
 			}
 

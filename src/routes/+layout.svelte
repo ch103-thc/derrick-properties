@@ -416,7 +416,7 @@
 	}
 
 	:global(html[data-theme='light']) :global(body) {
-		background-color: #f8f8f8;
+		background-color: #fff;
 		color: #333333;
 	}
 
@@ -445,7 +445,7 @@
 
 		&.scrolled {
 			top: 0;
-			background: #f8f9fa;
+			background: #fff;
 			border-bottom: 1px solid #e0e0e0;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 		}
@@ -502,7 +502,7 @@
 				left: 0;
 				background: #fff;
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-				border-radius: 1rem;
+				border-radius: 12px;
 				padding: 10px;
 				min-width: 230px;
 				list-style: none;
@@ -516,12 +516,12 @@
 					color: #333;
 					text-decoration: none;
 					font-size: 14px;
-					border-radius: 0.8rem;
+					border-radius: 8px;
 					transition: all 0.3s ease;
 
 					@media (hover: hover) and (pointer: fine) {
 						&:hover {
-							background: #f0f0f0;
+							background: #f8f9fa;
 							color: black;
 							transform: none;
 						}
@@ -555,7 +555,7 @@
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
 					background: rgba(255, 255, 255, 0.1) !important;
-					color: #f8f8f8 !important;
+					color: #fff !important;
 				}
 			}
 		}
@@ -574,7 +574,7 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				background: #f0f0f0;
+				background: #f8f9fa;
 			}
 		}
 
@@ -617,7 +617,7 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				background: #f0f0f0;
+				background: #f8f9fa;
 			}
 		}
 
@@ -649,7 +649,7 @@
 		display: inline-block;
 		padding: 12px 20px;
 		background: #1a1a1a;
-		color: #f8f8f8;
+		color: #fff;
 		border-radius: 50px;
 		font-weight: 600;
 		font-size: 14px;
@@ -668,7 +668,7 @@
 	}
 
 	:global(html[data-theme='dark']) .cta-button {
-		background: #f8f8f8;
+		background: #fff;
 		color: #1a1a1a;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
@@ -692,7 +692,7 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				background: #f0f0f0;
+				background: #f8f9fa;
 			}
 		}
 
@@ -768,7 +768,7 @@
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
-						background: #f0f0f0;
+						background: #f8f9fa;
 					}
 				}
 			}
@@ -812,7 +812,7 @@
 
 						@media (hover: hover) and (pointer: fine) {
 							&:hover {
-								background: #f0f0f0;
+								background: #f8f9fa;
 							}
 						}
 
@@ -855,7 +855,7 @@
 
 					@media (hover: hover) and (pointer: fine) {
 						&:hover {
-							background: #f0f0f0;
+							background: #f8f9fa;
 						}
 					}
 
@@ -921,7 +921,7 @@
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
-						background: #f0f0f0;
+						background: #f8f9fa;
 					}
 				}
 			}
@@ -1006,7 +1006,7 @@
 
 	.footer {
 		// margin-top: 80px;
-		background: #f8f9fa;
+		background: #fff;
 		color: #333;
 		border-top: 1px solid #fff;
 	}
@@ -1093,7 +1093,7 @@
 
 	:global(html[data-theme='dark']) .footer-brand .social-links a {
 		background: transparent;
-		color: #f8f8f8;
+		color: #fff;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 		@media (hover: hover) and (pointer: fine) {
