@@ -478,7 +478,7 @@
 
 	/* Hero Section */
 	.hero {
-		background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+		background: linear-gradient(135deg, #f5f5f5 0%, #e9ecef 100%);
 		color: #000;
 		padding: 80px 0 60px;
 		text-align: center;
@@ -862,7 +862,7 @@
 		display: flex;
 		justify-content: space-between;
 		padding: 12px 0;
-		border-bottom: 1px solid #f8f9fa;
+		border-bottom: 1px solid #f5f5f5;
 		font-size: 15px;
 	}
 

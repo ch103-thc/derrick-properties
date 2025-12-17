@@ -521,7 +521,7 @@
 
 					@media (hover: hover) and (pointer: fine) {
 						&:hover {
-							background: #f8f9fa;
+							background: #f5f5f5;
 							color: black;
 							transform: none;
 						}
@@ -574,7 +574,7 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				background: #f8f9fa;
+				background: #f5f5f5;
 			}
 		}
 
@@ -617,7 +617,7 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				background: #f8f9fa;
+				background: #f5f5f5;
 			}
 		}
 
@@ -692,7 +692,7 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				background: #f8f9fa;
+				background: #f5f5f5;
 			}
 		}
 
@@ -768,7 +768,7 @@
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
-						background: #f8f9fa;
+						background: #f5f5f5;
 					}
 				}
 			}
@@ -812,7 +812,7 @@
 
 						@media (hover: hover) and (pointer: fine) {
 							&:hover {
-								background: #f8f9fa;
+								background: #f5f5f5;
 							}
 						}
 
@@ -855,7 +855,7 @@
 
 					@media (hover: hover) and (pointer: fine) {
 						&:hover {
-							background: #f8f9fa;
+							background: #f5f5f5;
 						}
 					}
 
@@ -921,7 +921,7 @@
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
-						background: #f8f9fa;
+						background: #f5f5f5;
 					}
 				}
 			}

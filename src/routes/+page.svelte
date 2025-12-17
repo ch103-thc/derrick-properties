@@ -263,6 +263,7 @@
 					<div class="service-info">
 						<h3>{service.title}</h3>
 						<p>{service.description}</p>
+						<a href="/services/{service.title}" class="read-more">Read More</a>
 					</div>
 				</div>
 			{/each}
@@ -505,7 +506,7 @@
 	/* Services Styles */
 	.services {
 		padding: 100px 0 80px;
-		background: #f8f9fa;
+		background: #fff;
 
 		@media (max-width: 768px) {
 			padding: 60px 0 40px;
@@ -574,45 +575,53 @@
 	.service-card {
 		position: relative;
 		border-radius: 12px;
-		overflow: hidden;
-		height: 300px;
-		box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-		transition: all 0.3s ease;
+		overflow: visible;
+		height: auto;
+		box-shadow: none;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		cursor: pointer;
+		display: flex;
+		flex-direction: column;
+		background: #f5f5f5; // Add this
+		padding: 16px;
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: translateY(-2px);
+			}
+		}
 	}
 
 	.service-image {
 		width: 100%;
-		height: 100%;
+		height: 240px;
+		overflow: hidden;
+		flex-shrink: 0;
+
+		@media (max-width: 768px) {
+			height: 200px;
+		}
 
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			transition: transform 0.3s ease;
-		}
-	}
-
-	@media (hover: hover) and (pointer: fine) {
-		.service-card:hover .service-image img {
-			transform: scale(1.05);
-		}
-
-		.service-card:hover .service-info h3::after {
-			transform: scaleX(1);
+			border-radius: 12px;
+			transition: transform 0.4s ease;
 		}
 	}
 
 	.service-info {
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		right: 0;
-		padding: 28px;
-		background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
-		color: white;
+		position: relative;
+		padding: 16px 0;
+		background: transparent;
+		color: inherit;
+		flex-grow: 1;
+		display: flex;
+		flex-direction: column;
 
 		@media (max-width: 768px) {
-			padding: 20px;
+			padding: 16px 0;
 		}
 
 		h3 {
@@ -620,6 +629,7 @@
 			margin: 0 0 8px 0;
 			position: relative;
 			display: inline-block;
+			color: #1a1a1a;
 
 			@media (max-width: 768px) {
 				font-size: 16px;
@@ -632,7 +642,7 @@
 				left: 0;
 				width: 100%;
 				height: 2px;
-				background: white;
+				background: #1a1a1a;
 				transform: scaleX(0);
 				transform-origin: left;
 				transition: transform 0.3s ease;
@@ -642,26 +652,67 @@
 		p {
 			font-size: 15px;
 			margin: 0;
-			opacity: 0.9;
+			opacity: 1;
 			line-height: 1.5;
+			color: #666;
+			flex-grow: 1;
 
 			@media (max-width: 768px) {
 				font-size: 14px;
 			}
 		}
+
+		.read-more {
+			display: inline-block;
+			margin-top: 8px;
+			font-weight: 600;
+			font-size: 0.9rem;
+			color: #1a1a1a;
+			text-decoration: underline;
+			cursor: pointer;
+			transition: color 0.3s ease;
+
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					color: #333;
+				}
+			}
+
+			:global(html[data-theme='dark']) & {
+				color: #fff;
+
+				&:hover {
+					color: #ddd;
+				}
+			}
+		}
+	}
+
+	:global(html[data-theme='dark']) .service-card {
+		background: #27272a;
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				transform: translateY(-2px);
+			}
+		}
 	}
 
 	:global(html[data-theme='dark']) .services {
-		background: #1D1D20;
+		background: #1a1a1a;
 	}
 
 	:global(html[data-theme='dark']) .service-info {
 		h3 {
 			color: #fff;
+
+			&::after {
+				background: #fff;
+			}
 		}
 
 		p {
-			color: #fff;
+			color: #aaa;
 		}
 	}
 
@@ -905,7 +956,7 @@
 	/* Reads Styles */
 	.reads {
 		padding: 100px 0 80px;
-		background: #f8f9fa;
+		background: #fff;
 
 		@media (max-width: 768px) {
 			padding: 60px 0 40px;
@@ -913,7 +964,7 @@
 	}
 
 	:global(html[data-theme='dark']) .reads {
-		background: #1D1D20;
+		background: #1a1a1a;
 	}
 
 	.reads-header {
@@ -951,30 +1002,26 @@
 
 		@media (max-width: 768px) {
 			grid-template-columns: 1fr;
-			gap: 20px;
+			gap: 50px;
 		}
 	}
 
 	.read-card {
 		overflow: hidden;
-		background: transparent;
+		background: #f5f5f5;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
 		position: relative;
 		display: flex;
 		flex-direction: column;
 		height: 100%;
+		border-radius: 12px; // Add this
+		padding: 16px;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				transform: translateY(-2px);
 			}
-		}
-	}
-
-	@media (hover: hover) and (pointer: fine) {
-		.read-card:hover .read-image img {
-			transform: scale(1.08);
 		}
 	}
 
@@ -1031,7 +1078,7 @@
 	}
 
 	:global(html[data-theme='dark']) .read-card {
-		background: transparent;
+		background: #27272a;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
