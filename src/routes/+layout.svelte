@@ -146,6 +146,12 @@
 					>
 				</li>
 				<li>
+					<a href="/journeys">
+						<Icon icon="mdi:account-group" width="20" height="20" />
+						<span>Customer Journeys</span>
+					</a>
+				</li>
+				<li>
 					<a href="/reads"
 						><Icon icon="mdi:book-open" width="20" height="20" /><span>Featured Reads</span></a
 					>
@@ -276,6 +282,12 @@
 								</a>
 							</li>
 							<li>
+								<a href="/journeys" onclick={toggleMobileMenu}>
+									<Icon icon="mdi:account-group" width="18" height="18" />
+									<span>Customer Journeys</span>
+								</a>
+							</li>
+							<li>
 								<a href="/reads" onclick={toggleMobileMenu}>
 									<Icon icon="mdi:book-open" width="18" height="18" />
 									<span>Featured Reads</span>
@@ -371,6 +383,7 @@
 			<h3>Resources</h3>
 			<ul>
 				<li><a href="/about">About</a></li>
+				<li><a href="/journeys">Customer Journeys</a></li>
 				<li><a href="/reads">Featured Reads</a></li>
 				<li><a href="/testimonials">Testimonials</a></li>
 				<li>
