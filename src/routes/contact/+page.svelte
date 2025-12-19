@@ -515,7 +515,7 @@
 				justify-content: center;
 				width: 44px;
 				height: 44px;
-				background: transparent;
+				background: #f5f5f5;
 				color: #1a1a1a;
 				border-radius: 50%;
 				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -541,7 +541,7 @@
 		}
 
 		.social-links a {
-			background: transparent;
+			background: #27272A;
 			color: #f8f8f8;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
@@ -758,7 +758,7 @@
 		justify-content: center;
 		gap: 8px;
 		padding: 12px 20px;
-		background: #1a1a1a;
+		background: #3a3546;
 		color: #f8f8f8;
 		border: none;
 		border-radius: 0.75rem;

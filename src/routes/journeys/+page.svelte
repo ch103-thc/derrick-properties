@@ -120,7 +120,7 @@
 								<p>{paragraph}</p>
 							{/each}
 						</div>
-						<a href="/journeys/{journey.name}" class="read-more">Read More</a>
+						<a href="/journeys/{journey.name}" class="read-full-story">Read Full Story</a>
 					</div>
 				</article>
 			{/each}
@@ -209,7 +209,7 @@
 
 	.journey-card {
 		position: relative;
-		border-radius: 12px;
+		border-radius: 1rem;
 		overflow: visible;
 		height: auto;
 		box-shadow: none;
@@ -255,7 +255,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 12px;
+			border-radius: 1rem;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -321,7 +321,7 @@
 		color: #aaa;
 	}
 
-	.read-more {
+	.read-full-story {
 		display: inline-block;
 		margin-top: 8px;
 		font-weight: 600;

@@ -571,9 +571,9 @@
 	}
 
 	.toggle-btn.active {
-		background: #1a1a1a;
+		background: #3a3546;
 		color: white;
-		border-color: #1a1a1a;
+		border-color: #3a3546;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 	}
 

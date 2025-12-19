@@ -234,10 +234,13 @@
 								<p>{paragraph}</p>
 							{/each}
 						</div>
-						<a href="/journeys/{journey.name}" class="read-more">Read More</a>
+						<a href="/journeys/{journey.name}" class="read-full-story">Read Full Story</a>
 					</div>
 				</div>
 			{/each}
+		</div>
+		<div class="view-all">
+			<a href="/journeys" class="view-all-btn">View All Stories</a>
 		</div>
 	</div>
 </section>
@@ -265,8 +268,8 @@
 			{/each}
 		</div>
 
-		<div class="see-all">
-			<a href="/reads" class="see-all-btn">See All Reads</a>
+		<div class="view-all">
+			<a href="/reads" class="view-all-btn">View All Reads</a>
 		</div>
 	</div>
 </section>
@@ -320,8 +323,8 @@
 
 	.cta-button {
 		display: inline-block;
-		padding: 16px 32px;
-		background: #1a1a1a;
+		padding: 14px 28px;
+		background: #3a3546;
 		color: #f8f8f8;
 		border-radius: 50px;
 		font-weight: 600;
@@ -341,10 +344,10 @@
 		}
 	}
 
-	.see-all-btn {
+	.view-all-btn {
 		display: inline-block;
 		padding: 12px 20px;
-		background: #1a1a1a;
+		background: #3a3546;
 		color: #f8f8f8;
 		border-radius: 50px;
 		font-weight: 600;
@@ -365,7 +368,7 @@
 	}
 
 	:global(html[data-theme='dark']) .cta-button,
-	:global(html[data-theme='dark']) .see-all-btn {
+	:global(html[data-theme='dark']) .view-all-btn {
 		background: #f8f8f8;
 		color: #1a1a1a;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
@@ -484,7 +487,7 @@
 
 	.service-card {
 		position: relative;
-		border-radius: 12px;
+		border-radius: 1rem;
 		overflow: visible;
 		height: auto;
 		box-shadow: none;
@@ -520,7 +523,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 12px;
+			border-radius: 1rem;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -640,7 +643,7 @@
 
 	.journey-card {
 		position: relative;
-		border-radius: 12px;
+		border-radius: 1rem;
 		overflow: visible;
 		height: auto;
 		box-shadow: none;
@@ -676,7 +679,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 12px;
+			border-radius: 1rem;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -704,7 +707,7 @@
 			}
 		}
 
-		.read-more {
+		.read-full-story {
 			display: inline-block;
 			margin-top: 8px;
 			font-weight: 600;
@@ -828,7 +831,7 @@
 		}
 	}
 
-	.see-all {
+	.view-all {
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -863,7 +866,7 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		border-radius: 12px; // Add this
+		border-radius: 1rem;
 		padding: 16px;
 
 		@media (hover: hover) and (pointer: fine) {
@@ -885,7 +888,7 @@
 			height: 100%;
 			object-fit: cover;
 			display: block;
-			border-radius: 12px;
+			border-radius: 1rem;
 			transition: transform 0.4s ease;
 		}
 	}
