@@ -404,7 +404,7 @@
 		position: relative;
 		width: 100%;
 		height: 500px;
-		border-radius: 1rem;
+		border-radius: 1.5rem;
 		overflow: hidden;
 		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 		z-index: 2;
@@ -419,7 +419,6 @@
 	/* Services Styles */
 	.services {
 		padding: 100px 0 80px;
-		background: #fff;
 
 		@media (max-width: 768px) {
 			padding: 60px 0 40px;
@@ -487,7 +486,7 @@
 
 	.service-card {
 		position: relative;
-		border-radius: 1rem;
+		border-radius: 1.5rem;
 		overflow: visible;
 		height: auto;
 		box-shadow: none;
@@ -523,7 +522,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 1rem;
+			border-radius: 1.5rem;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -643,7 +642,7 @@
 
 	.journey-card {
 		position: relative;
-		border-radius: 1rem;
+		border-radius: 1.5rem;
 		overflow: visible;
 		height: auto;
 		box-shadow: none;
@@ -679,7 +678,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 1rem;
+			border-radius: 1.5rem;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -806,7 +805,6 @@
 	/* Reads Styles */
 	.reads {
 		padding: 100px 0 80px;
-		background: #fff;
 
 		@media (max-width: 768px) {
 			padding: 60px 0 40px;
@@ -853,7 +851,6 @@
 
 		@media (max-width: 768px) {
 			grid-template-columns: 1fr;
-			gap: 50px;
 		}
 	}
 
@@ -866,7 +863,7 @@
 		display: flex;
 		flex-direction: column;
 		height: 100%;
-		border-radius: 1rem;
+		border-radius: 1.5rem;
 		padding: 16px;
 
 		@media (hover: hover) and (pointer: fine) {
@@ -888,7 +885,7 @@
 			height: 100%;
 			object-fit: cover;
 			display: block;
-			border-radius: 1rem;
+			border-radius: 1.5rem;
 			transition: transform 0.4s ease;
 		}
 	}

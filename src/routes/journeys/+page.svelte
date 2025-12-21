@@ -209,7 +209,7 @@
 
 	.journey-card {
 		position: relative;
-		border-radius: 1rem;
+		border-radius: 1.5rem;
 		overflow: visible;
 		height: auto;
 		box-shadow: none;
@@ -255,7 +255,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 1rem;
+			border-radius: 1.5rem;
 			transition: transform 0.4s ease;
 		}
 	}

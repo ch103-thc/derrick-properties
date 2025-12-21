@@ -429,7 +429,7 @@
 	}
 
 	:global(html[data-theme='light']) :global(body) {
-		background-color: #fbfbfb;
+		background-color: #fff;
 		color: #333333;
 	}
 
@@ -458,7 +458,7 @@
 
 		&.scrolled {
 			top: 0;
-			background: #fbfbfb;
+			background: #fff;
 			border-bottom: 1px solid #e0e0e0;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 		}
@@ -513,7 +513,7 @@
 				position: absolute;
 				top: 100%;
 				left: 0;
-				background: #fbfbfb;
+				background: #fff;
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 				border-radius: 12px;
 				padding: 10px;
@@ -559,16 +559,16 @@
 		backdrop-filter: blur(10px) !important;
 		-webkit-backdrop-filter: blur(10px) !important;
 		border: 1px solid rgba(255, 255, 255, 0.1) !important;
-		color: #fbfbfb !important;
+		color: #fff !important;
 		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
 
 		li a {
-			color: #fbfbfb !important;
+			color: #fff !important;
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
 					background: rgba(255, 255, 255, 0.1) !important;
-					color: #fbfbfb !important;
+					color: #fff !important;
 				}
 			}
 		}
@@ -605,7 +605,7 @@
 	}
 
 	:global(html[data-theme='dark']) .nav-link {
-		color: #fbfbfb;
+		color: #fff;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -649,7 +649,7 @@
 	}
 
 	:global(html[data-theme='dark']) .theme-toggle {
-		color: #fbfbfb;
+		color: #fff;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -662,7 +662,7 @@
 		display: inline-block;
 		padding: 10px 24px;
 		background: #3a3546;
-		color: #fbfbfb;
+		color: #fff;
 		border-radius: 50px;
 		font-weight: 600;
 		font-size: 14px;
@@ -681,7 +681,7 @@
 	}
 
 	:global(html[data-theme='dark']) .cta-button {
-		background: #fbfbfb;
+		background: #fff;
 		color: #1a1a1a;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
@@ -717,7 +717,7 @@
 	}
 
 	:global(html[data-theme='dark']) .hamburger {
-		color: #fbfbfb;
+		color: #fff;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -794,7 +794,7 @@
 			right: 0;
 			width: 280px;
 			height: 100vh;
-			background: #fbfbfb;
+			background: #fff;
 			z-index: 999;
 			padding: 40px 24px 24px;
 			overflow-y: auto;
@@ -819,7 +819,7 @@
 						padding: 14px 16px;
 						color: #333;
 						text-decoration: none;
-						border-radius: 12px;
+						border-radius: 50px;
 						transition: all 0.3s ease;
 						font-weight: 500;
 
@@ -831,8 +831,8 @@
 
 						&.mobile-cta {
 							margin-top: 16px;
-							background: #1a1a1a;
-							color: #fbfbfb;
+							background: #3a3546;
+							color: #fff;
 							text-align: center;
 							justify-content: center;
 							font-weight: 600;
@@ -905,11 +905,11 @@
 			border-bottom-color: rgba(255, 255, 255, 0.1);
 
 			.mobile-menu-title {
-				color: #fbfbfb;
+				color: #fff;
 			}
 
 			.mobile-close {
-				color: #fbfbfb;
+				color: #fff;
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
@@ -920,7 +920,7 @@
 		}
 
 		ul li a {
-			color: #fbfbfb;
+			color: #fff;
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
@@ -929,7 +929,7 @@
 			}
 
 			&.mobile-cta {
-				background: #fbfbfb;
+				background: #fff;
 				color: #1a1a1a;
 
 				@media (hover: hover) and (pointer: fine) {
@@ -942,7 +942,7 @@
 
 		.mobile-dropdown {
 			.mobile-dropdown-toggle {
-				color: #fbfbfb;
+				color: #fff;
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
@@ -1019,9 +1019,9 @@
 
 	.footer {
 		// margin-top: 80px;
-		background: #fbfbfb;
+		background: #fff;
 		color: #333;
-		border-top: 1px solid #fbfbfb;
+		border-top: 1px solid #fff;
 	}
 
 	:global(html[data-theme='dark']) .footer {
@@ -1106,7 +1106,7 @@
 
 	:global(html[data-theme='dark']) .footer-brand .social-links a {
 		background: #27272a;
-		color: #fbfbfb;
+		color: #fff;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 		@media (hover: hover) and (pointer: fine) {
@@ -1152,7 +1152,7 @@
 
 	:global(html[data-theme='dark']) .footer-column {
 		h3 {
-			color: #fbfbfb;
+			color: #fff;
 		}
 
 		ul li a {
@@ -1160,7 +1160,7 @@
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
-					color: #fbfbfb;
+					color: #fff;
 				}
 			}
 		}
@@ -1170,7 +1170,7 @@
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 24px 32px;
-		border-top: 1px solid #fbfbfb;
+		border-top: 1px solid #fff;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -1211,7 +1211,7 @@
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
-					color: #fbfbfb;
+					color: #fff;
 				}
 			}
 		}

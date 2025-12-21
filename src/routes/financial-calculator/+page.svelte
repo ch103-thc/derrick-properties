@@ -482,13 +482,30 @@
 		color: #000;
 		padding: 80px 0 60px;
 		text-align: center;
-	}
 
-	.hero-title {
-		font-size: 2.5rem;
-		font-weight: 700;
-		margin: 0 0 16px 0;
-		line-height: 1.2;
+		.hero-title {
+			font-size: 2.5rem;
+			font-weight: 700;
+			margin: 0 0 16px 0;
+			line-height: 1.2;
+
+			@media (max-width: 768px) {
+				font-size: 36px;
+			}
+		}
+
+		.hero-subtitle {
+			font-size: 20px;
+			color: #666;
+			max-width: 600px;
+			margin: 0 auto;
+			opacity: 0.9;
+
+			@media (max-width: 768px) {
+				font-size: 16px;
+				max-width: 400px;
+			}
+		}
 	}
 
 	/* DARK THEME - HERO SECTION */
@@ -497,31 +514,12 @@
 		color: #ffffff;
 	}
 
-	:global(html[data-theme='dark']) .hero-title {
+	:global(html[data-theme='dark']) .hero .hero-title {
 		color: #ffffff;
 	}
 
-	:global(html[data-theme='dark']) .hero-subtitle {
+	:global(html[data-theme='dark']) .hero .hero-subtitle {
 		color: #b0b0c0;
-		opacity: 0.9;
-	}
-
-	@media (max-width: 768px) {
-		.hero-title {
-			font-size: 36px;
-		}
-
-		.hero-subtitle {
-			font-size: 16px;
-			max-width: 400px;
-		}
-	}
-
-	.hero-subtitle {
-		font-size: 20px;
-		color: #666;
-		max-width: 600px;
-		margin: 0 auto;
 		opacity: 0.9;
 	}
 
@@ -545,7 +543,7 @@
 		padding: 14px 32px;
 		background: #fff;
 		border: 1px solid #e0e0e0;
-		border-radius: 1rem;
+		border-radius: 50px;
 		font-size: 1rem;
 		font-weight: 600;
 		cursor: pointer;
@@ -677,7 +675,7 @@
 		width: 20px;
 		height: 20px;
 		border-radius: 50%;
-		background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+		background: #3a3546;
 		cursor: pointer;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 		transition: all 0.2s ease;
@@ -694,7 +692,7 @@
 		width: 20px;
 		height: 20px;
 		border-radius: 50%;
-		background: linear-gradient(135deg, #1a1a1a 0%, #333 100%);
+		background: #3a3546;
 		cursor: pointer;
 		border: none;
 		box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
@@ -702,11 +700,11 @@
 	}
 
 	:global(html[data-theme='dark']) .form-group input[type='range']::-webkit-slider-thumb {
-		background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+		background: #888;
 	}
 
 	:global(html[data-theme='dark']) .form-group input[type='range']::-moz-range-thumb {
-		background: linear-gradient(135deg, #ffffff 0%, #e0e0e0 100%);
+		background: #888;
 	}
 
 	.input-with-display {
@@ -979,7 +977,7 @@
 
 	/* DARK THEME - CALCULATOR GRID */
 	:global(html[data-theme='dark']) .calculator-grid {
-		background: #1a1a1a;
+		background: #1D1D20;
 		border: 1px solid rgba(255, 255, 255, 0.12);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 	}

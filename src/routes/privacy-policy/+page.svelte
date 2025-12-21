@@ -117,7 +117,7 @@
 			margin: 0 auto;
 			background: #fff;
 			padding: 3rem 2rem;
-			border-radius: 1rem;
+			border-radius: 1.5rem;
 			border: 1px solid #e0e0e0;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 			opacity: 0;

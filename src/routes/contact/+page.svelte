@@ -336,15 +336,10 @@
 
 	.contact-section {
 		padding: 80px 0;
-		background: #f8f8f8;
 
 		@media (max-width: 768px) {
 			padding: 60px 0 40px;
 		}
-	}
-
-	:global(html[data-theme='dark']) .contact-section {
-		background: #1a1a1a;
 	}
 
 	.contact-grid {
@@ -541,7 +536,7 @@
 		}
 
 		.social-links a {
-			background: #27272A;
+			background: #27272a;
 			color: #f8f8f8;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
@@ -571,7 +566,7 @@
 	}
 
 	:global(html[data-theme='dark']) .contact-form-wrapper {
-		background: #1a1a1a;
+		background: #1D1D20;
 		border: 1px solid rgba(255, 255, 255, 0.12);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 	}
