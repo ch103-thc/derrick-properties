@@ -494,7 +494,7 @@
 		cursor: pointer;
 		display: flex;
 		flex-direction: column;
-		background: #f5f5f5;
+		background: #fff;
 		padding: 16px;
 		opacity: 0;
 		transform: translateY(30px);
@@ -522,7 +522,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 1.5rem;
+			border-radius: 0.75rem;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -650,7 +650,7 @@
 		cursor: pointer;
 		display: flex;
 		flex-direction: column;
-		background: #f5f5f5;
+		background: #fff;
 		padding: 16px;
 		opacity: 0;
 		transform: translateY(30px);
@@ -678,7 +678,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 1.5rem;
+			border-radius: 0.75rem;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -856,7 +856,7 @@
 
 	.read-card {
 		overflow: hidden;
-		background: #f5f5f5;
+		background: #fff;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
 		position: relative;
@@ -885,7 +885,7 @@
 			height: 100%;
 			object-fit: cover;
 			display: block;
-			border-radius: 1.5rem;
+			border-radius: 0.75rem;
 			transition: transform 0.4s ease;
 		}
 	}
