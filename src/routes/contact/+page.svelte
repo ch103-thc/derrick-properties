@@ -93,7 +93,8 @@
 				<div class="info-cards">
 					<a href="mailto:info@yourdomain.com" class="info-card">
 						<div class="icon-wrapper">
-							<Icon icon="mdi:email" width="24" height="24" />
+							<Icon icon="mingcute:mail-line" width="24" height="24" />
+							<!-- <Icon icon="fontisto:email" width="24" height="24" /> -->
 						</div>
 						<div class="info-text">
 							<h3>Email</h3>
@@ -113,7 +114,7 @@
 
 					<div class="info-card">
 						<div class="icon-wrapper">
-							<Icon icon="mdi:clock" width="24" height="24" />
+							<Icon icon="mingcute:time-line" width="24" height="24" />
 						</div>
 						<div class="info-text">
 							<h3>Availability</h3>
@@ -289,7 +290,7 @@
 	}
 
 	.contact-hero {
-		background: linear-gradient(135deg, #f5f5f5 0%, #e9ecef 100%);
+		background: linear-gradient(135deg, #fafafa 0%, #e9ecef 100%);
 		color: #000;
 		padding: 80px 0 60px;
 		text-align: center;
@@ -408,6 +409,7 @@
 		align-items: flex-start;
 		gap: 16px;
 		padding: 20px;
+		background: #fafafa;
 		border-radius: 1rem;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		text-decoration: none;
@@ -423,7 +425,7 @@
 		.icon-wrapper {
 			width: 48px;
 			height: 48px;
-			background: rgba(26, 26, 46, 0.08);
+			background: #fafafa;
 			border-radius: 50%;
 			display: flex;
 			align-items: center;
@@ -510,7 +512,7 @@
 				justify-content: center;
 				width: 44px;
 				height: 44px;
-				background: #f5f5f5;
+				background: #fafafa;
 				color: #1a1a1a;
 				border-radius: 50%;
 				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);

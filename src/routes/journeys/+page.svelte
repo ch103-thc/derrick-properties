@@ -136,7 +136,7 @@
 	}
 
 	.journeys-hero {
-		background: linear-gradient(135deg, #f5f5f5 0%, #e9ecef 100%);
+		background: linear-gradient(135deg, #fafafa 0%, #e9ecef 100%);
 		color: #000;
 		padding: 80px 0 60px;
 		text-align: center;

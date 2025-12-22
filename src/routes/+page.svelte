@@ -6,31 +6,31 @@
 			image: 'img/service/retirement.jpg',
 			title: 'Planning for Retirement',
 			description:
-				'Strategic real estate planning to help you build long-term security and a stable retirement income.'
+				'Strategic real estate planning for long-term security and stable retirement income.'
 		},
 		{
 			image: 'img/service/consulting.jpg',
 			title: 'Real Estate Consulting',
 			description:
-				'Expert consultation for buying, selling, investing, and renting for passive income in real estate markets.'
+				'Expert guidance for buying, selling, investing, and renting real estate for passive income.'
 		},
 		{
-			image: 'img/service/restructuring.png',
+			image: 'img/service/restructuring.jpg',
 			title: 'Asset Restructuring',
 			description:
-				'Optimise your property portfolio through restructuring strategies that enhance long-term financial growth.'
+				'Optimise your property portfolio with restructuring strategies for long-term growth.'
 		},
 		{
 			image: 'img/service/selling.jpeg',
 			title: 'Selling a Property',
 			description:
-				'Comprehensive guidance to position, market, and sell your property at the best possible price.'
+				'Strategic guidance to position, market, and sell your property for the best price.'
 		},
 		{
 			image: 'img/service/buying.jpeg',
 			title: 'Buying a Property',
 			description:
-				'Personalised support to help you find the right home or investment property that fits your goals.'
+				'Personalised support to find the right home or investment property.'
 		},
 		{
 			image: 'img/service/renting.jpeg',
@@ -628,7 +628,7 @@
 
 	.journey-image {
 		width: 100%;
-		height: 280px;
+		height: 240px;
 		overflow: hidden;
 		flex-shrink: 0;
 
@@ -857,7 +857,7 @@
 
 	.read-image {
 		width: 100%;
-		height: 280px;
+		height: 240px;
 		overflow: hidden;
 		flex-shrink: 0;
 
