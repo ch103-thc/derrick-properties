@@ -325,7 +325,7 @@
 		padding: 14px 28px;
 		background: #3a3546;
 		color: #f8f8f8;
-		border-radius: 50px;
+		border-radius: 12px;
 		font-weight: 600;
 		font-size: 1rem;
 		text-decoration: none;
@@ -380,7 +380,7 @@
 		position: relative;
 		width: 100%;
 		height: 500px;
-		border-radius: 1.5rem;
+		border-radius: 12px;
 		overflow: hidden;
 		box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
 		z-index: 2;
@@ -462,7 +462,7 @@
 
 	.service-card {
 		position: relative;
-		border-radius: 1.5rem;
+		border-radius: 12px;
 		overflow: hidden;
 		height: 320px;
 		box-shadow: none;
@@ -548,7 +548,7 @@
 			background: rgba(255, 255, 255, 0.9);
 			color: #1a1a1a;
 			border: none;
-			border-radius: 50px;
+			border-radius: 6px;
 			font-weight: 600;
 			font-size: 0.9rem;
 			text-decoration: none;
@@ -601,7 +601,7 @@
 
 	.journey-card {
 		position: relative;
-		border-radius: 1.5rem;
+		border-radius: 12px;
 		overflow: visible;
 		height: auto;
 		box-shadow: none;
@@ -636,7 +636,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 1.5rem 1.5rem 0 0;
+			border-radius: 12px 12px 0 0;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -672,7 +672,7 @@
 			background: transparent;
 			color: #3a3546;
 			border: 2px solid #3a3546;
-			border-radius: 50px;
+			border-radius: 6px;
 			font-weight: 600;
 			font-size: 0.9rem;
 			text-decoration: none;
@@ -811,7 +811,7 @@
 		padding: 12px 20px;
 		background: #3a3546;
 		color: #f8f8f8;
-		border-radius: 50px;
+		border-radius: 6px;
 		font-weight: 600;
 		font-size: 0.9rem;
 		text-decoration: none;
@@ -829,7 +829,7 @@
 
 	.read-card {
 		position: relative;
-		border-radius: 1.5rem;
+		border-radius: 12px;
 		overflow: visible;
 		height: auto;
 		box-shadow: none;
@@ -865,7 +865,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 0.75rem;
+			border-radius: 6px;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -924,7 +924,7 @@
 			background: transparent;
 			color: #3a3546;
 			border: 2px solid #3a3546;
-			border-radius: 50px;
+			border-radius: 6px;
 			font-weight: 600;
 			font-size: 0.9rem;
 			text-decoration: none;

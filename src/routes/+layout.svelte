@@ -583,7 +583,7 @@
 		text-decoration: none;
 		position: relative;
 		transition: all 0.3s ease;
-		border-radius: 50px;
+		border-radius: 12px;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -663,7 +663,7 @@
 		padding: 10px 24px;
 		background: #3a3546;
 		color: #fff;
-		border-radius: 50px;
+		border-radius: 12px;
 		font-weight: 600;
 		font-size: 14px;
 		text-decoration: none;
@@ -819,7 +819,7 @@
 						padding: 14px 16px;
 						color: #333;
 						text-decoration: none;
-						border-radius: 50px;
+						border-radius: 12px;
 						transition: all 0.3s ease;
 						font-weight: 500;
 
@@ -860,7 +860,7 @@
 					font-weight: 500;
 					background: transparent;
 					border: none;
-					border-radius: 50px;
+					border-radius: 12px;
 					cursor: pointer;
 					transition: all 0.3s ease;
 					font-family: 'Poppins', sans-serif;
@@ -1082,7 +1082,7 @@
 				height: 44px;
 				background: #f5f5f5;
 				color: #1a1a1a;
-				border-radius: 50%;
+				border-radius: 4px;
 				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 

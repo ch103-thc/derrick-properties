@@ -410,7 +410,7 @@
 		gap: 16px;
 		padding: 20px;
 		background: #fafafa;
-		border-radius: 1rem;
+		border-radius: 12px;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		text-decoration: none;
 
@@ -514,7 +514,7 @@
 				height: 44px;
 				background: #fafafa;
 				color: #1a1a1a;
-				border-radius: 50%;
+				border-radius: 4px;
 				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 
@@ -554,7 +554,7 @@
 	.contact-form-wrapper {
 		background: #fff;
 		padding: 40px;
-		border-radius: 1.5rem;
+		border-radius: 12px;
 		border: 1px solid #e0e0e0;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 		opacity: 0;
@@ -596,7 +596,7 @@
 			padding: 12px 16px;
 			background: #fff;
 			border: 1px solid #d0d0d0;
-			border-radius: 0.8rem;
+			border-radius: 8px;
 			font-size: 15px;
 			font-family: 'Poppins', sans-serif;
 			transition: all 0.3s ease;
@@ -758,7 +758,7 @@
 		background: #3a3546;
 		color: #f8f8f8;
 		border: none;
-		border-radius: 0.75rem;
+		border-radius: 8px;
 		font-size: 1rem;
 		font-weight: 600;
 		cursor: pointer;
