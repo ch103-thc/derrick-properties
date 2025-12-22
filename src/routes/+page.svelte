@@ -202,11 +202,11 @@
 				<div class="service-card" class:visible={servicesVisible} style="--delay: {i}">
 					<div class="service-image">
 						<img src={service.image} alt={service.title} loading="lazy" />
-					</div>
-					<div class="service-info">
-						<h3>{service.title}</h3>
-						<p>{service.description}</p>
-						<a href="/services/{service.title}" class="read-more">Read More</a>
+						<div class="service-overlay">
+							<h3>{service.title}</h3>
+							<p>{service.description}</p>
+							<a href="/services/{service.title}" class="read-more">Read More</a>
+						</div>
 					</div>
 				</div>
 			{/each}
@@ -463,15 +463,11 @@
 	.service-card {
 		position: relative;
 		border-radius: 1.5rem;
-		overflow: visible;
-		height: auto;
+		overflow: hidden;
+		height: 320px;
 		box-shadow: none;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
-		display: flex;
-		flex-direction: column;
-		background: #f5f5f5;
-		padding: 16px;
 		opacity: 0;
 		transform: translateY(30px);
 
@@ -484,55 +480,61 @@
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				transform: translateY(-2px);
+
+				.service-image img {
+					transform: scale(1.05);
+				}
 			}
 		}
 	}
 
 	.service-image {
+		position: relative;
 		width: 100%;
-		height: 240px;
+		height: 100%;
 		overflow: hidden;
-		flex-shrink: 0;
 
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 0.75rem;
 			transition: transform 0.4s ease;
 		}
 	}
 
-	.service-info {
-		position: relative;
-		padding: 16px 0;
-		background: transparent;
-		color: inherit;
-		flex-grow: 1;
+	.service-overlay {
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background: linear-gradient(
+			to top,
+			rgba(0, 0, 0, 0.65) 0%,
+			rgba(0, 0, 0, 0.3) 25%,
+			transparent 50%
+		);
+		padding: 24px;
+		color: #fff;
 		display: flex;
 		flex-direction: column;
-
-		@media (max-width: 768px) {
-			padding: 16px 0;
-		}
+		justify-content: flex-end;
+		height: 100%;
 
 		h3 {
-			font-size: 18px;
-			margin: 0 0 8px 0;
-			color: #1a1a1a;
+			font-size: 20px;
+			margin: 0 0 12px 0;
+			color: #fff;
 
 			@media (max-width: 768px) {
-				font-size: 16px;
+				font-size: 18px;
 			}
 		}
 
 		p {
 			font-size: 15px;
-			margin: 0;
-			opacity: 1;
+			margin: 0 0 16px 0;
 			line-height: 1.5;
-			color: #666;
-			flex-grow: 1;
+			color: rgba(255, 255, 255, 0.9);
 
 			@media (max-width: 768px) {
 				font-size: 14px;
@@ -542,63 +544,31 @@
 		.read-more {
 			display: inline-block;
 			align-self: flex-start;
-			margin-top: 12px;
 			padding: 8px 16px;
-			background: transparent;
-			color: #3a3546;
-			border: 2px solid #3a3546;
+			background: rgba(255, 255, 255, 0.9);
+			color: #1a1a1a;
+			border: none;
 			border-radius: 50px;
 			font-weight: 600;
 			font-size: 0.9rem;
 			text-decoration: none;
 			cursor: pointer;
 			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-			box-shadow: none;
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
-					background: #3a3546;
-					color: #f8f8f8;
-					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-				}
-			}
-
-			:global(html[data-theme='dark']) & {
-				background: transparent;
-				color: #f8f8f8;
-				border: 2px solid #f8f8f8;
-				box-shadow: none;
-
-				&:hover {
-					background: #f8f8f8;
-					color: #1a1a1a;
-					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+					background: #fff;
+					box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 				}
 			}
 		}
 	}
 
 	:global(html[data-theme='dark']) .service-card {
-		background: #27272a;
-
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				transform: translateY(-2px);
 			}
-		}
-	}
-
-	:global(html[data-theme='dark']) .services {
-		background: #1a1a1a;
-	}
-
-	:global(html[data-theme='dark']) .service-info {
-		h3 {
-			color: #fff;
-		}
-
-		p {
-			color: #aaa;
 		}
 	}
 

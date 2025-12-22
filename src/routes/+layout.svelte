@@ -860,7 +860,7 @@
 					font-weight: 500;
 					background: transparent;
 					border: none;
-					border-radius: 12px;
+					border-radius: 50px;
 					cursor: pointer;
 					transition: all 0.3s ease;
 					font-family: 'Poppins', sans-serif;
