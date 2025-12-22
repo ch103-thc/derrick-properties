@@ -610,7 +610,6 @@
 		display: flex;
 		flex-direction: column;
 		background: #f5f5f5;
-		padding: 16px;
 		opacity: 0;
 		transform: translateY(30px);
 
@@ -629,7 +628,7 @@
 
 	.journey-image {
 		width: 100%;
-		height: 240px;
+		height: 280px;
 		overflow: hidden;
 		flex-shrink: 0;
 
@@ -637,14 +636,14 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 0.75rem;
+			border-radius: 1.5rem 1.5rem 0 0;
 			transition: transform 0.4s ease;
 		}
 	}
 
 	.journey-info {
 		position: relative;
-		padding: 16px 0;
+		padding: 16px;
 		background: transparent;
 		color: inherit;
 		flex-grow: 1;
@@ -652,7 +651,7 @@
 		flex-direction: column;
 
 		@media (max-width: 768px) {
-			padding: 16px 0;
+			padding: 16px;
 		}
 
 		h3 {
@@ -858,7 +857,7 @@
 
 	.read-image {
 		width: 100%;
-		height: 240px;
+		height: 280px;
 		overflow: hidden;
 		flex-shrink: 0;
 
