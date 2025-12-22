@@ -429,7 +429,7 @@
 	}
 
 	:global(html[data-theme='light']) :global(body) {
-		background-color: #f5f6f8;
+		background-color: #fff;
 		color: #333333;
 	}
 
@@ -458,7 +458,7 @@
 
 		&.scrolled {
 			top: 0;
-			background: #f5f6f8;
+			background: #fff;
 			border-bottom: 1px solid #e0e0e0;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 		}
@@ -513,7 +513,7 @@
 				position: absolute;
 				top: 100%;
 				left: 0;
-				background: #f5f6f8;
+				background: #fff;
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 				border-radius: 12px;
 				padding: 10px;
@@ -529,12 +529,12 @@
 					color: #333;
 					text-decoration: none;
 					font-size: 14px;
-					border-radius: 8px;
+					border-radius: 6px;
 					transition: all 0.3s ease;
 
 					@media (hover: hover) and (pointer: fine) {
 						&:hover {
-							background: #fff;
+							background: #f5f5f5;
 							color: black;
 							transform: none;
 						}
@@ -559,16 +559,16 @@
 		backdrop-filter: blur(10px) !important;
 		-webkit-backdrop-filter: blur(10px) !important;
 		border: 1px solid rgba(255, 255, 255, 0.1) !important;
-		color: #f5f6f8 !important;
+		color: #fff !important;
 		box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
 
 		li a {
-			color: #f5f6f8 !important;
+			color: #fff !important;
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
 					background: rgba(255, 255, 255, 0.1) !important;
-					color: #f5f6f8 !important;
+					color: #fff !important;
 				}
 			}
 		}
@@ -587,7 +587,7 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				background: #fff;
+				background: #f5f5f5;
 			}
 		}
 
@@ -605,7 +605,7 @@
 	}
 
 	:global(html[data-theme='dark']) .nav-link {
-		color: #f5f6f8;
+		color: #fff;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -630,7 +630,7 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				background: #fff;
+				background: #f5f5f5;
 			}
 		}
 
@@ -649,7 +649,7 @@
 	}
 
 	:global(html[data-theme='dark']) .theme-toggle {
-		color: #f5f6f8;
+		color: #fff;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -662,7 +662,7 @@
 		display: inline-block;
 		padding: 10px 24px;
 		background: #3a3546;
-		color: #f5f6f8;
+		color: #fff;
 		border-radius: 50px;
 		font-weight: 600;
 		font-size: 14px;
@@ -681,7 +681,7 @@
 	}
 
 	:global(html[data-theme='dark']) .cta-button {
-		background: #f5f6f8;
+		background: #fff;
 		color: #1a1a1a;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
@@ -705,7 +705,7 @@
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
-				background: #fff;
+				background: #f5f5f5;
 			}
 		}
 
@@ -717,7 +717,7 @@
 	}
 
 	:global(html[data-theme='dark']) .hamburger {
-		color: #f5f6f8;
+		color: #fff;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -781,7 +781,7 @@
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
-						background: #fff;
+						background: #f5f5f5;
 					}
 				}
 			}
@@ -794,7 +794,7 @@
 			right: 0;
 			width: 280px;
 			height: 100vh;
-			background: #f5f6f8;
+			background: #fff;
 			z-index: 999;
 			padding: 40px 24px 24px;
 			overflow-y: auto;
@@ -825,14 +825,14 @@
 
 						@media (hover: hover) and (pointer: fine) {
 							&:hover {
-								background: #fff;
+								background: #f5f5f5;
 							}
 						}
 
 						&.mobile-cta {
 							margin-top: 16px;
 							background: #3a3546;
-							color: #f5f6f8;
+							color: #fff;
 							text-align: center;
 							justify-content: center;
 							font-weight: 600;
@@ -868,7 +868,7 @@
 
 					@media (hover: hover) and (pointer: fine) {
 						&:hover {
-							background: #fff;
+							background: #f5f5f5;
 						}
 					}
 
@@ -905,11 +905,11 @@
 			border-bottom-color: rgba(255, 255, 255, 0.1);
 
 			.mobile-menu-title {
-				color: #f5f6f8;
+				color: #fff;
 			}
 
 			.mobile-close {
-				color: #f5f6f8;
+				color: #fff;
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
@@ -920,7 +920,7 @@
 		}
 
 		ul li a {
-			color: #f5f6f8;
+			color: #fff;
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
@@ -929,12 +929,12 @@
 			}
 
 			&.mobile-cta {
-				background: #f5f6f8;
+				background: #fff;
 				color: #1a1a1a;
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
-						background: #fff;
+						background: #f5f5f5;
 					}
 				}
 			}
@@ -942,7 +942,7 @@
 
 		.mobile-dropdown {
 			.mobile-dropdown-toggle {
-				color: #f5f6f8;
+				color: #fff;
 
 				@media (hover: hover) and (pointer: fine) {
 					&:hover {
@@ -1019,9 +1019,9 @@
 
 	.footer {
 		// margin-top: 80px;
-		background: #f5f6f8;
+		background: #fff;
 		color: #333;
-		border-top: 1px solid #f5f6f8;
+		border-top: 1px solid #fff;
 	}
 
 	:global(html[data-theme='dark']) .footer {
@@ -1080,7 +1080,7 @@
 				justify-content: center;
 				width: 44px;
 				height: 44px;
-				background: #fff;
+				background: #f5f5f5;
 				color: #1a1a1a;
 				border-radius: 50%;
 				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -1106,7 +1106,7 @@
 
 	:global(html[data-theme='dark']) .footer-brand .social-links a {
 		background: #27272a;
-		color: #f5f6f8;
+		color: #fff;
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 
 		@media (hover: hover) and (pointer: fine) {
@@ -1152,7 +1152,7 @@
 
 	:global(html[data-theme='dark']) .footer-column {
 		h3 {
-			color: #f5f6f8;
+			color: #fff;
 		}
 
 		ul li a {
@@ -1160,7 +1160,7 @@
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
-					color: #f5f6f8;
+					color: #fff;
 				}
 			}
 		}
@@ -1170,7 +1170,7 @@
 		max-width: 1200px;
 		margin: 0 auto;
 		padding: 24px 32px;
-		border-top: 1px solid #f5f6f8;
+		border-top: 1px solid #fff;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -1211,7 +1211,7 @@
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
-					color: #f5f6f8;
+					color: #fff;
 				}
 			}
 		}

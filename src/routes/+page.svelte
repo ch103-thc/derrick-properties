@@ -250,26 +250,25 @@
 	<div class="container">
 		<div class="section-title" class:visible={readsVisible}>
 			<h2>Featured Reads</h2>
-			<p class="sub-header">Insights and updates from the real estate world</p>
 		</div>
 
 		<div class="reads-grid">
 			{#each reads as read, i}
-				<article class="read-card" class:visible={readsVisible} style="--delay: {i}">
+				<div class="read-card" class:visible={readsVisible} style="--delay: {i}">
 					<div class="read-image">
-						<img src={read.image} alt={read.title} />
+						<img src={read.image} alt={read.title} loading="lazy" />
 					</div>
-					<div class="read-content">
-						<h3>{read.title}</h3>
+					<div class="read-info">
 						<p class="read-date">{read.date}</p>
+						<h3>{read.title}</h3>
 						<p class="read-description">{read.description}</p>
+						<a href="/reads/{read.title}" class="read-article">Read Article</a>
 					</div>
-				</article>
+				</div>
 			{/each}
 		</div>
-
 		<div class="view-all">
-			<a href="/reads" class="view-all-btn">View All Reads</a>
+			<a href="/reads" class="view-all-btn">View All Articles</a>
 		</div>
 	</div>
 </section>
@@ -335,29 +334,6 @@
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 		// letter-spacing: 0.5px;
 		margin-top: 16px;
-
-		@media (hover: hover) and (pointer: fine) {
-			&:hover {
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-				background: #333;
-			}
-		}
-	}
-
-	.view-all-btn {
-		display: inline-block;
-		padding: 12px 20px;
-		background: #3a3546;
-		color: #f8f8f8;
-		border-radius: 50px;
-		font-weight: 600;
-		font-size: 0.9rem;
-		text-decoration: none;
-		cursor: pointer;
-		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-		// letter-spacing: 0.5px;
-		margin-top: 0;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -494,7 +470,7 @@
 		cursor: pointer;
 		display: flex;
 		flex-direction: column;
-		background: #fff;
+		background: #f5f5f5;
 		padding: 16px;
 		opacity: 0;
 		transform: translateY(30px);
@@ -565,25 +541,38 @@
 
 		.read-more {
 			display: inline-block;
-			margin-top: 8px;
+			align-self: flex-start;
+			margin-top: 12px;
+			padding: 8px 16px;
+			background: transparent;
+			color: #3a3546;
+			border: 2px solid #3a3546;
+			border-radius: 50px;
 			font-weight: 600;
 			font-size: 0.9rem;
-			color: #1a1a1a;
-			text-decoration: underline;
+			text-decoration: none;
 			cursor: pointer;
-			transition: color 0.3s ease;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			box-shadow: none;
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
-					color: #333;
+					background: #3a3546;
+					color: #f8f8f8;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 				}
 			}
 
 			:global(html[data-theme='dark']) & {
-				color: #fff;
+				background: transparent;
+				color: #f8f8f8;
+				border: 2px solid #f8f8f8;
+				box-shadow: none;
 
 				&:hover {
-					color: #ddd;
+					background: #f8f8f8;
+					color: #1a1a1a;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 				}
 			}
 		}
@@ -650,7 +639,7 @@
 		cursor: pointer;
 		display: flex;
 		flex-direction: column;
-		background: #fff;
+		background: #f5f5f5;
 		padding: 16px;
 		opacity: 0;
 		transform: translateY(30px);
@@ -708,25 +697,38 @@
 
 		.read-full-story {
 			display: inline-block;
-			margin-top: 8px;
+			align-self: flex-start;
+			margin-top: 12px;
+			padding: 8px 16px;
+			background: transparent;
+			color: #3a3546;
+			border: 2px solid #3a3546;
+			border-radius: 50px;
 			font-weight: 600;
 			font-size: 0.9rem;
-			color: #1a1a1a;
-			text-decoration: underline;
+			text-decoration: none;
 			cursor: pointer;
-			transition: color 0.3s ease;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			box-shadow: none;
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
-					color: #333;
+					background: #3a3546;
+					color: #f8f8f8;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
 				}
 			}
 
 			:global(html[data-theme='dark']) & {
-				color: #fff;
+				background: transparent;
+				color: #f8f8f8;
+				border: 2px solid #f8f8f8;
+				box-shadow: none;
 
 				&:hover {
-					color: #ddd;
+					background: #f8f8f8;
+					color: #1a1a1a;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 				}
 			}
 		}
@@ -811,39 +813,11 @@
 		}
 	}
 
-	:global(html[data-theme='dark']) .reads {
-		background: #1a1a1a;
-	}
-
-	.reads-header {
-		display: flex;
-		justify-content: space-between;
-		align-items: flex-start;
-		margin-bottom: 2.5rem;
-		gap: 40px;
-
-		@media (max-width: 768px) {
-			flex-direction: column;
-			align-items: flex-start;
-			gap: 24px;
-		}
-	}
-
-	.view-all {
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin-top: 2.5rem;
-
-		@media (max-width: 768px) {
-			width: 100%;
-		}
-	}
-
 	.reads-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: 16px;
+		margin-top: 2.5rem;
 
 		@media (max-width: 1024px) {
 			grid-template-columns: repeat(2, 1fr);
@@ -854,17 +828,56 @@
 		}
 	}
 
+	.view-all {
+		text-align: center;
+		margin-top: 40px;
+
+		@media (max-width: 768px) {
+			margin-top: 32px;
+		}
+	}
+
+	.view-all-btn {
+		display: inline-block;
+		padding: 12px 20px;
+		background: #3a3546;
+		color: #f8f8f8;
+		border-radius: 50px;
+		font-weight: 600;
+		font-size: 0.9rem;
+		text-decoration: none;
+		cursor: pointer;
+		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+				background: #333;
+			}
+		}
+	}
+
 	.read-card {
-		overflow: hidden;
-		background: #fff;
+		position: relative;
+		border-radius: 1.5rem;
+		overflow: visible;
+		height: auto;
+		box-shadow: none;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
-		position: relative;
 		display: flex;
 		flex-direction: column;
-		height: 100%;
-		border-radius: 1.5rem;
+		background: #f5f5f5;
 		padding: 16px;
+		opacity: 0;
+		transform: translateY(30px);
+
+		&.visible {
+			opacity: 1;
+			transform: translateY(0);
+			transition-delay: calc(var(--delay) * 0.1s);
+		}
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -877,52 +890,87 @@
 		width: 100%;
 		height: 240px;
 		overflow: hidden;
-		position: relative;
 		flex-shrink: 0;
 
 		img {
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			display: block;
 			border-radius: 0.75rem;
 			transition: transform 0.4s ease;
 		}
 	}
 
-	.read-content {
+	.read-info {
 		position: relative;
-		z-index: 2;
+		padding: 16px 0;
+		background: transparent;
+		color: inherit;
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
-	}
-
-	.read-date {
-		font-size: 12px;
-		margin: 0 0 12px 0;
-		text-transform: uppercase;
-		// letter-spacing: 0.8px;
-		color: rgba(80, 80, 100, 0.7);
-		font-weight: 500;
-	}
-
-	.read-content h3 {
-		font-size: 18px;
-		font-weight: 600;
-		margin: 16px 0 12px;
-		color: #1a1a1a;
 
 		@media (max-width: 768px) {
-			font-size: 18px;
+			padding: 16px 0;
 		}
-	}
 
-	.read-description {
-		font-size: 15px;
-		margin: 0;
-		color: #666;
-		flex-grow: 1;
+		.read-date {
+			font-size: 13px;
+			color: #999;
+			margin: 0 0 8px 0;
+			font-weight: 500;
+
+			@media (max-width: 768px) {
+				font-size: 12px;
+			}
+		}
+
+		h3 {
+			font-size: 18px;
+			margin: 0 0 8px 0;
+			color: #1a1a1a;
+
+			@media (max-width: 768px) {
+				font-size: 16px;
+			}
+		}
+
+		.read-description {
+			font-size: 15px;
+			margin: 0;
+			line-height: 1.5;
+			color: #666;
+			flex-grow: 1;
+
+			@media (max-width: 768px) {
+				font-size: 14px;
+			}
+		}
+
+		.read-article {
+			display: inline-block;
+			align-self: flex-start;
+			margin-top: 12px;
+			padding: 8px 16px;
+			background: transparent;
+			color: #3a3546;
+			border: 2px solid #3a3546;
+			border-radius: 50px;
+			font-weight: 600;
+			font-size: 0.9rem;
+			text-decoration: none;
+			cursor: pointer;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			box-shadow: none;
+
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					background: #3a3546;
+					color: #f8f8f8;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+				}
+			}
+		}
 	}
 
 	:global(html[data-theme='dark']) .read-card {
@@ -935,15 +983,30 @@
 		}
 	}
 
-	:global(html[data-theme='dark']) .read-date {
-		color: rgba(238, 231, 222, 0.6);
-	}
+	:global(html[data-theme='dark']) .read-info {
+		.read-date {
+			color: #777;
+		}
 
-	:global(html[data-theme='dark']) .read-content h3 {
-		color: #fff;
-	}
+		h3 {
+			color: #fff;
+		}
 
-	:global(html[data-theme='dark']) .read-description {
-		color: #aaa;
+		.read-description {
+			color: #aaa;
+		}
+
+		.read-article {
+			background: transparent;
+			color: #f8f8f8;
+			border: 2px solid #f8f8f8;
+			box-shadow: none;
+
+			&:hover {
+				background: #f8f8f8;
+				color: #1a1a1a;
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+			}
+		}
 	}
 </style>

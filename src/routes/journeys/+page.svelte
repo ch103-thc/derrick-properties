@@ -255,7 +255,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 1.5rem;
+			border-radius: 0.75rem;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -280,6 +280,44 @@
 
 			@media (max-width: 768px) {
 				font-size: 16px;
+			}
+		}
+
+		.read-full-story {
+			display: inline-block;
+			align-self: flex-start;
+			margin-top: 12px;
+			padding: 8px 16px;
+			background: transparent;
+			color: #3a3546;
+			border: 2px solid #3a3546;
+			border-radius: 50px;
+			font-weight: 600;
+			font-size: 0.9rem;
+			text-decoration: none;
+			cursor: pointer;
+			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			box-shadow: none;
+
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					background: #3a3546;
+					color: #f8f8f8;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+				}
+			}
+
+			:global(html[data-theme='dark']) & {
+				background: transparent;
+				color: #f8f8f8;
+				border: 2px solid #f8f8f8;
+				box-shadow: none;
+
+				&:hover {
+					background: #f8f8f8;
+					color: #1a1a1a;
+					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+				}
 			}
 		}
 	}
@@ -319,30 +357,5 @@
 
 	:global(html[data-theme='dark']) .journey-text {
 		color: #aaa;
-	}
-
-	.read-full-story {
-		display: inline-block;
-		margin-top: 8px;
-		font-weight: 600;
-		font-size: 0.9rem;
-		color: #1a1a1a;
-		text-decoration: underline;
-		cursor: pointer;
-		transition: color 0.3s ease;
-
-		@media (hover: hover) and (pointer: fine) {
-			&:hover {
-				color: #333;
-			}
-		}
-
-		:global(html[data-theme='dark']) & {
-			color: #fff;
-
-			&:hover {
-				color: #ddd;
-			}
-		}
 	}
 </style>
