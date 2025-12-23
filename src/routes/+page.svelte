@@ -29,8 +29,7 @@
 		{
 			image: 'img/service/buying.jpeg',
 			title: 'Buying a Property',
-			description:
-				'Personalised support to find the right home or investment property.'
+			description: 'Personalised support to find the right home or investment property.'
 		},
 		{
 			image: 'img/service/renting.jpeg',

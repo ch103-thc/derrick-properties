@@ -117,7 +117,7 @@
 			margin: 0 auto;
 			background: #fff;
 			padding: 3rem 2rem;
-			border-radius: 1.5rem;
+			border-radius: 12px;
 			border: 1px solid #e0e0e0;
 			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 			opacity: 0;
@@ -169,7 +169,7 @@
 			background: #f9f9f9;
 			padding: 1rem 1.5rem;
 			border-left: 4px solid #000;
-			border-radius: 0.5rem;
+			border-radius: 6px;
 			margin: 1rem 0;
 
 			a {
@@ -265,7 +265,7 @@
 		background: #f9f9f9;
 		padding: 1.5rem;
 		border-left: 4px solid #1a1a1a;
-		border-radius: 0.5rem;
+		border-radius: 6px;
 		margin: 1.5rem 0;
 		box-shadow: none;
 
