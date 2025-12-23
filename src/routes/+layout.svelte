@@ -4,6 +4,7 @@
 	import logoTransparent from '$lib/assets/logo-transparent.png';
 	import logoFooter from '$lib/assets/logo-footer.png';
 	import logoFooterTransparent from '$lib/assets/logo-footer-transparent.png';
+	import '@fontsource-variable/inter';
 	import '@fontsource/poppins';
 	import Icon from '@iconify/svelte';
 	import '../main.scss';
@@ -420,7 +421,7 @@
 	:global(body) {
 		margin: 0;
 		padding: 0;
-		font-family: 'Poppins', sans-serif;
+		font-family: 'Inter Variable', sans-serif;
 	}
 
 	/* Light Mode (Default) */
@@ -863,7 +864,7 @@
 					border-radius: 12px;
 					cursor: pointer;
 					transition: all 0.3s ease;
-					font-family: 'Poppins', sans-serif;
+					font-family: 'Inter Variable', sans-serif;
 					font-size: 1rem;
 
 					@media (hover: hover) and (pointer: fine) {
