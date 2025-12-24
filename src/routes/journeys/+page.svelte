@@ -130,7 +130,7 @@
 
 <style lang="scss">
 	.container {
-		max-width: 1200px;
+		max-width: 1135px;
 		margin: 0 auto;
 		padding: 0 20px;
 	}
@@ -209,7 +209,7 @@
 
 	.journey-card {
 		position: relative;
-		border-radius: 8px;
+		border-radius: 12px;
 		overflow: visible;
 		height: auto;
 		box-shadow: none;
@@ -254,7 +254,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 8px 8px 0 0;
+			border-radius: 12px 12px 0 0;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -290,7 +290,7 @@
 			background: transparent;
 			color: #3a3546;
 			border: 2px solid #3a3546;
-			border-radius: 4px;
+			border-radius: 6px;
 			font-weight: 600;
 			font-size: 0.9rem;
 			text-decoration: none;

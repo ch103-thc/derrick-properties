@@ -664,7 +664,7 @@
 		padding: 10px 24px;
 		background: #3a3546;
 		color: #fff;
-		border-radius: 8px;
+		border-radius: 20px;
 		font-weight: 600;
 		font-size: 14px;
 		text-decoration: none;
@@ -1031,7 +1031,7 @@
 	}
 
 	.footer-container {
-		max-width: 1200px;
+		max-width: 1135px;
 		margin: 0 auto;
 		padding: 30px;
 		display: grid;
@@ -1168,7 +1168,7 @@
 	}
 
 	.footer-bottom {
-		max-width: 1200px;
+		max-width: 1135px;
 		margin: 0 auto;
 		padding: 24px 32px;
 		border-top: 1px solid #fff;

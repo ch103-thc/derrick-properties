@@ -204,7 +204,10 @@
 						<div class="service-overlay">
 							<h3>{service.title}</h3>
 							<p>{service.description}</p>
-							<a href="/services/{service.title}" class="read-more">Read More</a>
+							<a href="/services/{service.title}" class="read-more"
+								>Read More
+								<Icon icon="mdi:arrow-right" width="20" height="20" />
+							</a>
 						</div>
 					</div>
 				</div>
@@ -233,7 +236,10 @@
 								<p>{paragraph}</p>
 							{/each}
 						</div>
-						<a href="/journeys/{journey.name}" class="read-full-story">Read Full Story</a>
+						<a href="/journeys/{journey.name}" class="read-full-story"
+							>Read Full Story
+							<Icon icon="mdi:arrow-right" width="20" height="20" />
+						</a>
 					</div>
 				</div>
 			{/each}
@@ -261,7 +267,10 @@
 						<p class="read-date">{read.date}</p>
 						<h3>{read.title}</h3>
 						<p class="read-description">{read.description}</p>
-						<a href="/reads/{read.title}" class="read-article">Read Article</a>
+						<a href="/reads/{read.title}" class="read-article"
+							>Read Article
+							<Icon icon="mdi:arrow-right" width="20" height="20" />
+						</a>
 					</div>
 				</div>
 			{/each}
@@ -274,7 +283,7 @@
 
 <style lang="scss">
 	.container {
-		max-width: 1200px;
+		max-width: 1135px;
 		margin: 0 auto;
 		padding: 0 20px;
 	}
@@ -324,7 +333,7 @@
 		padding: 14px 28px;
 		background: #3a3546;
 		color: #f8f8f8;
-		border-radius: 8px;
+		border-radius: 20px;
 		font-weight: 600;
 		font-size: 1rem;
 		text-decoration: none;
@@ -344,14 +353,15 @@
 
 	:global(html[data-theme='dark']) .cta-button,
 	:global(html[data-theme='dark']) .view-all-btn {
-		background: #f8f8f8;
-		color: #1a1a1a;
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+		background: transparent;
+		color: #f8f8f8;
+		border: 2px solid #f8f8f8;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
+				background: #f8f8f8;
+				color: #1a1a1a;
 				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-				background: #e0e0e0;
 			}
 		}
 	}
@@ -461,7 +471,7 @@
 
 	.service-card {
 		position: relative;
-		border-radius: 8px;
+		border-radius: 12px;
 		overflow: hidden;
 		height: 320px;
 		box-shadow: none;
@@ -541,23 +551,20 @@
 		}
 
 		.read-more {
-			display: inline-block;
-			align-self: flex-start;
-			padding: 8px 16px;
-			background: rgba(255, 255, 255, 0.9);
-			color: #1a1a1a;
-			border: none;
-			border-radius: 4px;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
+			color: rgba(255, 255, 255, 0.9);
 			font-weight: 600;
 			font-size: 0.9rem;
 			text-decoration: none;
 			cursor: pointer;
-			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+			transition: all 0.3s ease;
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
-					background: #fff;
-					box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+					gap: 12px;
+					color: #fff;
 				}
 			}
 		}
@@ -600,7 +607,7 @@
 
 	.journey-card {
 		position: relative;
-		border-radius: 8px;
+		border-radius: 12px;
 		overflow: visible;
 		height: auto;
 		box-shadow: none;
@@ -635,7 +642,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 8px 8px 0 0;
+			border-radius: 12px 12px 0 0;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -664,40 +671,25 @@
 		}
 
 		.read-full-story {
-			display: inline-block;
-			align-self: flex-start;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
 			margin-top: 12px;
-			padding: 8px 16px;
-			background: transparent;
 			color: #3a3546;
-			border: 2px solid #3a3546;
-			border-radius: 4px;
 			font-weight: 600;
 			font-size: 0.9rem;
 			text-decoration: none;
 			cursor: pointer;
-			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-			box-shadow: none;
+			transition: all 0.3s ease;
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
-					background: #3a3546;
-					color: #f8f8f8;
-					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+					gap: 12px;
 				}
 			}
 
 			:global(html[data-theme='dark']) & {
-				background: transparent;
 				color: #f8f8f8;
-				border: 2px solid #f8f8f8;
-				box-shadow: none;
-
-				&:hover {
-					background: #f8f8f8;
-					color: #1a1a1a;
-					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-				}
 			}
 		}
 	}
@@ -808,27 +800,28 @@
 	.view-all-btn {
 		display: inline-block;
 		padding: 12px 20px;
-		background: #3a3546;
-		color: #f8f8f8;
-		border-radius: 4px;
+		background: transparent;
+		color: #3a3546;
+		border: 2px solid #3a3546;
+		border-radius: 20px;
 		font-weight: 600;
 		font-size: 0.9rem;
 		text-decoration: none;
 		cursor: pointer;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
+				background: #3a3546;
+				color: #f8f8f8;
 				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-				background: #333;
 			}
 		}
 	}
 
 	.read-card {
 		position: relative;
-		border-radius: 8px;
+		border-radius: 12px;
 		overflow: visible;
 		height: auto;
 		box-shadow: none;
@@ -864,7 +857,7 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 4px;
+			border-radius: 6px;
 			transition: transform 0.4s ease;
 		}
 	}
@@ -916,27 +909,25 @@
 		}
 
 		.read-article {
-			display: inline-block;
-			align-self: flex-start;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
 			margin-top: 12px;
-			padding: 8px 16px;
-			background: transparent;
 			color: #3a3546;
-			border: 2px solid #3a3546;
-			border-radius: 4px;
 			font-weight: 600;
 			font-size: 0.9rem;
 			text-decoration: none;
 			cursor: pointer;
-			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-			box-shadow: none;
+			transition: all 0.3s ease;
 
 			@media (hover: hover) and (pointer: fine) {
 				&:hover {
-					background: #3a3546;
-					color: #f8f8f8;
-					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
+					gap: 12px;
 				}
+			}
+
+			:global(html[data-theme='dark']) & {
+				color: #f8f8f8;
 			}
 		}
 	}

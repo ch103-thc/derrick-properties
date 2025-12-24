@@ -267,7 +267,7 @@
 
 <style lang="scss">
 	.container {
-		max-width: 1200px;
+		max-width: 1135px;
 		margin: 0 auto;
 		padding: 0 20px;
 	}
