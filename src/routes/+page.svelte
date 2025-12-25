@@ -471,11 +471,6 @@
 		// letter-spacing: 0.5px;
 		margin-top: 16px;
 
-		@media (max-width: 768px) {
-			display: block;
-			max-width: fit-content;
-		}
-
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
@@ -922,10 +917,6 @@
 		display: flex;
 		flex-direction: column;
 
-		@media (max-width: 768px) {
-			padding: 16px;
-		}
-
 		h3 {
 			font-size: 18px;
 			margin: 0 0 8px 0;
@@ -1069,12 +1060,6 @@
 		text-decoration: none;
 		cursor: pointer;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-
-		@media (max-width: 768px) {
-			display: block;
-			max-width: fit-content;
-			margin: 0 auto;
-		}
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {

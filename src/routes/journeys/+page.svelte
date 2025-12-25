@@ -1,4 +1,5 @@
 <script>
+	import Icon from '@iconify/svelte';
 	import { onMount } from 'svelte';
 
 	const journeys = [
@@ -113,16 +114,20 @@
 					<div class="journey-image">
 						<img src={journey.photo} alt={journey.name} loading="lazy" />
 					</div>
-					<div class="journey-content">
-						<h2>{journey.name}</h2>
+					<div class="journey-info">
+						<h3>{journey.name}</h3>
 						<div class="journey-text">
 							{#each journey.review as paragraph}
 								<p>{paragraph}</p>
 							{/each}
 						</div>
-						<a href="/journeys/{journey.name}" class="read-full-story">Read Full Story</a>
+						<span class="read-full-story">
+							Read Full Story
+							<Icon icon="mingcute:right-line" width="20" height="20" />
+						</span>
 					</div>
 				</article>
+				<!-- <a href="/journeys/{journey.name}" class="journey-card" class:visible={journeysVisible} style="--delay: {i}"></a> -->
 			{/each}
 		</div>
 	</div>
@@ -212,14 +217,14 @@
 		border-radius: 12px;
 		overflow: visible;
 		height: auto;
-		box-shadow: none;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
 		display: flex;
 		flex-direction: column;
-		background: #f5f5f5;
 		opacity: 0;
 		transform: translateY(30px);
+		text-decoration: none;
+		color: inherit;
 
 		&.visible {
 			opacity: 1;
@@ -254,25 +259,21 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 12px 12px 0 0;
+			border-radius: 12px;
 			transition: transform 0.4s ease;
 		}
 	}
 
-	.journey-content {
+	.journey-info {
 		position: relative;
-		padding: 16px;
+		margin: 16px 0 16px;
 		background: transparent;
 		color: inherit;
 		flex-grow: 1;
 		display: flex;
 		flex-direction: column;
 
-		@media (max-width: 768px) {
-			padding: 16px;
-		}
-
-		h2 {
+		h3 {
 			font-size: 18px;
 			margin: 0 0 8px 0;
 			color: #1a1a1a;
@@ -283,46 +284,25 @@
 		}
 
 		.read-full-story {
-			display: inline-block;
-			align-self: flex-start;
+			display: inline-flex;
+			align-items: center;
+			gap: 8px;
 			margin-top: 12px;
-			padding: 8px 16px;
-			background: transparent;
 			color: #3a3546;
-			border: 2px solid #3a3546;
-			border-radius: 6px;
 			font-weight: 600;
 			font-size: 0.9rem;
 			text-decoration: none;
 			cursor: pointer;
-			transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-			box-shadow: none;
-
-			@media (hover: hover) and (pointer: fine) {
-				&:hover {
-					background: #3a3546;
-					color: #f8f8f8;
-					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
-				}
-			}
+			transition: all 0.3s ease;
 
 			:global(html[data-theme='dark']) & {
-				background: transparent;
 				color: #f8f8f8;
-				border: 2px solid #f8f8f8;
-				box-shadow: none;
-
-				&:hover {
-					background: #f8f8f8;
-					color: #1a1a1a;
-					box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-				}
 			}
 		}
 	}
 
-	:global(html[data-theme='dark']) .journey-content {
-		h2 {
+	:global(html[data-theme='dark']) .journey-info {
+		h3 {
 			color: #fff;
 		}
 	}
