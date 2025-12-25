@@ -5,35 +5,41 @@
 		{
 			image: 'img/service/retirement.jpg',
 			title: 'Planning for Retirement',
+			url: 'planning-for-retirement',
 			description:
 				'Strategic real estate planning for long-term security and stable retirement income.'
 		},
 		{
 			image: 'img/service/consulting.jpg',
 			title: 'Real Estate Consulting',
+			url: 'real-estate-consulting',
 			description:
 				'Expert guidance for buying, selling, investing, and renting real estate for passive income.'
 		},
 		{
 			image: 'img/service/restructuring.jpg',
 			title: 'Asset Restructuring',
+			url: 'asset-restructuring',
 			description:
 				'Optimise your property portfolio with restructuring strategies for long-term growth.'
 		},
 		{
 			image: 'img/service/selling.jpeg',
 			title: 'Selling a Property',
+			url: 'selling-a-property',
 			description:
 				'Strategic guidance to position, market, and sell your property for the best price.'
 		},
 		{
 			image: 'img/service/buying.jpeg',
 			title: 'Buying a Property',
+			url: 'buying-a-property',
 			description: 'Personalised support to find the right home or investment property.'
 		},
 		{
 			image: 'img/service/renting.jpeg',
 			title: 'Renting a Property',
+			url: 'renting-a-property',
 			description:
 				'Assistance in renting out or finding rental properties with ease and confidence.'
 		}
@@ -279,7 +285,7 @@
 		<div class="services-grid">
 			{#each services as service, i}
 				<a
-					href="/services/{service.title}"
+					href="/services/{service.url}"
 					class="service-card"
 					class:visible={servicesVisible}
 					style="--delay: {i}"
@@ -459,7 +465,7 @@
 		display: inline-block;
 		padding: 14px 28px;
 		background: #3a3546;
-		color: #f8f8f8;
+		color: #fff;
 		border-radius: 9999px;
 		font-weight: 600;
 		font-size: 1rem;
@@ -471,6 +477,10 @@
 		// letter-spacing: 0.5px;
 		margin-top: 16px;
 
+		@media (max-width: 768px) {
+			width: 100%;
+		}
+
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12);
@@ -479,7 +489,19 @@
 		}
 	}
 
-	:global(html[data-theme='dark']) .cta-button,
+	:global(html[data-theme='dark']) .cta-button {
+		background: #fff;
+		color: #1a1a1a;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover {
+				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+				background: #e0e0e0;
+			}
+		}
+	}
+
 	:global(html[data-theme='dark']) .view-all-btn {
 		background: transparent;
 		color: #f8f8f8;
@@ -740,6 +762,10 @@
 				.service-image img {
 					transform: scale(1.05);
 				}
+
+				.read-more {
+					gap: 12px;
+				}
 			}
 		}
 	}
@@ -843,7 +869,7 @@
 		@media (max-width: 768px) {
 			display: flex;
 			overflow-x: auto;
-			scroll-snap-type: x mandatory;
+			scroll-snap-type: none;
 			gap: 16px;
 			padding-bottom: 16px;
 			-webkit-overflow-scrolling: touch;
@@ -879,7 +905,7 @@
 
 		@media (max-width: 768px) {
 			flex: 0 0 85%;
-			scroll-snap-align: start;
+			scroll-snap-align: none;
 		}
 
 		@media (hover: hover) and (pointer: fine) {
@@ -973,8 +999,6 @@
 	}
 
 	:global(html[data-theme='dark']) .journey-card {
-		background: #27272a;
-
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				transform: translateY(-2px);
@@ -1050,16 +1074,20 @@
 
 	.view-all-btn {
 		display: inline-block;
-		padding: 12px 20px;
+		padding: 14px 28px;
 		background: transparent;
 		color: #3a3546;
 		border: 2px solid #3a3546;
 		border-radius: 9999px;
 		font-weight: 600;
-		font-size: 0.9rem;
+		font-size: 1rem;
 		text-decoration: none;
 		cursor: pointer;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+		@media (max-width: 768px) {
+			width: 100%;
+		}
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -1095,6 +1123,10 @@
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				transform: translateY(-2px);
+
+				.read-article {
+					gap: 12px;
+				}
 			}
 		}
 	}
@@ -1199,18 +1231,6 @@
 
 		.read-description {
 			color: #aaa;
-		}
-
-		.read-article {
-			background: transparent;
-			color: #f8f8f8;
-			border: 2px solid #f8f8f8;
-
-			&:hover {
-				background: #f8f8f8;
-				color: #1a1a1a;
-				box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-			}
 		}
 	}
 </style>

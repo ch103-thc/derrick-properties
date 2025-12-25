@@ -240,8 +240,6 @@
 	}
 
 	:global(html[data-theme='dark']) .journey-card {
-		background: #27272a;
-
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				transform: translateY(-2px);
