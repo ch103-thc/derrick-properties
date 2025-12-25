@@ -516,7 +516,7 @@
 				left: 0;
 				background: #fff;
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
-				border-radius: 8px;
+				border-radius: 12px;
 				padding: 10px;
 				min-width: 230px;
 				list-style: none;
@@ -530,7 +530,7 @@
 					color: #333;
 					text-decoration: none;
 					font-size: 14px;
-					border-radius: 4px;
+					border-radius: 12px;
 					transition: all 0.3s ease;
 
 					@media (hover: hover) and (pointer: fine) {
@@ -584,7 +584,7 @@
 		text-decoration: none;
 		position: relative;
 		transition: all 0.3s ease;
-		border-radius: 8px;
+		border-radius: 9999px;
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -664,7 +664,7 @@
 		padding: 10px 24px;
 		background: #3a3546;
 		color: #fff;
-		border-radius: 20px;
+		border-radius: 9999px;
 		font-weight: 600;
 		font-size: 14px;
 		text-decoration: none;
@@ -820,7 +820,7 @@
 						padding: 14px 16px;
 						color: #333;
 						text-decoration: none;
-						border-radius: 8px;
+						border-radius: 12px;
 						transition: all 0.3s ease;
 						font-weight: 500;
 
@@ -861,7 +861,7 @@
 					font-weight: 500;
 					background: transparent;
 					border: none;
-					border-radius: 8px;
+					border-radius: 12px;
 					cursor: pointer;
 					transition: all 0.3s ease;
 					font-family: 'Inter Variable', sans-serif;
@@ -1083,7 +1083,7 @@
 				height: 44px;
 				background: #f5f5f5;
 				color: #1a1a1a;
-				border-radius: 50px;
+				border-radius: 9999px;
 				transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 				box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 

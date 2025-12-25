@@ -85,6 +85,59 @@
 			],
 			name: "Raymond and Faye's Story",
 			photo: 'img/journey/raymond-faye-story.jpg'
+		},
+		{
+			review: [
+				'Some journeys in life come full circle. I’ve known Lau for almost 30 years — I even attended his wedding back then. So when he reached out recently, it was with a heavy heart… he needed help selling his 4-room flat due to a divorce.',
+				'The unit was on a very low floor, though it had great conveniences: a 5-minute walk to the MRT, and close to parks, coffeeshops, and schools. Even with a relatively young lease, finding the right buyer wasn’t easy. And with the court order timeline ticking, the pressure was real.',
+				'We went all out — digital marketing, paper flyers, door-knocking around the neighbourhood — hoping to connect with buyers who already loved the area and wanted to move here for the schools or MRT access. After six months of persistence and countless efforts, a genuine buyer finally appeared, and we secured the OTP.',
+				'But the journey didn’t end there. Navigating his next home purchase was another challenge — limited funds, CPF retirement sum requirements, and strict loan eligibility. There were many rounds of calculations, appeals, and letters to the relevant agencies. Eventually, we managed to secure the minimum HDB loan he needed to move forward with a new flat.',
+				'While not every story begins or ends the way we wish, being able to help Lau transition into a new chapter — together with his son and daughter — is something that truly gives meaning to my work. 💛'
+			],
+			name: "Lau's Story",
+			photo: 'img/journey/lau-story.jpeg'
+		},
+		{
+			review: [
+				'Rafi first reached out to me after seeing my FB story about how I helped Emilia, a single buyer, secure her 3-room flat. At that time, his situation was tough — he was working as a food delivery rider, his wife was on an LTVP and not working yet, and they were living in a rented flat under his mom’s name with their four growing children.',
+				'He asked me a simple but heartfelt question: “Bro do you think I have any chance to give my family a home of our own?”',
+				'But things weren’t straightforward. Rafi was under a bank loan restructuring program with two more years left, which made getting any housing loan extremely difficult. This was a genuine case that needed real guidance — not just a quick “no” like what he had heard from other agents.',
+				'I sat down with him and mapped out a clear, realistic path forward: • secure a permanent job so he can qualify for an HDB loan • prioritise clearing his remaining debts • renew his wife’s passport and LTVP • eventually get her employed too, to strengthen the family’s income • understand how CPF can support the journey',
+				'By the end of our conversation, he thanked me — saying most agents had turned him away once they heard his situation. I assured him that I was here to walk this journey with him, no matter how long it took.',
+				'Fast forward two years. Rafi called me again — this time with good news. He had a stable, permanent job… and his wife had become a PR. That was the green light we needed. We met up, re-assessed everything, and moved forward with confidence.',
+				'Today, Rafi and his family are proud owners of a 4-room flat, conveniently located near their daughter’s school and close to his sister’s house — making it easier for his mom to visit too.',
+				'Seeing the smile on his face, and knowing how much this home means for his children’s future, reminds me why I do what I do. This profession isn’t just about homes — it’s about changing lives, one family at a time. 💛🏡✨',
+				'If you’re unsure about your situation or feel like your chances are low - it’s okay. Sometimes you just need someone to show you the path. PM me anytime. I’m here to help.'
+			],
+			name: "Rafi's Story",
+			photo: 'img/journey/rafi-story.jpeg'
+		},
+		{
+			review: [
+				'During one of our activities, Mrs Tay approached me with an interest in investing in a property. It was a broad desire — and like many first-time investors, she wasn’t sure what direction made the most sense for her goals.',
+				'We had an open and honest chat about her current home, her finances, and what she hoped to achieve. Local commercial or industrial properties didn’t match her lifestyle or comfort level. Buying another local residential property under her daughter’s name also didn’t feel right, especially with her daughter just entering her graduation year.',
+				'That narrowed our path to a meaningful, realistic option: ✨ a neighbouring overseas property — one that fit her budget, offered potential rental income, and aligned with her long-term plans.',
+				'I connected her with my trusted cross-border partner to ensure we fully understood the policies and regulations involved. Protecting her interests was priority. Together, we reviewed options, analysed the rules, and even travelled across the border for site visits.',
+				'And that’s when everything clicked. We found a development with beautiful natural surroundings — a unit with serene sea views right from the balcony, and from the higher floors, a sweeping view of the local township below. It offered both tranquility and vibrancy — exactly the kind of environment she could see value in for the long term.',
+				'After several discussions and on-site evaluations, she made her decision with full confidence. Today, Mrs Tay is delighted — not just because she secured a promising investment, but because it aligns perfectly with her plans for her daughter’s future and her own retirement lifestyle.',
+				'Property decisions aren’t just about numbers. They’re about clarity, care, and helping clients find a future they feel good about. 🌊🏡✨'
+			],
+			name: "Mrs Tay's Story",
+			photo: 'img/journey/tay-story.jpeg'
+		},
+		{
+			review: [
+				'Viewing showflats is a favourite pastime for many people — and that’s exactly how I bumped into Mr Teh, a gentleman in his 50s, while I was on duty. We toured the showflat together, and soon after, we dived into a conversation about policies, numbers, and the realities of today’s property market.',
+				'We analysed nearby projects, looked at both sale and rental trends, and discussed where the market is likely heading in the near future. These insights were important, especially for someone like Mr Teh — a finance professional who understands numbers better than anyone.',
+				'Initially, the idea of owning a private investment-cum-own-stay property seemed too heavy on his finances. After reviewing the calculations together, it became clear that pushing for a private condo immediately wouldn’t be the most balanced move.',
+				'That’s when we zoomed in on a more strategic path: ✨ Upgrading to an Executive Condo (EC) It made perfect sense — he could secure a new home without having to offload his existing property right away. More flexibility, less pressure, and better long-term planning.',
+				'We went through several EC projects that fit his budget, lifestyle, and future plans. Keeping his son’s working location in mind, he eventually made a decisive choice: ✔ a project with a sizable land parcel ✔ facilities he could enjoy now ✔ and strong appeal for resale or retirement planning later',
+				'Today, Mr Teh feels confident and excited about the road ahead — knowing he made a strategic, future-proof decision that balances his finances, lifestyle, and long-term goals.',
+				'Helping clients see both numbers and possibilities… that’s where the magic happens. ✨🏡',
+				'PM me if you are in search and needs a 2nd proposal to understand better. Always ready to assist.'
+			],
+			name: "Mr Teh's Story",
+			photo: 'img/journey/teh-story.jpeg'
 		}
 	];
 
@@ -113,6 +166,33 @@
 	];
 
 	import { onMount } from 'svelte';
+
+	let currentJourneyIndex = $state(0);
+	const journeysPerPage = 3;
+	const totalJourneyPages = Math.ceil(journeys.length / journeysPerPage);
+
+	function nextJourneys() {
+		if (currentJourneyIndex < totalJourneyPages - 1) {
+			currentJourneyIndex++;
+		}
+	}
+
+	function prevJourneys() {
+		if (currentJourneyIndex > 0) {
+			currentJourneyIndex--;
+		}
+	}
+
+	function goToJourneyPage(index) {
+		currentJourneyIndex = index;
+	}
+
+	$effect(() => {
+		const startIdx = currentJourneyIndex * journeysPerPage;
+		visibleJourneys = journeys.slice(startIdx, startIdx + journeysPerPage);
+	});
+
+	let visibleJourneys = $state(journeys.slice(0, journeysPerPage));
 
 	// Add after your existing state variables
 	let servicesVisible = $state(false);
@@ -198,19 +278,24 @@
 
 		<div class="services-grid">
 			{#each services as service, i}
-				<div class="service-card" class:visible={servicesVisible} style="--delay: {i}">
+				<a
+					href="/services/{service.title}"
+					class="service-card"
+					class:visible={servicesVisible}
+					style="--delay: {i}"
+				>
 					<div class="service-image">
 						<img src={service.image} alt={service.title} loading="lazy" />
 						<div class="service-overlay">
 							<h3>{service.title}</h3>
 							<p>{service.description}</p>
-							<a href="/services/{service.title}" class="read-more"
-								>Read More
-								<Icon icon="mdi:arrow-right" width="20" height="20" />
-							</a>
+							<span class="read-more">
+								Read More
+								<Icon icon="mingcute:right-line" width="20" height="20" />
+							</span>
 						</div>
 					</div>
-				</div>
+				</a>
 			{/each}
 		</div>
 	</div>
@@ -223,27 +308,64 @@
 			<h2>My Customer's Journey With Me</h2>
 		</div>
 
-		<div class="journeys-grid">
-			{#each journeys as journey, i}
-				<div class="journey-card" class:visible={journeysVisible} style="--delay: {i}">
-					<div class="journey-image">
-						<img src={journey.photo} alt={journey.name} loading="lazy" />
-					</div>
-					<div class="journey-info">
-						<h3>{journey.name}</h3>
-						<div class="journey-text">
-							{#each journey.review as paragraph}
-								<p>{paragraph}</p>
-							{/each}
+		<div class="carousel-wrapper">
+			<button
+				class="nav-arrow prev"
+				onclick={prevJourneys}
+				disabled={currentJourneyIndex === 0}
+				aria-label="Previous journeys"
+			>
+				<Icon icon="mdi:chevron-left" width="32" height="32" />
+			</button>
+
+			<div class="journeys-grid">
+				{#each visibleJourneys as journey, i}
+					<a
+						href="/journeys/{journey.name}"
+						class="journey-card"
+						class:visible={journeysVisible}
+						style="--delay: {i}"
+					>
+						<div class="journey-image">
+							<img src={journey.photo} alt={journey.name} loading="lazy" />
 						</div>
-						<a href="/journeys/{journey.name}" class="read-full-story"
-							>Read Full Story
-							<Icon icon="mdi:arrow-right" width="20" height="20" />
-						</a>
-					</div>
-				</div>
+						<div class="journey-info">
+							<h3>{journey.name}</h3>
+							<div class="journey-text">
+								{#each journey.review as paragraph}
+									<p>{paragraph}</p>
+								{/each}
+							</div>
+							<span class="read-full-story">
+								Read Full Story
+								<Icon icon="mingcute:right-line" width="20" height="20" />
+							</span>
+						</div>
+					</a>
+				{/each}
+			</div>
+
+			<button
+				class="nav-arrow next"
+				onclick={nextJourneys}
+				disabled={currentJourneyIndex === totalJourneyPages - 1}
+				aria-label="Next journeys"
+			>
+				<Icon icon="mdi:chevron-right" width="32" height="32" />
+			</button>
+		</div>
+
+		<div class="carousel-indicators">
+			{#each Array(totalJourneyPages) as _, i}
+				<button
+					class="indicator"
+					class:active={currentJourneyIndex === i}
+					onclick={() => goToJourneyPage(i)}
+					aria-label="Go to page {i + 1}"
+				/>
 			{/each}
 		</div>
+
 		<div class="view-all">
 			<a href="/journeys" class="view-all-btn">View All Stories</a>
 		</div>
@@ -259,7 +381,12 @@
 
 		<div class="reads-grid">
 			{#each reads as read, i}
-				<div class="read-card" class:visible={readsVisible} style="--delay: {i}">
+				<a
+					href="/reads/{read.title}"
+					class="read-card"
+					class:visible={readsVisible}
+					style="--delay: {i}"
+				>
 					<div class="read-image">
 						<img src={read.image} alt={read.title} loading="lazy" />
 					</div>
@@ -267,12 +394,12 @@
 						<p class="read-date">{read.date}</p>
 						<h3>{read.title}</h3>
 						<p class="read-description">{read.description}</p>
-						<a href="/reads/{read.title}" class="read-article"
-							>Read Article
-							<Icon icon="mdi:arrow-right" width="20" height="20" />
-						</a>
+						<span class="read-article">
+							Read Article
+							<Icon icon="mingcute:right-line" width="20" height="20" />
+						</span>
 					</div>
-				</div>
+				</a>
 			{/each}
 		</div>
 		<div class="view-all">
@@ -333,15 +460,21 @@
 		padding: 14px 28px;
 		background: #3a3546;
 		color: #f8f8f8;
-		border-radius: 20px;
+		border-radius: 9999px;
 		font-weight: 600;
 		font-size: 1rem;
+		text-align: center;
 		text-decoration: none;
 		cursor: pointer;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 		// letter-spacing: 0.5px;
 		margin-top: 16px;
+
+		@media (max-width: 768px) {
+			display: block;
+			width: 100%;
+		}
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -454,6 +587,124 @@
 		}
 	}
 
+	/* Carousel Wrapper */
+	.carousel-wrapper {
+		position: relative;
+		padding: 0 60px;
+
+		@media (max-width: 768px) {
+			padding: 0;
+		}
+	}
+
+	/* Navigation Arrows */
+	.nav-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		background: rgba(58, 53, 70, 0.9);
+		color: #fff;
+		border: none;
+		width: 48px;
+		height: 48px;
+		border-radius: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		z-index: 10;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
+		&:disabled {
+			opacity: 0.3;
+			cursor: not-allowed;
+		}
+
+		&:not(:disabled) {
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					background: rgba(58, 53, 70, 1);
+					box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+				}
+			}
+		}
+
+		&.prev {
+			left: 0;
+		}
+
+		&.next {
+			right: 0;
+		}
+
+		@media (max-width: 768px) {
+			display: none;
+		}
+	}
+
+	:global(html[data-theme='dark']) .nav-arrow {
+		background: rgba(248, 248, 248, 0.9);
+		color: #1a1a1a;
+
+		&:not(:disabled) {
+			@media (hover: hover) and (pointer: fine) {
+				&:hover {
+					background: rgba(248, 248, 248, 1);
+				}
+			}
+		}
+	}
+
+	/* Carousel Indicators */
+	.carousel-indicators {
+		display: flex;
+		justify-content: center;
+		gap: 8px;
+		margin-top: 32px;
+
+		@media (max-width: 768px) {
+			margin-top: 24px;
+		}
+	}
+
+	.indicator {
+		width: 8px;
+		height: 8px;
+		border-radius: 50%;
+		border: none;
+		background: #d1d5db;
+		cursor: pointer;
+		transition: all 0.3s ease;
+		padding: 0;
+
+		&.active {
+			background: #3a3546;
+			width: 24px;
+			border-radius: 4px;
+		}
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover:not(.active) {
+				background: #9ca3af;
+			}
+		}
+	}
+
+	:global(html[data-theme='dark']) .indicator {
+		background: #52525b;
+
+		&.active {
+			background: #f8f8f8;
+		}
+
+		@media (hover: hover) and (pointer: fine) {
+			&:hover:not(.active) {
+				background: #71717a;
+			}
+		}
+	}
+
 	.services-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -474,11 +725,12 @@
 		border-radius: 12px;
 		overflow: hidden;
 		height: 320px;
-		box-shadow: none;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
 		opacity: 0;
 		transform: translateY(30px);
+		text-decoration: none;
+		color: inherit;
 
 		&.visible {
 			opacity: 1;
@@ -560,13 +812,6 @@
 			text-decoration: none;
 			cursor: pointer;
 			transition: all 0.3s ease;
-
-			@media (hover: hover) and (pointer: fine) {
-				&:hover {
-					gap: 12px;
-					color: #fff;
-				}
-			}
 		}
 	}
 
@@ -601,7 +846,30 @@
 		}
 
 		@media (max-width: 768px) {
-			grid-template-columns: 1fr;
+			display: flex;
+			overflow-x: auto;
+			scroll-snap-type: x mandatory;
+			gap: 16px;
+			padding-bottom: 16px;
+			-webkit-overflow-scrolling: touch;
+
+			&::-webkit-scrollbar {
+				height: 8px;
+			}
+
+			&::-webkit-scrollbar-track {
+				background: #f1f1f1;
+				border-radius: 4px;
+			}
+
+			&::-webkit-scrollbar-thumb {
+				background: #888;
+				border-radius: 4px;
+			}
+
+			&::-webkit-scrollbar-thumb:hover {
+				background: #555;
+			}
 		}
 	}
 
@@ -610,14 +878,14 @@
 		border-radius: 12px;
 		overflow: visible;
 		height: auto;
-		box-shadow: none;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
 		display: flex;
 		flex-direction: column;
-		background: #f5f5f5;
 		opacity: 0;
 		transform: translateY(30px);
+		text-decoration: none;
+		color: inherit;
 
 		&.visible {
 			opacity: 1;
@@ -625,9 +893,18 @@
 			transition-delay: calc(var(--delay) * 0.1s);
 		}
 
+		@media (max-width: 768px) {
+			flex: 0 0 85%;
+			scroll-snap-align: start;
+		}
+
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
 				transform: translateY(-2px);
+
+				.read-full-story {
+					gap: 12px;
+				}
 			}
 		}
 	}
@@ -642,14 +919,14 @@
 			width: 100%;
 			height: 100%;
 			object-fit: cover;
-			border-radius: 12px 12px 0 0;
+			border-radius: 12px;
 			transition: transform 0.4s ease;
 		}
 	}
 
 	.journey-info {
 		position: relative;
-		padding: 16px;
+		margin: 16px 0 16px;
 		background: transparent;
 		color: inherit;
 		flex-grow: 1;
@@ -681,12 +958,6 @@
 			text-decoration: none;
 			cursor: pointer;
 			transition: all 0.3s ease;
-
-			@media (hover: hover) and (pointer: fine) {
-				&:hover {
-					gap: 12px;
-				}
-			}
 
 			:global(html[data-theme='dark']) & {
 				color: #f8f8f8;
@@ -803,12 +1074,17 @@
 		background: transparent;
 		color: #3a3546;
 		border: 2px solid #3a3546;
-		border-radius: 20px;
+		border-radius: 9999px;
 		font-weight: 600;
 		font-size: 0.9rem;
 		text-decoration: none;
 		cursor: pointer;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+		@media (max-width: 768px) {
+			display: block;
+			width: 100%;
+		}
 
 		@media (hover: hover) and (pointer: fine) {
 			&:hover {
@@ -824,7 +1100,6 @@
 		border-radius: 12px;
 		overflow: visible;
 		height: auto;
-		box-shadow: none;
 		transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 		cursor: pointer;
 		display: flex;
@@ -833,6 +1108,8 @@
 		padding: 16px;
 		opacity: 0;
 		transform: translateY(30px);
+		text-decoration: none;
+		color: inherit;
 
 		&.visible {
 			opacity: 1;
@@ -920,12 +1197,6 @@
 			cursor: pointer;
 			transition: all 0.3s ease;
 
-			@media (hover: hover) and (pointer: fine) {
-				&:hover {
-					gap: 12px;
-				}
-			}
-
 			:global(html[data-theme='dark']) & {
 				color: #f8f8f8;
 			}
@@ -959,7 +1230,6 @@
 			background: transparent;
 			color: #f8f8f8;
 			border: 2px solid #f8f8f8;
-			box-shadow: none;
 
 			&:hover {
 				background: #f8f8f8;
