@@ -473,7 +473,7 @@
 
 		@media (max-width: 768px) {
 			display: block;
-			width: 100%;
+			max-width: fit-content;
 		}
 
 		@media (hover: hover) and (pointer: fine) {
@@ -664,7 +664,7 @@
 		margin-top: 32px;
 
 		@media (max-width: 768px) {
-			margin-top: 24px;
+			display: none;
 		}
 	}
 
@@ -854,22 +854,11 @@
 			-webkit-overflow-scrolling: touch;
 
 			&::-webkit-scrollbar {
-				height: 8px;
+				display: none;
 			}
 
-			&::-webkit-scrollbar-track {
-				background: #f1f1f1;
-				border-radius: 4px;
-			}
-
-			&::-webkit-scrollbar-thumb {
-				background: #888;
-				border-radius: 4px;
-			}
-
-			&::-webkit-scrollbar-thumb:hover {
-				background: #555;
-			}
+			-ms-overflow-style: none;
+			scrollbar-width: none;
 		}
 	}
 
@@ -1083,7 +1072,8 @@
 
 		@media (max-width: 768px) {
 			display: block;
-			width: 100%;
+			max-width: fit-content;
+			margin: 0 auto;
 		}
 
 		@media (hover: hover) and (pointer: fine) {
